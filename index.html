@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://wine2025.cs.rutgers.edu/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./files/css" rel="stylesheet">
+
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="https://wine2025.cs.rutgers.edu/images/R-favicon.ico">
+  <title>WINE 2025 (Rutgers University)</title>
+  <meta name="description" content="WINE 2025: The 21st Conference on Web and Internet Economics.">
+  
+  <!-- Add this structured data block: -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "WINE 2025",
+    "startDate": "2025-12-08",
+    "endDate": "2025-12-11",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventType": "Academic",
+    "location": {
+      "@type": "Place",
+      "name": "Rutgers University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Brunswick",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Rutgers University",
+      "url": "https://www.rutgers.edu"
+    },
+    "url": "https://wine2025.cs.rutgers.edu/",
+    "description": "The 21st Conference on Web and Internet Economics (WINE 2025) will be hosted by Rutgers University.",
+    "image": "https://wine2025.cs.rutgers.edu/logo.png"
+  }
+  </script>
+  
+  <style>
+    /* Basic reset and styling */
+    html {
+      height: 100%;
+      min-height: 100%;
+      overflow-y: scroll;
+    }
+    html.dark {
+      filter: invert(1) hue-rotate(210deg);
+    }
+    html.dark .no-dark {
+      filter: invert(1) hue-rotate(150deg);
+    }
+    body {
+      font-size: 18px;
+      font-family: Open Sans;
+      min-height: 100%;
+      margin: 0px;
+      padding: 0px;
+      background-color: #f5f5f5;
+    }
+    ::selection {
+      background: rgb(204, 153, 173); /* Highlight color */
+      color: black;         /* Text color */
+    }
+    /* Container centered and limited to 1200px */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    /* Title area */
+    .title {
+      text-align: center;
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      border-bottom: 1.5px solid rgb(204, 0, 51);
+      margin-bottom: 0px;
+    }
+    
+    .title img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+      max-width: 25%;  /* shrink if parent is smaller */
+      height: auto;
+    }
+    
+    .title img:hover {
+      transform: scale(1.1);
+    }
+    
+    .title-text {
+      flex-direction: column; /* allow multiple lines */
+    }
+    
+    /* Main area for side tabs and content */
+    .main {
+      display: flex;
+    }
+    
+    .fade {
+      /* The text color is derived from the background */
+      background: rgb(128, 128, 128);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    
+    li::marker {
+      color: rgb(128, 128, 128);
+    }
+    
+    ul, ol {
+      list-style: square;
+    }
+    
+    ul.spaced-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    /* Vertical tab buttons */
+    .tab-buttons {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      border-right: 1.5px solid rgb(204, 0, 51);
+      padding-right: 0px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .tab-buttons button {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: Open Sans, sans-serif;
+      transition: background-color 0.5s ease;
+    }
+
+    .tab-buttons button:hover {
+      background-color: rgba(255, 204, 204, 0.8);
+    }
+
+    /* Active tab style */
+    .tab-buttons button.active {
+      background-color: rgba(204, 0, 51, 0.9);
+      font-weight: bold;
+      color: #d9d9d9;
+    }
+
+    /* Tab content area */
+    .tab-content {
+      max-width: 840px;
+      display: none;
+      padding: 40px;
+      padding-top: 0px;
+      flex: 1; /* Take up remaining space */
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+
+    /* Menu button for small screens */
+    .menu-button {
+      display: none;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: rgb(204, 0, 51);
+      color: #d9d9d9;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 1100;
+      border-radius: 5px;
+    }
+    
+    /* Hide side panel on small screens */
+    @media (max-width: 768px) {
+      .tab-buttons {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60vh;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transform: translateX(-100%);
+        z-index: 1000;
+        padding: 30px;
+        padding-top: 75px;
+        overflow-y: auto;
+      }
+
+      .tab-buttons.show {
+        transform: translateX(0);
+      }
+
+      .menu-button {
+        display: block;
+      }
+    }
+
+    /* Optional hover effect for the menu button */
+    .menu-button:hover {
+      background-color: rgb(255, 51, 51);
+    }
+    
+    a {
+      text-decoration: none;
+      color: rgb(153, 102, 92);
+      position: relative;
+      transition: color 1.0s ease;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
+    }
+    
+    /* Create a sliding underline effect on hover */
+    a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: rgb(31, 0, 0);
+      transform-origin: bottom right;
+      transition: transform 0.75s ease-out;
+    }
+    
+    a:hover {
+      color: rgba(31, 0, 0); /* Darker shade on hover */
+    }
+    
+    a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse; /* Merges the borders for a cleaner look */
+    }
+    
+    th, td {
+      padding: 12px; /* Adds some space inside the cells */
+      text-align: center; /* Aligns text to the left */
+    }
+    
+    table.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1278.0" data-gr-ext-installed="">
+  <div class="container">
+    <!-- Title -->
+    <div class="title">
+      <img src="./files/seal.png" onclick="toggleDarkMode()">
+      <div class="title-text">
+        <h2>WINE 2025: The 21st Conference on Web and Internet Economics</h2>
+        <p><strong>Rutgers University</strong>, New Brunswick, USA</p>
+        <p><strong>December 8–11, 2025</strong></p>
+      </div>
+    </div>
+    <button class="menu-button" onclick="toggleSidebar()">☰ Menu</button>
+    <!-- Main area: side tabs and content -->
+    <div class="main">
+      <!-- Side tab buttons -->
+      <div class="tab-buttons" id="sidebar">
+        <button href="#about" class="tab-link active" onclick="openTab(event, &#39;about&#39;)" data-tab="about">Overview</button>
+        <button href="#pc" class="tab-link" onclick="openTab(event, &#39;pc&#39;)" data-tab="pc">Committees</button>
+        <button href="#schedule" class="tab-link" onclick="openTab(event, &#39;schedule&#39;)" data-tab="schedule">Schedule</button>
+        <button href="#call-for-papers" class="tab-link" onclick="openTab(event, &#39;call-for-papers&#39;)" data-tab="call-for-papers">Call for Papers</button>
+        <button href="#accepted-papers" class="tab-link" onclick="openTab(event, &#39;accepted-papers&#39;)" data-tab="accepted-papers">Accepted Papers</button>
+        <button href="#call-for-tutorials" class="tab-link" onclick="openTab(event, &#39;call-for-tutorials&#39;)" data-tab="call-for-tutorials">Call for Tutorials</button>
+        <button href="#accepted-tutorials" class="tab-link" onclick="openTab(event, &#39;accepted-tutorials&#39;)" data-tab="accepted-tutorials">Accepted Tutorials</button>
+        <button href="#awards" class="tab-link" onclick="openTab(event, &#39;awards&#39;)" data-tab="awards">Awards</button>
+        <button href="#graduating-bits" class="tab-link" onclick="openTab(event, &#39;graduating-bits&#39;)" data-tab="graduating-bits">Graduating Bits</button>
+        <button href="#registration" class="tab-link" onclick="openTab(event, &#39;registration&#39;)" data-tab="registration">Registration</button>
+        <button href="#visa-letters" class="tab-link" onclick="openTab(event, &#39;visa-letters&#39;)" data-tab="visa-letters">Visa Letters</button>
+        <button href="#local-info" class="tab-link" onclick="openTab(event, &#39;local-info&#39;)" data-tab="local-info">Local Information</button>
+        <!--
+        <button href="#sponsorship" class="tab-link" onclick="openTab(event, 'sponsorship')" data-tab="sponsorship">Sponsorship Opportunities</button>
+        -->
+        <button href="#previous-wine" class="tab-link" onclick="openTab(event, &#39;previous-wine&#39;)" data-tab="previous-wine">Previous WINEs</button>
+      </div>
+      
+      <!-- Tab content sections -->
+      <div class="tab-content-container">
+        <div id="about" class="tab-content active" style="display: block;">
+          <h2>Overview</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <p>Over the past two decades, researchers from fields such as theoretical computer science, artificial intelligence, operations research, and economics have joined forces to explore the interplay of incentives and computation. These topics are of particular importance for the Internet and enable the interaction of large and diverse populations.</p>
+          <p>The Conference on Web and Internet Economics (WINE, originally known as the Workshop on Internet &amp; Network Economics until 2013) is an interdisciplinary platform for exchanging ideas and findings on incentives and computation from these varied fields. The WINE conference has been held annually since its inception in 2005, and WINE 2025 (<a href="https://wine2025.cs.rutgers.edu/" target="_blank">https://wine2025.cs.rutgers.edu/</a>) will carry on this tradition, taking place on December 8–11, 2025, in New Brunswick, USA, and hosted by Rutgers University. WINE 2025 is an in-person event.</p>
+          
+          <p><strong>We gratefully acknowledge the generous support of Google and Springer.</strong></p>
+          
+          <h3>Important Dates</h3>
+          <ul>
+            <li> Paper submission deadline: July 3, 2025, Anywhere on Earth </li>
+            <li> Rebuttal deadline: August 24, 2025, Anywhere on Earth </li>
+            <li> Author notification: September 15, 2025 </li>
+            <li> <strong>Conference: December 8–11, 2025</strong> </li>
+          </ul>
+          
+          <h3>News</h3>
+          <ul>
+            <li> <span class="fade">December 11, 2025:</span> We want to extend a sincere thank you to everyone for attending WINE 2025. Your participation made this year's event truly successful. </li>
+            <li> <span class="fade">December 6, 2025:</span> We updated the <a href="https://wine2025.cs.rutgers.edu/#schedule">conference schedule</a> with Graduating Bits and Sponsor Spotlight. We also provided information regarding <a href="https://wine2025.cs.rutgers.edu/#local-info">parking</a>. </li>
+            <li> <span class="fade">November 19, 2025:</span> We announced a detailed <a href="https://wine2025.cs.rutgers.edu/#schedule">conference schedule</a>. </li>
+            <li> <span class="fade">November 6, 2025:</span> We announced more details about <a href="https://wine2025.cs.rutgers.edu/#graduating-bits">the Graduating Bits session</a> and a tentative <a href="https://wine2025.cs.rutgers.edu/#schedule">conference schedule overview</a>. </li>
+            <li> <span class="fade">October 17, 2025:</span> The <a href="https://wine2025.cs.rutgers.edu/#registration">registration portal</a> is open. </li>
+            <li> <span class="fade">September 30, 2025:</span> We announced <a href="https://wine2025.cs.rutgers.edu/#accepted-papers">the list of accepted papers</a>, <a href="https://wine2025.cs.rutgers.edu/#accepted-tutorials">the list of accepted tutorials</a>, and <a href="https://wine2025.cs.rutgers.edu/#visa-letters">the instructions for requesting visa letters</a>. </li>
+            <li> <span class="fade">July 27, 2025:</span> The <a href="https://wine2025.cs.rutgers.edu/#call-for-tutorials">call for tutorials</a> is now out. </li>
+            <li> <span class="fade">June 19, 2025:</span> The <a href="https://wine2025.hotcrp.com/" target="_blank">submission server</a> is now open. </li>
+            <li> <span class="fade">May 10, 2025:</span> The <a href="https://wine2025.cs.rutgers.edu/#call-for-papers">call for papers</a> has arrived! </li>
+          </ul>
+          
+          <!--
+          <h3>Diamond Sponsor</h3>
+          <div class="no-dark">
+            <p style="text-align: center">
+              <img style="width: 240px" src="images/Google.svg">
+            </p>
+          </div>
+          -->
+        </div>
+        
+        
+        <div id="pc" class="tab-content" style="display: none;">
+        <h2>
+          Committees
+        </h2>
+        <hr style="border: none; height: 2px; background-color: black;">
+        <h3>
+          General Chairs
+        </h3>
+        <ul>
+          <li><a href="https://sites.google.com/view/arpitabiswas" target="_blank">Arpita Biswas</a>, Rutgers University</li>
+          <li><a href="https://www.kangning.info/" target="_blank">Kangning Wang</a>, Rutgers University</li>
+        </ul>
+        <p>Contact <span class="fade">(regarding conference organization and logistics)</span>: <a href="mailto:wine2025general@gmail.com">wine2025general@gmail.com</a></p>
+
+        <h3>
+          Program Committee Chairs
+        </h3>
+        <ul>
+          <li><a href="https://sites.google.com/site/vittoriobilo/" target="_blank">Vittorio Bilò</a>, University of Salento</li>
+          <li><a href="https://www.cs.yale.edu/homes/cai/" target="_blank">Yang Cai</a>, Yale University</li>
+          <li><a href="https://i.cs.hku.hk/~zhiyi/" target="_blank">Zhiyi Huang</a>, University of Hong Kong</li>
+        </ul>
+        <p>Contact <span class="fade">(regarding the technical program and proceedings)</span>: <a href="mailto:wine2025chairs@gmail.com">wine2025chairs@gmail.com</a></p>
+
+        <h3>
+          Senior Program Committee
+        </h3>
+        <ul>
+          <li><a href="https://www.math.mcgill.ca/vetta/" target="_blank">Adrian Vetta</a>, McGill University</li>
+          <li><a href="https://sites.google.com/site/alkminisgouritsa" target="_blank">Alkmini Sgouritsa</a>, Athens University of Economics and Business</li>
+          <li><a href="https://sites.google.com/view/deligkas/home" target="_blank">Argyrios Deligkas</a>, Royal Holloway, University of London</li>
+          <li><a href="https://arisfilosratsikas.com/" target="_blank">Aris Filos-Ratsikas</a>, University of Edinburgh</li>
+          <li><a href="https://www.microsoft.com/en-us/research/people/brlucier/" target="_blank">Brendan Lucier</a>, Microsoft Research</li>
+          <li><a href="https://www.kcl.ac.uk/people/carmine-ventre" target="_blank">Carmine Ventre</a>, King’s College London</li>
+          <li><a href="https://sites.google.com/view/gchristo" target="_blank">George Christodoulou</a>, Aristotle University of Thessaloniki</li>
+          <li><a href="https://sites.google.com/view/giovanna-varricchio/" target="_blank">Giovanna Varricchio</a>, Università della Calabria</li>
+          <li><a href="https://homepages.cwi.nl/~schaefer/" target="_blank">Guido Schaefer</a>, Centrum Wiskunde &amp; Informatica (CWI)</li>
+          <li><a href="https://hanruizha.github.io/" target="_blank">Hanrui Zhang</a>, Chinese University of Hong Kong</li>
+          <li><a href="https://www.gla.ac.uk/schools/business/staff/hervemoulin/" target="_blank">Hervé Moulin</a>, University of Glasgow</li>
+          <li><a href="https://www.fuhuthu.com/" target="_blank">Hu Fu</a>, Shanghai University of Finance and Economics</li>
+          <li><a href="http://www.inbaltalgam.com/" target="_blank">Inbal Talgam-Cohen</a>, Tel Aviv University</li>
+          <li><a href="https://jiangtaoli.weebly.com/" target="_blank">Jiangtao Li</a>, Singapore Management University</li>
+          <li><a href="https://hpc.cs.tsinghua.edu.cn/en/info/1537/2714.htm" target="_blank">Jing Chen</a>, Tsinghua University</li>
+          <li><a href="https://www.kiragoldner.com/" target="_blank">Kira Goldner</a>, Boston University</li>
+          <li><a href="https://sites.google.com/view/marcoscarsini/home" target="_blank">Marco Scarsini</a>, Luiss University</li>
+          <li><a href="https://www.cs.ucy.ac.cy/~mavronic/" target="_blank">Marios Mavronicolas</a>, University of Cyprus</li>
+          <li><a href="https://martinobanchio.github.io/" target="_blank">Martino Banchio</a>, Università Bocconi, Google Research</li>
+          <li><a href="https://scholar.google.com/citations?user=OFxBCzIAAAAJ&amp;hl=en" target="_blank">Mingfei Zhao</a>, Google Research</li>
+          <li><a href="https://nimahaghpanah.com/" target="_blank">Nima Haghpanah</a>, Yale University</li>
+          <li><a href="https://faculty.chicagobooth.edu/rad-niazadeh" target="_blank">Rad Niazadeh</a>, University of Chicago</li>
+          <li><a href="https://viterbi-web.usc.edu/~shaddin/" target="_blank">Shaddin Dughmi</a>, University of Southern California</li>
+          <li><a href="https://simina.info/" target="_blank">Simina Brânzei</a>, Purdue University</li>
+          <li><a href="https://cs.idc.ac.il/~tami/" target="_blank">Tami Tamir</a>, Reichman University</li>
+          <li><a href="https://www.fim.uni-passau.de/en/mathopt" target="_blank">Tobias Harks</a>, University of Passau</li>
+          <li><a href="https://vahideh-manshadi.com/" target="_blank">Vahideh Manshadi</a>, Yale University</li>
+          <li><a href="https://www.comp.nus.edu.sg/~warut/" target="_blank">Warut Suksompong</a>, National University of Singapore</li>
+          <li><a href="https://www.columbia.edu/~wm2428/" target="_blank">Will Ma</a>, Columbia University</li>
+          <li><a href="https://yambi.jp/" target="_blank">Yasushi Kawase</a>, Tokyo University</li>
+          <li><a href="https://www.ydfeng.us/" target="_blank">Yiding Feng</a>, Hong Kong University of Science and Technology</li>
+          <li><a href="https://yingkai-li.github.io/" target="_blank">Yingkai Li</a>, National University of Singapore</li>
+          <li><a href="https://busi.jiangnan.edu.cn/english/info/1892/10794.htm" target="_blank">Yukun Cheng</a>, Jiangnan University</li>
+          <li><a href="https://yunanli.org/" target="_blank">Yunan Li</a>, City University of Hong Kong</li>
+          <li><a href="https://cfcs.pku.edu.cn/yuqkong/" target="_blank">Yuqing Kong</a>, Peking University</li>
+          <li><a href="https://www.zenanwu.com/" target="_blank">Zenan Wu</a>, Peking University</li>
+          <li><a href="https://sites.google.com/view/zhenzhenyan/home" target="_blank">Zhenzhen Yan</a>, Nanyang Technological University</li>
+          <li><a href="http://zhihaotang.com/" target="_blank">Zhihao Gavin Tang</a>, Shanghai University of Finance and Economics</li>
+          <li><a href="https://mypage.cuhk.edu.cn/academics/wangzizhuo/" target="_blank">Zizhuo Wang</a>, Chinese University of Hong Kong, Shenzhen</li>
+        </ul>
+        
+        <h3>
+           Program Committee
+        </h3>
+        <ul>
+          <li><a href="https://www.asc.ox.ac.uk/person/dr-alexandros-hollender-0" target="_blank">Alexandros Hollender</a>, University of Oxford</li>
+          <li><a href="https://sites.google.com/site/andrewkmackenzie/home" target="_blank">Andrew Mackenzie</a>, Rutgers University</li>
+          <li><a href="https://ansonkahng.com/" target="_blank">Anson Kahng</a>, University of Rochester</li>
+          <li><a href="https://aroikonomou.github.io/" target="_blank">Argyris Oikonomou</a>, Meta</li>
+          <li><a href="https://dblp.org/pid/270/0805.html" target="_blank">Ariel Shaulker</a>, Weizmann Institute of Science</li>
+          <li><a href="https://artemtsikiridis.com/" target="_blank">Artem Tsikiridis</a>, Technical University of Munich</li>
+          <li><a href="https://www.kcl.ac.uk/people/bart-de-keijzer" target="_blank">Bart de Keijzer</a>, King's College London</li>
+          <li><a href="https://jhc.sjtu.edu.cn/~bstao/" target="_blank">Biaoshuai Tao</a>, Shanghai Jiao Tong University</li>
+          <li><a href="https://binliu1009.weebly.com/" target="_blank">Bin Liu</a>, Chinese University of Hong Kong, Shenzhen</li>
+          <li><a href="https://www4.comp.polyu.edu.hk/~bo2li/" target="_blank">Bo Li</a>, Hong Kong Polytechnic University</li>
+          <li><a href="https://celicc.github.io/" target="_blank">Ce Li</a>, Boston University</li>
+          <li><a href="https://cjwangw.weebly.com/" target="_blank">Changjun Wang</a>, University of Chinese Academy of Sciences</li>
+          <li><a href="https://charalamposkokkalis.github.io/" target="_blank">Charalampos Kokkalis</a>, University of Edinburgh</li>
+          <li><a href="https://clathomasprime.github.io/" target="_blank">Clayton Thomas</a>, Yale University</li>
+          <li><a href="https://sites.google.com/view/cosimo-vinci" target="_blank">Cosimo Vinci</a>, University of Salento</li>
+          <li><a href="https://sites.google.com/view/dpizarro" target="_blank">Dana Pizarro</a>, Toulouse Business School</li>
+          <li><a href="https://danschoepflin.github.io/" target="_blank">Daniel Schoepflin</a>, Rutgers University</li>
+          <li><a href="https://dfengecon.github.io/" target="_blank">Di Feng</a>, Dongbei University of Finance and Economics</li>
+          <li><a href="https://sites.google.com/view/dihanzou" target="_blank">Dihan Zou</a>, University of North Carolina at Chapel Hill</li>
+          <li><a href="https://docenti.unisa.it/023604/home" target="_blank">Diodato Ferraioli</a>, University of Salerno</li>
+          <li><a href="https://knopdusa.pages.fit/" target="_blank">Dusan Knop</a>, Czech Technical University in Prague</li>
+          <li><a href="https://sites.google.com/view/elliot-anshelevich" target="_blank">Elliot Anshelevich</a>, Rensselaer Polytechnic Institute</li>
+          <li><a href="https://www.cs.drexel.edu/~ep556/" target="_blank">Emmanouil Pountourakis</a>, Drexel University</li>
+          <li><a href="https://hpi.de/friedrich/people/george-skretas.html" target="_blank">George Skretas</a>, Hasso Plattner Institute, University of Potsdam</li>
+          <li><a href="https://sites.google.com/site/gebirbas/" target="_blank">Georgios Birmpas</a>, University of Liverpool</li>
+          <li><a href="https://gvelegkas.github.io/" target="_blank">Grigoris Velegkas</a>, Google Research</li>
+          <li><a href="https://people.mpi-inf.mpg.de/~hakrami/" target="_blank">Hannaneh Akrami</a>, Saarland Informatics Campus, Max Planck Institute</li>
+          <li><a href="https://sites.google.com/view/hengliu/home" target="_blank">Heng Liu</a>, Rensselaer Polytechnic Institute</li>
+          <li><a href="https://www.jamie.tuckerfoltz.com/" target="_blank">Jamie Tucker-Foltz</a>, Yale University</li>
+          <li><a href="https://www.jessiefin.com/" target="_blank">Jessica Finocchiaro</a>, Boston College</li>
+          <li><a href="https://sites.google.com/view/jiaqilu" target="_blank">Jiaqi Lu</a>, Chinese University of Hong Kong, Shenzhen</li>
+          <li><a href="https://jgan.xyz/" target="_blank">Jiarui Gan</a>, University of Oxford</li>
+          <li><a href="https://jiashuo3.github.io/" target="_blank">Jiashuo Jiang</a>, Hong Kong University of Science and Technology</li>
+          <li><a href="https://www.jinzhaowu.com/" target="_blank">Jinzhao Wu</a>, Yale University</li>
+          <li><a href="https://imjjchen.github.io/" target="_blank">Junjie Chen</a>, National University of Singapore</li>
+          <li><a href="https://junnanhe.weebly.com/" target="_blank">Junnan He</a>, Sciences Po</li>
+          <li><a href="https://fujiik.github.io/" target="_blank">Kaito Fujii</a>, National Institute of Informatics</li>
+          <li><a href="https://sites.google.com/view/kexinwang" target="_blank">Kexin Wang</a>, Singapore Management University</li>
+          <li><a href="https://zabarnyi.cswp.cs.technion.ac.il/" target="_blank">Konstantin Zabarnyi</a>, Yale University</li>
+          <li><a href="https://users-cs.au.dk/arnsfelt/" target="_blank">Kristoffer Arnsfelt Hansen</a>, Aarhus University</li>
+          <li><a href="https://bs.usst.edu.cn/Eng/2022/0907/c13582a303885/page.htm" target="_blank">Ling Gai</a>, University of Shanghai for Science and Technology</li>
+          <li><a href="https://papireddygari.github.io/" target="_blank">Maneesha Papireddygari</a>, Boston College</li>
+          <li><a href="https://www.mimuw.edu.pl/~amosild/" target="_blank">Marcin Konrad Dziubiński</a>, Warsaw University</li>
+          <li><a href="https://martin-bullinger.github.io/" target="_blank">Martin Bullinger</a>, University of Bristol</li>
+          <li><a href="https://mathieu-molina.github.io/" target="_blank">Mathieu Molina</a>, Tel Aviv University</li>
+          <li><a href="https://mhamilton-pitt.github.io/" target="_blank">Michael L. Hamilton</a>, University of Pittsburgh</li>
+          <li><a href="https://users.ics.forth.gr/~mfasoul/" target="_blank">Michail Fasoulakis</a>, Royal Holloway, University of London</li>
+          <li><a href="https://www.latifian.me/" target="_blank">Mohamad Latifian</a>, University of Edinburgh</li>
+          <li><a href="https://www.seas.upenn.edu/~ncollina/" target="_blank">Natalie Collina</a>, University of Pennsylvania</li>
+          <li><a href="https://nicosprotopapas.github.io/" target="_blank">Nicos Protopapas</a>, Archimedes, Athena Research Center</li>
+          <li><a href="https://www.essex.ac.uk/people/KANEL33803/Panagiotis-Kanellopoulos" target="_blank">Panagiotis Kanellopoulos</a>, University of Essex</li>
+          <li><a href="https://paolopenna.com/" target="_blank">Paolo Penna</a>, Input Output Global (IOG)</li>
+          <li><a href="https://sites.google.com/view/pieter-kleer/" target="_blank">Pieter Kleer</a>, Tilburg University</li>
+          <li><a href="https://zhangqian.fan/" target="_blank">Qianfan Zhang</a>, Princeton University</li>
+          <li><a href="https://www.qianjunlyu.com/" target="_blank">Qianjun Lyu</a>, University Carlos III of Madrid</li>
+          <li><a href="https://rojinrezvan.github.io/" target="_blank">Rojin Rezvan</a>, University of Texas at Austin</li>
+          <li><a href="https://rzhu.github.io/" target="_blank">Ruihao Zhu</a>, Cornell University</li>
+          <li><a href="http://samueltaggart.com/" target="_blank">Samuel Taggart</a>, Oberlin College</li>
+          <li><a href="https://www.shanglyudeng.com/" target="_blank">Shanglyu Deng</a>, University of Macau</li>
+          <li><a href="https://shaulrosner.github.io/" target="_blank">Shaul Rosner</a>, Tel Aviv University</li>
+          <li><a href="https://sites.google.com/view/shengweizhou/" target="_blank">Shengwei Zhou</a>, Nanyang Technological University</li>
+          <li><a href="https://shengxin-liu.github.io/" target="_blank">Shengxin Liu</a>, Harbin Institute of Technology, Shenzhen</li>
+          <li><a href="https://sites.gatech.edu/shixinwang/" target="_blank">Shixin Wang</a>, Georgia Institute of Technology</li>
+          <li><a href="https://www.simonfinster.com/" target="_blank">Simon Finster</a>, Johannes Kepler University Linz</li>
+          <li><a href="https://pages.fit.cvut.cz/schiesim/" target="_blank">Šimon Schierreich</a>, Czech Technical University in Prague</li>
+          <li><a href="https://gsreedurga.wixsite.com/mysite" target="_blank">Sreedurga Gogulapati</a>, University of Edinburgh</li>
+          <li><a href="https://scholar.google.com/citations?user=bPql4RYAAAAJ&amp;hl=en" target="_blank">Stavros Ioannidis</a>, Royal Holloway, University of London</li>
+          <li><a href="https://suhoshin.github.io/" target="_blank">Suho Shin</a>, University of Maryland</li>
+          <li><a href="https://sites.google.com/view/sulagna" target="_blank">Sulagna Dasgupta</a>, Cornell University</li>
+          <li><a href="https://goelsumit.com/" target="_blank">Sumit Goel</a>, New York University Abu Dhabi</li>
+          <li><a href="https://taikitodo.github.io/" target="_blank">Taiki Todo</a>, Kyushu University</li>
+          <li><a href="https://tao-l.github.io/" target="_blank">Tao Lin</a>, Microsoft Research</li>
+          <li><a href="https://sites.google.com/view/themistoklismelissourgos" target="_blank">Themistoklis Melissourgos</a>, University of Essex</li>
+          <li><a href="https://sites.google.com/view/timoosterwijk/" target="_blank">Tim Oosterwijk</a>, Vrije Universiteit Amsterdam</li>
+          <li><a href="https://ponitka.github.io/" target="_blank">Tomasz Ponitka</a>, Tel Aviv University</li>
+          <li><a href="https://vaslivanos.github.io/" target="_blank">Vasilis Livanos</a>, EPFL</li>
+          <li><a href="https://sites.google.com/view/wanchangzhang" target="_blank">Wanchang Zhang</a>, Chinese University of Hong Kong, Shenzhen</li>
+          <li><a href="https://wtang.org/" target="_blank">Wei Tang</a>, Chinese University of Hong Kong</li>
+          <li><a href="https://weichengmin.weebly.com/" target="_blank">Weicheng Min</a>, Shanghai Jiao Tong University</li>
+          <li><a href="https://weiqiang-zheng.com/" target="_blank">Weiqiang Zheng</a>, Yale University</li>
+          <li><a href="https://www.weiran-shen.info/" target="_blank">Weiran Shen</a>, Renmin University of China</li>
+          <li><a href="https://personal.ntu.edu.sg/xhbei/" target="_blank">Xiaohui Bei</a>, Nanyang Technological University</li>
+          <li><a href="https://xiaoqitan.org/" target="_blank">Xiaoqi Tan</a>, University of Alberta</li>
+          <li><a href="https://sites.google.com/site/wxw0711/" target="_blank">Xiaowei Wu</a>, University of Macau</li>
+          <li><a href="https://sites.google.com/view/xinhuang" target="_blank">Xin Huang</a>, Kyushu University</li>
+          <li><a href="https://xizhitan.github.io/" target="_blank">Xizhi Tan</a>, Stanford University</li>
+          <li><a href="https://yanwei-sun.github.io/" target="_blank">Yanwei Sun</a>, Imperial College London</li>
+          <li><a href="https://yj10027.github.io/" target="_blank">Yaonan Jin</a>, Huawei</li>
+          <li><a href="https://litcwyf.github.io/" target="_blank">Yifan Wang</a>, Georgia Institute of Technology</li>
+          <li><a href="https://yifanwu.me/" target="_blank">Yifan Wu</a>, Microsoft Research</li>
+          <li><a href="https://sds.cuhk.edu.cn/en/teacher/447" target="_blank">Yilun Chen</a>, Chinese University of Hong Kong, Shenzhen</li>
+          <li><a href="https://tomtao26.github.io/" target="_blank">Yixin Tao</a>, Shanghai University of Finance and Economics</li>
+          <li><a href="https://www.yotamgafni.com/" target="_blank">Yotam Gafni</a>, Weizmann Institute of Science</li>
+          <li><a href="https://sites.google.com/site/yuzhouosaka/" target="_blank">Yu Zhou</a>, Nagoya University</li>
+          <li><a href="https://yuhao.li/" target="_blank">Yuhao Li</a>, Columbia University</li>
+          <li><a href="http://www.zyhwtc.com/" target="_blank">Yuhao Zhang</a>, Shanghai Jiao Tong University</li>
+          <li><a href="https://comp-math-econ.academy/index_.html" target="_blank">Yun Kuen Cheung</a>, Australian National University</li>
+          <li><a href="https://ruyc.github.io/" target="_blank">Yurong Chen</a>, Inria, École Normale Supérieure, PSL Research University</li>
+          <li><a href="https://sites.google.com/view/zhaohong-sun/home" target="_blank">Zhaohong Sun</a>, Kyushu University</li>
+          <li><a href="https://daleczh.github.io/" target="_blank">Zhaohua Chen</a>, Peking University</li>
+          <li><a href="https://sites.google.com/view/wangzhen/home" target="_blank">Zhen Wang</a>, Shanghai University of Finance and Economics</li>
+          <li><a href="https://sites.google.com/view/z-chen" target="_blank">Zhi Chen</a>, Chinese University of Hong Kong</li>
+          <li><a href="https://people.iiis.tsinghua.edu.cn/~fang/" target="_blank">Zhixuan Fang</a>, Tsinghua University</li>
+          <li><a href="https://zhkuang.weebly.com/" target="_blank">Zhonghong Kuang</a>, Renmin University of China</li>
+          <li><a href="http://www.zhuoranlu.com/" target="_blank">Zhuoran Lu</a>, Shanghai Jiao Tong University</li>
+          <li><a href="http://ai.ruc.edu.cn/english/GSAI_FACULTY/ac7a00893c93469bb66b0ce0b9e6bcef.htm" target="_blank">Zihe Wang</a>, Renmin University of China</li>
+          <li><a href="https://sites.google.com/view/zijiezhou/" target="_blank">Zijie Zhou</a>, Hong Kong University of Science and Technology</li>
+        </ul>
+
+        <h3>
+          Local Organizers
+        </h3>
+        <ul>
+          <li><a href="https://sites.google.com/view/shahrzadhaddadan/" target="_blank">Shahrzad Haddadan</a>, Rutgers University</li>
+          <li><a href="https://www.cs.rutgers.edu/people/professors/details/david-pennock" target="_blank">David Pennock</a>, Rutgers University</li>
+          <li><a href="http://aruneshsinha.net/" target="_blank">Arunesh Sinha</a>, Rutgers University</li>
+          <li><a href="https://xintongemilywang.github.io/" target="_blank">Xintong Wang</a>, Rutgers University</li>
+          <li><a href="https://people.cs.rutgers.edu/~lirong.xia/" target="_blank">Lirong Xia</a>, Rutgers University</li>
+        </ul>
+        
+        <h3>Steering Committee</h3>
+        <ul>
+          <li><a href="https://cfcs.pku.edu.cn/english/people/faculty/xiaotiedeng/index.htm" target="_blank">Xiaotie Deng</a>, Peking University, China</li>
+          <li><a href="https://www.cs.ox.ac.uk/people/paul.goldberg/" target="_blank">Paul Goldberg</a>, University of Oxford, UK</li>
+          <li><a rel="noreferrer noopener" href="https://engineering.columbia.edu/faculty/christos-papadimitriou" target="_blank">Christos Papadimitriou</a>, Columbia University, USA</li>
+          <li><a href="https://www.liverpool.ac.uk/computer-science/staff/paul-spirakis/" target="_blank">Paul Spirakis</a>, University of Liverpool, UK</li>
+          <li><a href="https://sites.google.com/site/quaerereverum9/" target="_blank">Rakesh Vohra</a>, University of Pennsylvania, USA</li>
+          <li><a href="https://iiis.tsinghua.edu.cn/en/People/Faculty/yaoqizhi.htm" target="_blank">Andrew Yao</a>, Tsinghua University, China</li>
+          <li><a href="https://web.stanford.edu/~yyye/" target="_blank">Yinyu Ye</a>, Stanford University, USA</li>
+          <li><a href="https://www.mfeldman.sites.tau.ac.il/" target="_blank">Michal Feldman</a>, Tel Aviv University, Israel <span class="fade">(joint ACM-EC/WINE executive committee)</span>
+          </li>
+          <li>
+            <a href="https://eml.berkeley.edu/~fechenique/" target="_blank">Federico Echenique</a>, UC Berkeley, USA <span class="fade">(joint ACM-EC/WINE executive committee)</span>
+          </li>
+          <li>
+            <a href="https://www.microsoft.com/en-us/research/people/brlucier/" target="_blank">Brendan Lucier</a>, Microsoft Research, USA <span class="fade">(joint ACM-EC/WINE executive committee)</span>
+          </li>
+        </ul>
+        
+        </div>
+        
+        
+        <div id="schedule" class="tab-content" style="display: none;">
+          <h2>Schedule</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          
+          <h3>Time for Onsite Registration and Checking in</h3>
+          <ul>
+            <li> December 8, 8:30–15:30 </li>
+            <li> December 9, 8:30–15:30 </li>
+            <li> December 10, 8:30–12:30 </li>
+          </ul>
+          
+          <h3>Room Assignment</h3>
+          <ul>
+            <li> <strong>Conference Room A</strong>: Sessions xA, and Tutorials 1 &amp; 3 </li>
+            <li> <strong>Dining Hall</strong>: All plenary sessions, Sessions xB, and Tutorials 2 &amp; 4 </li>
+          </ul>
+          <h3>Schedule Overview</h3>
+          <p>Most sessions have four talks each. Each talk (in Sessions 1–8) is scheduled to run for 20 minutes plus another 2.5 minutes for questions and answers.</p>
+          <table class="centered">
+            <tbody><tr>
+              <td><span class="fade">Date and Time</span></td>
+              <th>December 8</th>
+              <th>December 9</th>
+              <th>December 10</th>
+              <th>December 11</th>
+            </tr>
+            <tr>
+              <th>Starting at 8:30</th>
+              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">🥐</span> Light Breakfast <span class="no-dark">🥐</span></td>
+            </tr>
+            <tr>
+              <th>8:50–9:00</th>
+              <td style="background-color: #D0D0D0;"></td>
+              <td>Opening Remarks (Dining Hall)</td>
+              <td colspan="2" style="background-color: #D0D0D0;"></td>
+            </tr>
+            <tr>
+              <th>9:00–10:30</th>
+              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-1">1</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-2">2</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-1a">1A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-1b">1B</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-4a">4A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-4b">4B</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-6a">6A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-6b">6B</a></td>
+            </tr>
+            <tr>
+              <th>10:30–11:00</th>
+              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">☕</span> Coffee Break <span class="no-dark">☕</span></td>
+            </tr>
+            <tr>
+              <th>11:00–12:30</th>
+              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-1">1</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-2">2</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-2a">2A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-2b">2B</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-5a">5A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-5b">5B</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-7a">7A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-7b">7B</a></td>
+            </tr>
+            <tr>
+              <th>12:30–14:00</th>
+              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">🍴</span> Lunch <span class="no-dark">🍴</span></td>
+            </tr>
+            <tr>
+              <th>14:00–15:00</th>
+              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-3">3</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-4">4</a></td>
+              <td>Invited Talk: <i>Recent Developments in Fixed Point Computation</i>, by Xi Chen (Columbia)</td>
+              <td>Invited Talk: <i>Revenue Maximization with Minimal Information</i>, by Sigal Oren (Ben-Gurion)</td>
+              <td>Invited Talk: <i>Privacy and Discrimination</i>, by Philipp Strack (Yale)</td>
+            </tr>
+            <tr>
+              <th>15:00–15:30</th>
+              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">☕</span> Coffee Break <span class="no-dark">☕</span></td>
+            </tr>
+            <tr>
+              <th>15:30–17:30</th>
+              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-3">3</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-4">4</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-3a">3A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-3b">3B</a></td>
+              <td><a href="https://wine2025.cs.rutgers.edu/#session-best">Best Paper Awards</a>, <a href="https://wine2025.cs.rutgers.edu/#graduating-bits-talks">Graduating Bits</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#sponsor-spotlight">Sponsor Spotlight</a></td>
+              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-8a">8A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-8b">8B</a></td>
+            </tr>
+            <tr>
+              <th>18:00–19:30</th>
+              <td rowspan="2" style="background-color: #D0D0D0;"></td>
+              <td rowspan="2">Conference Dinner, Sponsored by Google</td>
+              <td>Business Meeting</td>
+              <td rowspan="2" style="background-color: #D0D0D0;"></td>
+            </tr>
+            <tr>
+              <th>19:30–21:00</th>
+              <td style="background-color: #D0D0D0;"></td>
+            </tr>
+          </tbody></table>
+          
+          
+          
+          <h3 id="tutorial-1">Tutorial 1 (9:00–10:30 and 11:00–12:30, December 8): <a href="https://sites.google.com/view/arielsch/wine-2025-tutorial?authuser=0" target="_blank">Tournament Design</a></h3>
+          <p><span class="fade">Organizer:</span> Ariel Schvartzman (Google Research)</p>
+          <p><span class="fade">Introduction:</span> How should the organizer of a round-robin tournament choose one of n teams as the winner in a fair manner? This is a question that has practical implications for everything from major sports competitions, like the World Cup and the Olympic Games, to theoretical implications for mechanism design and computational social choice. In this tutorial, we aim to present a growing line of work that addresses this question and highlight some elusive open questions and conjectures.</p>
+          
+          
+          <h3 id="tutorial-2">Tutorial 2 (9:00–10:30 and 11:00–12:30, December 8): <a href="https://xintongemilywang.github.io/assets/WINE_25_tutorial.pdf" target="_blank">Truth by Design: Proper Scoring Rules from Contracts to Markets</a></h3>
+          <p><span class="fade">Organizers:</span> Fang-Yi Yu (George Mason University); Xintong Wang (Rutgers University)</p>
+          <p><span class="fade">Introduction:</span> As forecasts steer real decisions—from allocating vaccines to pricing risk, reliable evaluation and incentives are essential. This tutorial surveys proper scoring rules, the backbone of probabilistic forecast evaluation and designing truthful reporting mechanisms. We introduce proper scoring rules as contracts that reward accurate forecasts and develop their geometric (convex-analytic) intuition. We then generalize to property elicitation, which characterizes which statistics of an outcome (e.g., means, quantiles) are elicitable, and to surrogate (proxy) scoring, which evaluates forecasts using stochastically related observations.</p>
+          <p>Building on this foundation, we survey applications of proper scoring rules. First, information elicitation aims to design payments to elicit truthful reports or even motivate costly information acquisition. We will survey a family of peer prediction mechanisms using proper scoring rules. Second, prediction markets, which serve as automatic market makers for prediction, use proper scoring rules to design trades that aggregate predictions in real time. We will focus on designing efficient algorithms for markets when the prediction space is large. We close with related topics—wagering mechanisms, forecast competitions and aggregation, and evaluating (multi-)calibration.</p>
+          
+          
+          
+          <h3 id="tutorial-3">Tutorial 3 (14:00–15:00 and 15:30–17:30, December 8): <a href="https://sites.google.com/pitt.edu/wine-2025-tutorial-yuxin" target="_blank">Differential Privacy for Strategic Information Sharing and Learning: Foundations, Mechanisms, and Applications</a></h3>
+          <p><span class="fade">Organizers:</span> M. Amin Rahimian (University of Pittsburgh); Juba Ziani (Georgia Institute of Technology); Marios Papachristou (Arizona State University); Yuxin Liu (University of Pittsburgh)</p>
+          <p><span class="fade">Introduction:</span> The increasing prevalence of data-driven decision making requires robust mechanisms to protect sensitive information while allowing its utility for collective benefit. Differential Privacy (DP) offers a rigorous framework for achieving strong privacy guarantees. This tutorial will explore how differential privacy can be leveraged to facilitate secure and privacy-preserving information sharing in various contexts. We will dive into the fundamental concepts of DP and discuss its application in scenarios where data are acquired, shared, aggregated, or processed to derive collective insights, ensuring individual contributions remain private.</p>
+          <p>The tutorial will cover recent advances in applying DP to practical challenges in information exchange, including methods for private estimation, learning, and inference, as well as incentive compatible and privacy-preserving mechanisms for optimal data sharing and acquisition. Attendees will gain an understanding of the trade-offs involved in designing DP mechanisms for real-world systems and learn about the techniques that enable effective information flow while mitigating privacy risks. Our discussion will highlight the importance of careful design to balance privacy with the goals of data utility, sharing, and collaborative knowledge generation, as well as open problems and research questions of interest to the WINE community in this space.</p>
+          
+          
+          <h3 id="tutorial-4">Tutorial 4 (14:00–15:00 and 15:30–17:30, December 8): <a href="https://sites.google.com/view/infor-design-calibration/home" target="_blank">Information Design Perspective on Calibration</a></h3>
+          <p><span class="fade">Organizers:</span> Wei Tang (Chinese University of Hong Kong); Yiding Feng (Hong Kong University of Science and Technology)</p>
+          <p><span class="fade">Introduction:</span> This tutorial explores the role of information design in studying and improving calibration for decision making. Calibration is crucial in scenarios where accurate predictions or decisions based on uncertain or incomplete information are necessary, such as in online markets, machine learning, or healthcare. In the first part, we will introduce the foundational concepts of calibration, the challenges in decision-making under uncertainty, and how information design techniques can be leveraged to study and enhance calibration. In the second part, we will delve into advanced topics, including applications of calibration in modern settings. The tutorial aims to equip participants with a deep understanding of how to analyze and improve calibration in decision-making processes using principles from information design.</p>
+          
+          
+          <h3 id="session-1a">Session 1A (9:00–10:30, December 9): AI and Game Theory</h3>
+          <ul>
+            <li> <strong>Multi-Armed Bandits With Machine Learning-Generated Surrogate Rewards</strong> <br> Wenlong Ji (Stanford University); Yihan Pan (Northwestern University); Ruihao Zhu (Cornell University); Lihua Lei (Stanford University) </li>
+            <li> <strong>Will AI Trade? A Computational Inversion of the No-Trade Theorem</strong> <br> Hanyu Li, Xiaotie Deng (Peking University) </li>
+            <li> <strong>Accelerated Preference Elicitation with LLM Proxies</strong> <br> David Huang (Harvard University); Francisco Marmolejo-Cossio (Boston College, Harvard University, IOG); Edwin Lock (University of Oxford); David Parkes (Harvard University) </li>
+            <li> <strong>Misalignment, Learning, and Ranking: Harnessing Users Limited Attention</strong> <br> Arpit Agarwal (IIT Bombay); Rad Niazadeh (University of Chicago); Prathamesh Patil (JP Morgan Chase) </li>
+          </ul>
+          
+          
+          <h3 id="session-1b">Session 1B (9:00–10:30, December 9): Pricing</h3>
+          <ul>
+            <li> <strong>Bounds on the revenue gap of linear posted pricing for selling a divisible item</strong> <br> Ioannis Caragiannis, Zhile Jiang (Aarhus University); Apostolis Kerentzis (Hellenic Air Force) </li>
+            <li> <strong>Optimal Robust Pricing with Minimal Information</strong> <br> Yan Ge (Shanghai University of Finance and Economics); Simai He (Shanghai Jiao Tong University); Zhen Wang (Shanghai University of Finance and Economics); Zizhuo Wang (The Chinese University of Hong Kong, Shenzhen) </li>
+            <li> <strong>Repeated Sales with Heterogeneous Buyer Sophistication</strong> <br> Rishi Patel, Emmanouil Pountourakis (Drexel University); Samuel Taggart (Oberlin College) </li>
+            <li> <strong>Dynamic Pricing with Adversarially-Censored Demands</strong> <br> Jianyu Xu (Carnegie Mellon University); Yining Wang (UT Dallas); Xi Chen (New York University); Yu-Xiang Wang (University of California San Diego) </li>
+          </ul>
+          
+          
+          <h3 id="session-2a">Session 2A (11:00–12:30, December 9): Fairness and Social Choice</h3>
+          <ul>
+            <li> <strong>Compatibility of Max and Sum Objectives for Committee Selection and k-Facility Location</strong> <br> Elliot Anshelevich, Yue Han (Rensselaer Polytechnic Institute) </li>
+            <li> <strong>Justified Representation: From Hare to Droop</strong> <br> Matthew M. Casey, Edith Elkind (Northwestern University) </li>
+            <li> <strong>Bin Packing and Covering: Pushing the Frontier on the Maximin Share Fairness</strong> <br> Bo Li, Ankang Sun (The Hong Kong Polytechnic University); Zunyu Wang (Huazhong University of Science and Technology); Yu Zhou (The Pennsylvania State University) </li>
+            <li> <strong>Improved Approximate EFX Guarantees for Multigraphs</strong> <br> Alireza Kaviani, Alireza Keshavarz (Sharif University of Technology); Masoud Seddighin (Tehran Institute for Advanced Studies); Amir Mohammad Shahrezaei (Sharif University of Technology) </li>
+          </ul>
+          
+          
+          <h3 id="session-2b">Session 2B (11:00–12:30, December 9): Behavioral and Decision Theory</h3>
+          <ul>
+            <li> <strong>Strategic Behavior in Crowdfunding: Insights from a Large-Scale Online Experiment</strong> <br> Din Amir, Bar Hoter, Moran Koren (Ben-Gurion University) </li>
+            <li> <strong>Behavioral Study of Dashboard Mechanisms</strong> <br> Paula Kayongo (Northwestern Univeristy); Jessica Hullman, Jason Hartline (Northwestern University) </li>
+            <li> <strong>Commitment Gap via Correlation Gap</strong> <br> Dimitrios Christou (University of Texas at Austin); Shuchi Chawla (UT Austin) </li>
+            <li> <strong>Online Selection with Uncertain Disruption</strong> <br> Yihua Xu, Suleyman Kerimov, Sebastian Perez-Salazar (Rice University) </li>
+          </ul>
+          
+          
+          <h3 id="session-3a">Session 3A (15:30–17:25, December 9): Mechanism Design</h3>
+          <ul>
+            <li> <strong>Bilateral Exclusion in Discrete Exchange Economies</strong> <br> Zhibin Tan, Ertan Zhuang (Beijing Jiaotong University) </li>
+            <li> <strong>Optimal Automated Market Makers: Differentiable Economics and Strong Duality</strong> <br> Michael Curry (University of Illinois Chicago); Zhou Fan, David Parkes (Harvard University) </li>
+            <li> <strong>Achieving Coordination in Non-Cooperative Joint Replenishment Games</strong> <br> Junjie Luo (Beijing Jiaotong University); Changjun Wang (University of Chinese Academy of Sciences) </li>
+            <li> <strong>Accelerated Price Adjustment for Fisher Markets with Exact Recovery of Competitive Equilibrium</strong> <br> He Chen, Chonghe Jiang, Anthony Man-Cho So (The Chinese University of Hong Kong) </li>
+            <li> <strong>Neighborhood Stability in Assignments on Graphs</strong> <br> Haris Aziz (UNSW Sydney); Grzegorz Lisowski (AGH University); Mashbat Suzuki, Jeremy Vollen (UNSW Sydney) </li>
+          </ul>
+          
+          
+          <h3 id="session-3b">Session 3B (15:30–17:00, December 9): Matching</h3>
+          <ul>
+            <li> <strong>Two-Sided Fairness in Many-to-One Matching</strong> <br> Ayumi Igarashi (University of Tokyo); Naoyuki Kamiyama (Kyushu University); Yasushi Kawase (University of Tokyo); Warut Suksompong (National University of Singapore); Hanna Sumita, Yu Yokoi (Institute of Science Tokyo) </li>
+            <li> <strong>Fair Metric Distortion for Matching with Preferences</strong> <br> Jabari Hastings, Prasanna Ramakrishnan (Stanford University) </li>
+            <li> <strong>The Popular Dimension of Matchings</strong> <br> Frank Connor, Louis-Roy Langevin, Ndiame Ndiaye, Agnès Totschnig, Rohit Vasishta, Adrian Vetta (McGill University) </li>
+            <li> <strong>Characterizing Super Stability in the Roommate Problem Under Weak Preferences</strong> <br> Bin Yu (Guangri Research and Development Institute) </li>
+          </ul>
+          
+          
+          <h3 id="session-4a">Session 4A (9:00–10:30, December 10): Online Algorithms</h3>
+          <ul>
+            <li> <strong>New Concentration Bounds and Their Applications in Online Resource Allocation</strong> <br> Jinshan Zhang (Zhejiang University); Biaoshuai Tao (Shanghai Jiaotong University); Nan Zhao, Meng Xi, Tao Jin, Jianwei Yin (Zhejiang University) </li>
+            <li> <strong>Robustness of Online Inventory Balancing to Inventory Shocks</strong> <br> Yiding Feng (Hong Kong University of Science and Technology); Rad Niazadeh (University of Chicago); Amin Saberi (Stanford University) </li>
+            <li> <strong>Constant Approximation for Network Revenue Management with Markovian-Correlated Customer Arrivals</strong> <br> Jiashuo Jiang (The Hong Kong University of Science and Technology) </li>
+            <li> <strong>Potential-Based Greedy Matching for Dynamic Delivery Pooling</strong> <br> Hongyao Ma, Will Ma, Matias Romero (Columbia University) </li>
+          </ul>
+          
+          
+          <h3 id="session-4b">Session 4B (9:00–10:30, December 10): Mechanism Design</h3>
+          <ul>
+            <li> <strong>Improved Budget-Feasible Mechanisms for Submodular Valuations: Beating 4 Deterministically in Linear Time</strong> <br> Kai Han, Pinyan Lu (Shanghai University of Finance and Economics) </li>
+            <li> <strong>Decentralized Signaling Mechanisms</strong> <br> Niloufar Mirzavand Boroujeni (Institute for Data Science in Oncology, The University of Texas MD Anderson Cancer Center); Krishnamurthy Iyer, William L. Cooper (University of Minnesota) </li>
+            <li> <strong>Ex-Ante Truthful Distribution-Reporting Mechanisms</strong> <br> Xiaotie Deng, Yanru Guan, Ningyuan Li (Peking University); Zihe Wang (Renmin University of China); Jie Zhang (University of Bath) </li>
+            <li> <strong>Inspect or Guess? Mechanism Design with Unobservable Inspection</strong> <br> Ali Daei Naby (Rotman School of Management, University of Toronto); Saeed Alaei (Google Research); Azarakhsh Malekian (Rotman School of Management, University of Toronto) </li>
+          </ul>
+          
+          
+          <h3 id="session-5a">Session 5A (11:00–12:30, December 10): Online Algorithms</h3>
+          <ul>
+            <li> <strong>Online Job Assignment</strong> <br> Farbod Ekbatani (University of Chicago Booth School of Business); Yiding Feng (Hong Kong University of Science and Technology); Ian Kash (UIC); Rad Niazadeh (University of Chicago) </li>
+            <li> <strong>Online Makespan Minimization: Beat LPT by Dynamic Locking</strong> <br> Zhaozi Wang (New York University); Zhiwei Ying, Yuhao Zhang (Shanghai Jiao Tong University) </li>
+            <li> <strong>Multi-Unit Combinatorial Prophet Inequalities</strong> <br> Shuchi Chawla (UT Austin); Trung Dang (The University of Texas at Austin); Zhiyi Huang (University of Texas at Austin); Yifan Wang (Georgia Institute of Technology) </li>
+            <li> <strong>Prophet Inequalities with Stochastic Choices</strong> <br> Shaoyu Wang, Pin Gao, Guillermo Gallego (The Chinese University of Hong Kong, Shenzhen); Su Zhao (Meituan) </li>
+          </ul>
+          
+          
+          <h3 id="session-5b">Session 5B (11:00–12:30, December 10): Games and Complexity</h3>
+          <ul>
+            <li> <strong>Constant Inapproximability of Pacing Equilibria in Second-Price Auctions</strong> <br> Xi Chen, Yuhao Li (Columbia University) </li>
+            <li> <strong>On the Complexity of Stationary Nash Equilibria in Discounted Perfect Information Stochastic Games</strong> <br> Kristoffer Arnsfelt Hansen, Xinhao Nie (Aarhus University) </li>
+            <li> <strong>Price of Anarchy of Algorithmic Monoculture</strong> <br> Robert Kleinberg, Erald Sinanaj, Éva Tardos (Cornell University) </li>
+            <li> <strong>Algorithmic and Structural Complexities of Menus in Unit-Demand Auctions</strong> <br> Clayton Thomas (Yale University); Daniel Schoepflin (Rutgers University); S. Matthew Weinberg (Princeton University) </li>
+          </ul>
+          
+          
+          <h3 id="session-best">Best Paper Awards Session (15:30–16:30, December 10)</h3>
+          <ul>
+            <li> <strong>The Limits of Interval-Regulated Price Discrimination</strong> <br> Kamesh Munagala, Yiheng Shen (Duke University); Renzhe Xu (Shanghai University of Finance and Economics) </li>
+            <li> <strong>Degree-bounded Online Bipartite Matching: OCS vs. Ranking</strong> <br> Yilong Feng, Haolong Li, Xiaowei Wu, Shengwei Zhou (University of Macau) </li>
+          </ul>
+          
+          
+          <h3 id="graduating-bits-talks">Graduating Bits (16:30–17:10, December 10)</h3>
+          <ul>
+            <li><a href="https://goelsumit.com/" target="_blank">Sumit Goel</a>, NYU Abu Dhabi</li>
+            <li><a href="https://www.mashsuzuki.com/" target="_blank">Mashbat Suzuki</a>, UNSW Sydney</li>
+            <li><a href="https://danschoepflin.github.io/" target="_blank">Daniel Schoepflin</a>, DIMACS, Rutgers University</li>
+            <li><a href="https://xu-jy.github.io/" target="_blank">Jianyu Xu</a>, CMU</li>
+            <li><a href="https://yuxinliu1997.github.io/" target="_blank">Yuxin Liu</a>, University of Pittsburgh</li>
+            <li><a href="https://yichiz97.github.io/" target="_blank">Yichi Zhang</a>, DIMACS, Rutgers University</li>
+          </ul>
+          
+          
+          <h3 id="sponsor-spotlight">Sponsor Spotlight (17:10–17:30, December 10)</h3>
+          <ul>
+            <li> <strong>Recent Trends in Market Algorithms Research in GenAI Era</strong> <br> Vahab Mirrokni (Google) </li>
+          </ul>
+          
+          
+          <h3 id="session-6a">Session 6A (9:00–10:30, December 11): Mechanism Design</h3>
+          <ul>
+            <li> <strong>Optimal Prize Design in Parallel Rank-order Contests</strong> <br> Xiaotie Deng (Peking University); Ningyuan Li (Center on Frontiers of Computing Studies, School of CS, Peking University); Weian Li (School of Software, Shandong University); Qi Qi (Gaoling School of Artificial Intelligence, Renmin University of China, Beijing, China) </li>
+            <li> <strong>Less is More: Optimal Contest Design with a Shortlist</strong> <br> Hanbing Liu (Gaoling School of Artificial Intelligence, Renmin University of China); Ningyuan Li (Center on Frontiers of Computing Studies, School of Computer Science, Peking University); Weian Li (School of Software, Shandong University); Qi Qi (Gaoling School of Artificial Intelligence, Renmin University of China); Changyuan Yu (Baidu Inc.) </li>
+            <li> <strong>TTC Domains</strong> <br> Sumit Goel (New York University Abu Dhabi); Yuki Tamura (Ecole Polytechnique, CREST, IP Paris) </li>
+            <li> <strong>Strategyproof Tournament Rules for Teams with a Constant Degree of Selfishness</strong> <br> David Pennock, Daniel Schoepflin, Kangning Wang (Rutgers University) </li>
+          </ul>
+          
+          
+          <h3 id="session-6b">Session 6B (9:00–10:30, December 11): Fair Division</h3>
+          <ul>
+            <li> <strong>Incentive Analysis of Collusion in Fair Division</strong> <br> Haoqiang Huang (HKUST); Biaoshuai Tao (Shanghai Jiao Tong University); Mingwei Yang (Stanford University); Shengwei Zhou (University of Macau) </li>
+            <li> <strong>A Polynomial-Time Algorithm for Fair and Efficient Allocation with a Fixed Number of Agents</strong> <br> Ryoga Mahara (The University of Tokyo) </li>
+            <li> <strong>Fair and Efficient Allocation of Indivisible Mixed Manna</strong> <br> Siddharth Barman (Indian Institute of Science); Vishwa Prakash HV (Chennai Mathematical Institute); Aditi Sethia (Indian Institute of Science, Bangalore); Mashbat Suzuki (UNSW Sydney) </li>
+            <li> <strong>On Pareto-Optimal and Fair Allocations with Personalized Bi-Valued Utilities</strong> <br> Jiarong Jin, Biaoshuai Tao (Shanghai Jiao Tong University) </li>
+          </ul>
+          
+          
+          <h3 id="session-7a">Session 7A (11:00–12:30, December 11): Games and Equilibria</h3>
+          <ul>
+            <li> <strong>Flow Over Time with Tolls</strong> <br> Shaul Rosner (Tel Aviv University); Marc Schröder (Maastricht University); Laura Vargas Koch (RWTH Aachen University) </li>
+            <li> <strong>Multiplayer General Lotto game</strong> <br> Yan Liu (Renmin University of China); Bonan Ni (Tsinghua University); Weiran Shen, Zihe Wang (Renmin University of China); Jie Zhang (University of Bath) </li>
+            <li> <strong>Integer-splittable Bin Packing Games</strong> <br> Bainian Hao (Chang'An University); Carla Michini (University of Wisconsin--Madison) </li>
+            <li> <strong>Cooperation in Bilateral Generalized Network Creation</strong> <br> Hans Gawendowicz (Hasso Plattner Institute, University of Potsdam); Pascal Lenzner (University of Augsburg); Lukas Weyand (Hasso Plattner Institute, University of Potsdam) </li>
+          </ul>
+          
+          
+          <h3 id="session-7b">Session 7B (11:00–12:30, December 11): Auctions</h3>
+          <ul>
+            <li> <strong>Unending Sequential Auctions</strong> <br> Amir Ban (Hebrew University of Jerusalem) </li>
+            <li> <strong>How to Sell High-Dimensional Data Optimally</strong> <br> Andrew Li, R. Ravi, Karan Singh, Zihong Yi, Weizhong Zhang (Carnegie Mellon University) </li>
+            <li> <strong>Robust Optimality of Bundling Goods Beyond Finite Variance</strong> <br> Tim van Eck, Pieter Kleer, Johan van Leeuwaarden (Tilburg University) </li>
+            <li> <strong>The Role of Prescreening in Auctions with Predictions</strong> <br> Yanwei Sun, Fupeng Sun (Imperial College London); Chiwei Yan (University of California, Berkeley); Jiahua Wu (Imperial College London) </li>
+          </ul>
+          
+          
+          <h3 id="session-8a">Session 8A (15:30–17:00, December 11): Blockchain</h3>
+          <ul>
+            <li> <strong>Money Burning Improves Mediated Communication</strong> <br> Yi Liu (Department of Economics, Yale University); Yang Yu (School of Economics and Management, China University of Petroleum-Beijing) </li>
+            <li> <strong>Time Consensus and Censorship Resistance in Blockchains</strong> <br> Arthur Breitman (Tezos Foundation, Switzerland); Dariusz Kowalski, Piotr Krysta (Augusta University) </li>
+            <li> <strong>One-dimensional vs. Multi-dimensional Pricing in Blockchain Protocols</strong> <br> Giorgos Panagiotakos (IOHK); Aggelos Kiayias (University of Edinburgh &amp; IOG); Elias Koutsoupias (University of Oxford); Kyriaki Zioga (National Technical University of Athens) </li>
+            <li> <strong>Selling Privacy in Blockchain Transactions</strong> <br> Georgios Chionas (University of Liverpool); Piotr Krysta (Augusta University); Olga Gorelkina, Rida Laraki (Université Mohammed VI Polytechnique) </li>
+          </ul>
+          
+          
+          <h3 id="session-8b">Session 8B (15:30–17:00, December 11): Pricing</h3>
+          <ul>
+            <li> <strong>Price and Assortment Optimization under the Multinomial Logit Model with Opaque Products</strong> <br> Omar El Housni (Cornell University); Adam Elmachtoub, Harsh Sheth, Jiaqi Shi (Columbia University) </li>
+            <li> <strong>Assortment Optimization for the Multinomial Logit Model with Repeated Customer Interactions</strong> <br> Ningyuan Chen (University of Toronto, Rotman School of Management); Pin Gao, Chenhao Wang (The Chinese University of Hong Kong, Shenzhen); Yao Wang (Xi'an Jiaotong University); Jianpei Wen (Meituan, Beijing, China) </li>
+            <li> <strong>Pricing and Addiction Control for Digital Services</strong> <br> Jiacheng Chang, Xiao Lei, Feng Tian (University of Hong Kong) </li>
+            <li> <strong>Rethinking Pricing in Energy Markets: Pay-as-Bid vs Pay-as-Clear</strong> <br> Ioannis Caragiannis, Zhile Jiang, Stratis Skoulakis (Aarhus University) </li>
+          </ul>
+        </div>
+        
+        
+        <div id="call-for-papers" class="tab-content" style="display: none;">
+          <h2>Call for Papers</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <p>Over the past two decades, researchers from fields such as theoretical computer science, artificial intelligence, operations research, and economics have joined forces to explore the interplay of incentives and computation. These topics are of particular importance for the Internet and enable the interaction of large and diverse populations.</p>
+          <p>The Conference on Web and Internet Economics (WINE, originally known as the Workshop on Internet &amp; Network Economics until 2013) is an interdisciplinary platform for exchanging ideas and findings on incentives and computation from these varied fields. The WINE conference has been held annually since its inception in 2005, and WINE 2025 (<a href="https://wine2025.cs.rutgers.edu/" target="_blank">https://wine2025.cs.rutgers.edu/</a>) will carry on this tradition, taking place on December 8–11, 2025, in New Brunswick, USA, and hosted by Rutgers University. WINE 2025 will be an in-person event.</p>
+          <p>The program will feature invited talks, tutorials, and paper presentations. All paper submissions will be peer-reviewed and evaluated for their originality, technical soundness, significance, and overall contribution.</p>
+          
+          
+          <h3>Topics</h3>
+          <p>We welcome submissions in the area of Web and Internet Economics, including but not limited to the following topics:</p>
+          <ul>
+            <li>Auctions and pricing</li>
+            <li>Behavioral economics and behavioral modeling</li>
+            <li>Blockchains and their applications</li>
+            <li>Computational advertising</li>
+            <li>Computational aspects of equilibria</li>
+            <li>Computational social choice</li>
+            <li>Coalitions, coordination, and collective action</li>
+            <li>Decision theory</li>
+            <li>Econometrics, ML and Data Science</li>
+            <li>Economic and strategic aspects of machine learning models</li>
+            <li>Fair division</li>
+            <li>Information design including contest and contract design</li>
+            <li>Information elicitation</li>
+            <li>Learning in games and markets</li>
+            <li>Market design</li>
+            <li>Matching markets</li>
+            <li>Mechanism design</li>
+            <li>Network games</li>
+            <li>Online platforms and applications</li>
+            <li>Privacy, fairness, and security</li>
+            <li>Revenue management</li>
+            <li>Social networks</li>
+          </ul>
+          <p>Submissions deemed outside the scope of the WINE conference or not of sufficient interest to the WINE community will be desk-rejected.</p>
+          
+          
+          <h3>Important Dates</h3>
+          <ul>
+              <li> Paper submission deadline: July 3, 2025, Anywhere on Earth  </li>
+              <li> Rebuttal deadline: August 24, 2025, Anywhere on Earth  </li>
+              <li> Author notification: September 15, 2025  </li>
+              <li> Conference: December 8–11, 2025  </li>
+          </ul>
+          
+          
+          <h3>FOCS Submissions</h3>
+          <p>Authors with submissions under review at <a href="https://focs.computer.org/2025/">FOCS 2025</a> may simultaneously submit the same work to WINE 2025. However, if a submission is accepted to FOCS 2025, the authors must promptly withdraw the corresponding submission from WINE 2025. The scheduled notification date of FOCS 2025 is July 8, 2025.</p>
+          
+          
+          <h3>Invited Talks</h3>
+          <p>The program will feature three keynote talks. The keynote speakers and the topics of their talks will be announced soon.</p>
+          
+          
+          <h3>Submission Server</h3>
+          <p>Submissions should be made at <a href="https://wine2025.hotcrp.com/">https://wine2025.hotcrp.com/</a>.
+          
+          
+          </p><h3>Submission Format</h3>
+          <p>Authors are invited to submit papers presenting original research on any research topic related to WINE 2025.</p>
+          <p>Submissions must be <strong>anonymous</strong> (see below). A submission should start with the title of the paper followed by a brief summary of the paper’s contributions. This should then be followed by a technical exposition of the main ideas and techniques used to achieve these results, including motivation and a clear comparison with related work. <strong>Even if the authors choose the one-page abstract option for the proceedings, they must still submit the full paper as their initial submission to facilitate a comprehensive and rigorous review process.</strong></p>
+          <p><strong>Submissions must not exceed 12 single-spaced pages excluding the title page and references</strong>, and must use a font size of at least 11 points with margins of at least one inch on all sides. If the authors believe that more details are essential to substantiate the claims of the paper, they may include a clearly marked appendix of arbitrary length that will be read at the discretion of the Program Committee. Submissions that clearly deviate from the specified format and length risk desk rejection.</p>
+          <p>The proceedings of the conference will be published by Springer in the ARCoSS/LNCS series, and will be available for distribution at the conference. Accepted papers will be allocated 18 pages including references in the LNCS format in the proceedings. Submissions are encouraged, though not required, to follow the LNCS format (in which case the authors may follow the font size and page margins of LNCS). More information about the LNCS format can be found on the <a href="https://www.springer.com/cn/computer-science/lncs/conference-proceedings-guidelines">author instructions page of Springer</a>.</p>
+          <p><strong>WINE 2025 will use double-blind reviewing like all other major conferences.</strong> Submissions should not reveal the identity of the authors in any way. In particular, authors’ names, affiliations, and email addresses should not appear anywhere in the submission. (In LNCS, \author{} and \institute{} fields should not be included.) Authors should refer to their prior work in a neutral manner (for example, say “XYZ showed” instead of “we showed”). Submissions may include work that has been publicly presented (as long as it has not appeared in published proceedings) or posted on arXiv or similar online repositories, provided that the submission itself is properly anonymized.</p>
+          <p>Questions regarding the submissions can be directed to the Program Committee Chairs at <a href="mailto:wine2025chairs@gmail.com">wine2025chairs@gmail.com</a>.</p>
+          
+          
+          <h3>Rebuttal</h3>
+          <p>The review process will include a rebuttal phase in late August, giving authors the opportunity to address questions and concerns raised by the Program Committee. This approach, adopted by related conferences such as EC and major AI venues, aims to improve the overall quality of the review process.</p>
+          
+          
+          <h3>Conflict of Interest Policy</h3>
+          <p>A conflict of interest (COI) is limited to the following categories:</p>
+          <ul>
+            <li>Family member or close friend</li>
+            <li>Ph.D. advisor or advisee (no time limit), or postdoctoral or undergraduate mentor or mentee within the past five years</li>
+            <li>Person with the same affiliation</li>
+            <li>Involved in an alleged incident of harassment (it is not required that the incident be reported)</li>
+            <li>Reviewer owes the author a favor (e.g., recently requested a reference letter)</li>
+            <li>Frequent or recent collaborator whom you believe cannot objectively review your work</li>
+          </ul>
+          <p>Authors should update their HotCRP account information to declare COIs with (Senior) Program Committee members.</p>
+          <p>Declaring COIs prevents the specified person from reviewing a paper, thereby constraining the matching process and potentially negatively impacting review quality. For this reason, COIs should not be declared automatically based on a prior relationship (coauthor, friend, colleague in the same institution, etc.).</p>
+          <p>(Senior) Program Committee members can also declare COIs with authors as well as with specific papers.</p>
+          
+          
+          <h3>Policy Against Plagiarism</h3>
+          <p>WINE 2025 adopts the <a href="https://www.acm.org/publications/policies/penalties-for-publication-violations">official ACM policy against plagiarism</a>.</p>
+          
+          
+          <h3>Paper Awards</h3>
+          <p>A <strong>Best Paper Award</strong> and a <strong>Best Student Paper Award</strong> will be presented. Only papers published in full length in the proceedings will be eligible for consideration.</p>
+          <p>In recognition of the growing number of high-quality submissions to WINE in recent years, 3 to 5 additional papers will be selected for <strong>Outstanding Paper Awards</strong>, representing roughly the top 10% of accepted papers.</p>
+          
+          
+          <h3>One-Page Abstract Option</h3>
+          <p>We offer the <strong>one-page abstract option</strong> to accommodate publishing norms in various fields where journals may decline to consider work that has appeared in preliminary form in conference proceedings. This allows authors of accepted papers to request that only a one-page abstract be included in the proceedings, accompanied by a URL linking to the full version of the paper. Authors should guarantee the URL to be reliable for at least two years. Even if authors choose the one-page abstract option for the proceedings, they must still submit the full paper as their initial submission to facilitate a comprehensive and rigorous review process.</p>
+          
+          
+          <h3>Simultaneous Submission</h3>
+          <p>The following submissions are not allowed:</p>
+          <ul>
+            <li>Papers that are currently under review at another archival conference, with the only exception of FOCS 2025 (see “FOCS Submissions” above)</li>
+            <li>Papers that have been published or accepted for publication in a journal or archival conference before the WINE 2025 submission deadline</li>
+            <li>Papers in which one or more of the contributions have previously been published or accepted for publication in a journal or archival conference</li>
+          </ul>
+          <p>Simultaneous submission of results to a journal is allowed only if the authors intend to publish the paper as a one-page abstract in WINE 2025. Papers that are accepted and appear as a one-page abstract may later be submitted to a journal, but may not be submitted to any other archival conference.</p>
+          
+          
+          <h3>ACM TEAC Special Issue for WINE 2025</h3>
+          <p>A special issue of <strong>ACM Transactions on Economics and Computation (ACM TEAC)</strong> will be organized in connection with WINE 2025. A selection of top papers presented at the conference will be invited to submit extended versions to the special issue, subject to the standard peer-review process of ACM TEAC. Further details will be communicated to the authors of invited papers in due course.</p>
+          
+          <h3>Forward to Journal</h3>
+          <p>Our partner journals are:</p>
+          <ul>
+            <li>ACM Transactions on Economics and Computation (ACM TEAC)</li>
+            <li>Artificial Intelligence (AIJ)</li>
+            <li>Games and Economic Behavior (GEB)</li>
+            <li>Journal of Artificial Intelligence Research (JAIR)</li>
+            <li>Management Science (MS) (in this case, the paper will be forwarded to the Market Design, Platform and Demand Analytics department)</li>
+            <li>Operational Research (OR)</li>
+            <li>Theoretical Economics (TE)</li>
+          </ul>
+          <p>If the authors of a paper accepted to WINE 2025 wish to use the Forward-to-Journal option, they must choose to submit a <strong>one-page extended abstract</strong> by the camera-ready deadline for the conference proceedings. They may then submit their full journal version to the selected journal by <strong>January 23, 2026</strong>. The cover letter to the journal should specify that the submission is part of the WINE 2025 Forward-to-Journal process. The authors should also include a <strong>formal response document</strong> to the WINE 2025 conference reviews and explain how those reviews were addressed in the revised manuscript. In case the particular journal of choice needs a de-anonymized version of the conference reviews on the submission, WINE 2025 will provide them upon request by the journal. Note that a journal’s participation in the WINE 2025 Forward-to-Journal option does not mean that other forms of previous publication of the submission are acceptable for the journal.</p>
+          <p>The journal’s department editors and associate editors may use the conference reviews to inform their decision-making, in any manner deemed appropriate by the journal. We suspect that the associate editors might choose referees from the set of conference reviewers, especially if they found the conference reviews informative. We emphasize that the conference reviewers are not required to accept such review requests, and that journals are not required to accept these submissions (and may even choose to desk-reject them depending on fit).</p>
+        </div>
+        
+        
+        <div id="accepted-papers" class="tab-content" style="display: none;">
+          <h2>Accepted Papers</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <ul class="spaced-list">
+            <li> <strong>Optimal Robust Pricing with Minimal Information</strong> <br> Yan Ge (Shanghai University of Finance and Economics); Simai He (Shanghai Jiao Tong University); Zhen Wang (Shanghai University of Finance and Economics); Zizhuo Wang (The Chinese University of Hong Kong, Shenzhen) </li>
+            <li> <strong>Multi-Unit Combinatorial Prophet Inequalities</strong> <br> Shuchi Chawla (UT Austin); Trung Dang (The University of Texas at Austin); Zhiyi Huang (University of Texas at Austin); Yifan Wang (Georgia Institute of Technology) </li>
+            <li> <strong>Price of Anarchy of Algorithmic Monoculture</strong> <br> Robert Kleinberg, Erald Sinanaj, Éva Tardos (Cornell University) </li>
+            <li> <strong>Algorithmic and Structural Complexities of Menus in Unit-Demand Auctions</strong> <br> Clayton Thomas (Yale University); Daniel Schoepflin (Rutgers University); S. Matthew Weinberg (Princeton University) </li>
+            <li> <strong>Online Selection with Uncertain Disruption</strong> <br> Yihua Xu, Suleyman Kerimov, Sebastian Perez-Salazar (Rice University) </li>
+            <li> <strong>Neighborhood Stability in Assignments on Graphs</strong> <br> Haris Aziz (UNSW Sydney); Grzegorz Lisowski (AGH University); Mashbat Suzuki, Jeremy Vollen (UNSW Sydney) </li>
+            <li> <strong>Improved Budget-Feasible Mechanisms for Submodular Valuations: Beating 4 Deterministically in Linear Time</strong> <br> Kai Han, Pinyan Lu (Shanghai University of Finance and Economics) </li>
+            <li> <strong>Flow Over Time with Tolls</strong> <br> Shaul Rosner (Tel Aviv University); Marc Schröder (Maastricht University); Laura Vargas Koch (RWTH Aachen University) </li>
+            <li> <strong>Characterizing Super Stability in the Roommate Problem Under Weak Preferences</strong> <br> Bin Yu (Guangri Research and Development Institute) </li>
+            <li> <strong>Incentive Analysis of Collusion in Fair Division</strong> <br> Haoqiang Huang (HKUST); Biaoshuai Tao (Shanghai Jiao Tong University); Mingwei Yang (Stanford University); Shengwei Zhou (University of Macau) </li>
+            <li> <strong>Online Job Assignment</strong> <br> Farbod Ekbatani (University of Chicago Booth School of Business); Yiding Feng (Hong Kong University of Science and Technology); Ian Kash (UIC); Rad Niazadeh (University of Chicago) </li>
+            <li> <strong>Strategic Behavior in Crowdfunding: Insights from a Large-Scale Online Experiment</strong> <br> Din Amir, Bar Hoter, Moran Koren (Ben-Gurion University) </li>
+            <li> <strong>Price and Assortment Optimization under the Multinomial Logit Model with Opaque Products</strong> <br> Omar El Housni (Cornell University); Adam Elmachtoub, Harsh Sheth, Jiaqi Shi (Columbia University) </li>
+            <li> <strong>New Concentration Bounds and Their Applications in Online Resource Allocation</strong> <br> Jinshan Zhang (Zhejiang University); Biaoshuai Tao (Shanghai Jiaotong University); Nan Zhao, Meng Xi, Tao Jin, Jianwei Yin (Zhejiang University) </li>
+            <li> <strong>Money Burning Improves Mediated Communication</strong> <br> Yi Liu (Department of Economics, Yale University); Yang Yu (School of Economics and Management, China University of Petroleum-Beijing) </li>
+            <li> <strong>Commitment Gap via Correlation Gap</strong> <br> Dimitrios Christou (University of Texas at Austin); Shuchi Chawla (UT Austin) </li>
+            <li> <strong>Pricing and Addiction Control for Digital Services</strong> <br> Jiacheng Chang, Xiao Lei, Feng Tian (University of Hong Kong) </li>
+            <li> <strong>Multi-Armed Bandits With Machine Learning-Generated Surrogate Rewards</strong> <br> Wenlong Ji (Stanford University); Yihan Pan (Northwestern University); Ruihao Zhu (Cornell University); Lihua Lei (Stanford University) </li>
+            <li> <strong>Will AI Trade? A Computational Inversion of the No-Trade Theorem</strong> <br> Hanyu Li, Xiaotie Deng (Peking University) </li>
+            <li> <strong>Online Makespan Minimization: Beat LPT by Dynamic Locking</strong> <br> Zhaozi Wang (New York University); Zhiwei Ying, Yuhao Zhang (Shanghai Jiao Tong University) </li>
+            <li> <strong>A Polynomial-Time Algorithm for Fair and Efficient Allocation with a Fixed Number of Agents</strong> <br> Ryoga Mahara (The University of Tokyo) </li>
+            <li> <strong>Repeated Sales with Heterogeneous Buyer Sophistication</strong> <br> Rishi Patel, Emmanouil Pountourakis (Drexel University); Samuel Taggart (Oberlin College) </li>
+            <li> <strong>Unending Sequential Auctions</strong> <br> Amir Ban (Hebrew University of Jerusalem) </li>
+            <li> <strong>Two-Sided Fairness in Many-to-One Matching</strong> <br> Ayumi Igarashi (University of Tokyo); Naoyuki Kamiyama (Kyushu University); Yasushi Kawase (University of Tokyo); Warut Suksompong (National University of Singapore); Hanna Sumita, Yu Yokoi (Institute of Science Tokyo) </li>
+            <li> <strong>Optimal Prize Design in Parallel Rank-order Contests</strong> <br> Xiaotie Deng (Peking University); Ningyuan Li (Center on Frontiers of Computing Studies, School of CS, Peking University); Weian Li (School of Software, Shandong University); Qi Qi (Gaoling School of Artificial Intelligence, Renmin University of China, Beijing, China) </li>
+            <li> <strong>Robustness of Online Inventory Balancing to Inventory Shocks</strong> <br> Yiding Feng (Hong Kong University of Science and Technology); Rad Niazadeh (University of Chicago); Amin Saberi (Stanford University) </li>
+            <li> <strong>Multiplayer General Lotto game</strong> <br> Yan Liu (Renmin University of China); Bonan Ni (Tsinghua University); Weiran Shen, Zihe Wang (Renmin University of China); Jie Zhang (University of Bath) </li>
+            <li> <strong>Constant Inapproximability of Pacing Equilibria in Second-Price Auctions</strong> <br> Xi Chen, Yuhao Li (Columbia University) </li>
+            <li> <strong>Bin Packing and Covering: Pushing the Frontier on the Maximin Share Fairness</strong> <br> Bo Li, Ankang Sun (The Hong Kong Polytechnic University); Zunyu Wang (Huazhong University of Science and Technology); Yu Zhou (The Pennsylvania State University) </li>
+            <li> <strong>Compatibility of Max and Sum Objectives for Committee Selection and k-Facility Location</strong> <br> Elliot Anshelevich, Yue Han (Rensselaer Polytechnic Institute) </li>
+            <li> <strong>Fair and Efficient Allocation of Indivisible Mixed Manna</strong> <br> Siddharth Barman (Indian Institute of Science); Vishwa Prakash HV (Chennai Mathematical Institute); Aditi Sethia (Indian Institute of Science, Bangalore); Mashbat Suzuki (UNSW Sydney) </li>
+            <li> <strong>Behavioral Study of Dashboard Mechanisms</strong> <br> Paula Kayongo (Northwestern Univeristy); Jessica Hullman, Jason Hartline (Northwestern University) </li>
+            <li> <strong>The Role of Prescreening in Auctions with Predictions</strong> <br> Yanwei Sun, Fupeng Sun (Imperial College London); Chiwei Yan (University of California, Berkeley); Jiahua Wu (Imperial College London) </li>
+            <li> <strong>Inspect or Guess? Mechanism Design with Unobservable Inspection</strong> <br> Ali Daei Naby (Rotman School of Management, University of Toronto); Saeed Alaei (Google Research); Azarakhsh Malekian (Rotman School of Management, University of Toronto) </li>
+            <li> <strong>Dynamic Pricing with Adversarially-Censored Demands</strong> <br> Jianyu Xu (Carnegie Mellon University); Yining Wang (UT Dallas); Xi Chen (New York University); Yu-Xiang Wang (University of California San Diego) </li>
+            <li> <strong>The Limits of Interval-Regulated Price Discrimination</strong> <br> Kamesh Munagala, Yiheng Shen (Duke University); Renzhe Xu (Shanghai University of Finance and Economics) </li>
+            <li> <strong>TTC Domains</strong> <br> Sumit Goel (New York University Abu Dhabi); Yuki Tamura (Ecole Polytechnique, CREST, IP Paris) </li>
+            <li> <strong>Accelerated Price Adjustment for Fisher Markets with Exact Recovery of Competitive Equilibrium</strong> <br> He Chen, Chonghe Jiang, Anthony Man-Cho So (The Chinese University of Hong Kong) </li>
+            <li> <strong>Decentralized Signaling Mechanisms</strong> <br> Niloufar Mirzavand Boroujeni (Institute for Data Science in Oncology, The University of Texas MD Anderson Cancer Center); Krishnamurthy Iyer, William L. Cooper (University of Minnesota) </li>
+            <li> <strong>Constant Approximation for Network Revenue Management with Markovian-Correlated Customer Arrivals</strong> <br> Jiashuo Jiang (The Hong Kong University of Science and Technology) </li>
+            <li> <strong>Ex-Ante Truthful Distribution-Reporting Mechanisms</strong> <br> Xiaotie Deng, Yanru Guan, Ningyuan Li (Peking University); Zihe Wang (Renmin University of China); Jie Zhang (University of Bath) </li>
+            <li> <strong>How to Sell High-Dimensional Data Optimally</strong> <br> Andrew Li, R. Ravi, Karan Singh, Zihong Yi, Weizhong Zhang (Carnegie Mellon University) </li>
+            <li> <strong>Degree-bounded Online Bipartite Matching: OCS vs. Ranking</strong> <br> Yilong Feng, Haolong Li, Xiaowei Wu, Shengwei Zhou (University of Macau) </li>
+            <li> <strong>Prophet Inequalities with Stochastic Choices</strong> <br> Shaoyu Wang, Pin Gao, Guillermo Gallego (The Chinese University of Hong Kong, Shenzhen); Su Zhao (Meituan) </li>
+            <li> <strong>Bilateral Exclusion in Discrete Exchange Economies</strong> <br> Zhibin Tan, Ertan Zhuang (Beijing Jiaotong University) </li>
+            <li> <strong>Optimal Automated Market Makers: Differentiable Economics and Strong Duality</strong> <br> Michael Curry (University of Illinois Chicago); Zhou Fan, David Parkes (Harvard University) </li>
+            <li> <strong>Improved Approximate EFX Guarantees for Multigraphs</strong> <br> Alireza Kaviani, Alireza Keshavarz (Sharif University of Technology); Masoud Seddighin (Tehran Institute for Advanced Studies); Amir Mohammad Shahrezaei (Sharif University of Technology) </li>
+            <li> <strong>Robust Optimality of Bundling Goods Beyond Finite Variance</strong> <br> Tim van Eck, Pieter Kleer, Johan van Leeuwaarden (Tilburg University) </li>
+            <li> <strong>Assortment Optimization for the Multinomial Logit Model with Repeated Customer Interactions</strong> <br> Ningyuan Chen (University of Toronto, Rotman School of Management); Pin Gao, Chenhao Wang (The Chinese University of Hong Kong, Shenzhen); Yao Wang (Xi'an Jiaotong University); Jianpei Wen (Meituan, Beijing, China) </li>
+            <li> <strong>Achieving Coordination in Non-Cooperative Joint Replenishment Games</strong> <br> Junjie Luo (Beijing Jiaotong University); Changjun Wang (University of Chinese Academy of Sciences) </li>
+            <li> <strong>Strategyproof Tournament Rules for Teams with a Constant Degree of Selfishness</strong> <br> David Pennock, Daniel Schoepflin, Kangning Wang (Rutgers University) </li>
+            <li> <strong>Rethinking Pricing in Energy Markets: Pay-as-Bid vs Pay-as-Clear</strong> <br> Ioannis Caragiannis, Zhile Jiang, Stratis Skoulakis (Aarhus University) </li>
+            <li> <strong>On Pareto-Optimal and Fair Allocations with Personalized Bi-Valued Utilities</strong> <br> Jiarong Jin, Biaoshuai Tao (Shanghai Jiao Tong University) </li>
+            <li> <strong>Time Consensus and Censorship Resistance in Blockchains</strong> <br> Arthur Breitman (Tezos Foundation, Switzerland); Dariusz Kowalski, Piotr Krysta (Augusta University) </li>
+            <li> <strong>Fair Metric Distortion for Matching with Preferences</strong> <br> Jabari Hastings, Prasanna Ramakrishnan (Stanford University) </li>
+            <li> <strong>Integer-splittable Bin Packing Games</strong> <br> Bainian Hao (Chang'An University); Carla Michini (University of Wisconsin--Madison) </li>
+            <li> <strong>The Popular Dimension of Matchings</strong> <br> Frank Connor, Louis-Roy Langevin, Ndiame Ndiaye, Agnès Totschnig, Rohit Vasishta, Adrian Vetta (McGill University) </li>
+            <li> <strong>One-dimensional vs. Multi-dimensional Pricing in Blockchain Protocols</strong> <br> Giorgos Panagiotakos (IOHK); Aggelos Kiayias (University of Edinburgh &amp; IOG); Elias Koutsoupias (University of Oxford); Kyriaki Zioga (National Technical University of Athens) </li>
+            <li> <strong>Cooperation in Bilateral Generalized Network Creation</strong> <br> Hans Gawendowicz (Hasso Plattner Institute, University of Potsdam); Pascal Lenzner (University of Augsburg); Lukas Weyand (Hasso Plattner Institute, University of Potsdam) </li>
+            <li> <strong>Less is More: Optimal Contest Design with a Shortlist</strong> <br> Hanbing Liu (Gaoling School of Artificial Intelligence, Renmin University of China); Ningyuan Li (Center on Frontiers of Computing Studies, School of Computer Science, Peking University); Weian Li (School of Software, Shandong University); Qi Qi (Gaoling School of Artificial Intelligence, Renmin University of China); Changyuan Yu (Baidu Inc.) </li>
+            <li> <strong>Bounds on the revenue gap of linear posted pricing for selling a divisible item</strong> <br> Ioannis Caragiannis, Zhile Jiang (Aarhus University); Apostolis Kerentzis (Hellenic Air Force) </li>
+            <li> <strong>Justified Representation: From Hare to Droop</strong> <br> Matthew M. Casey, Edith Elkind (Northwestern University) </li>
+            <li> <strong>Potential-Based Greedy Matching for Dynamic Delivery Pooling</strong> <br> Hongyao Ma, Will Ma, Matias Romero (Columbia University) </li>
+            <li> <strong>Accelerated Preference Elicitation with LLM Proxies</strong> <br> David Huang (Harvard University); Francisco Marmolejo-Cossio (Boston College, Harvard University, IOG); Edwin Lock (University of Oxford); David Parkes (Harvard University) </li>
+            <li> <strong>Misalignment, Learning, and Ranking: Harnessing Users Limited Attention</strong> <br> Arpit Agarwal (IIT Bombay); Rad Niazadeh (University of Chicago); Prathamesh Patil (JP Morgan Chase) </li>
+            <li> <strong>On the Complexity of Stationary Nash Equilibria in Discounted Perfect Information Stochastic Games</strong> <br> Kristoffer Arnsfelt Hansen, Xinhao Nie (Aarhus University) </li>
+            <li> <strong>Selling Privacy in Blockchain Transactions</strong> <br> Georgios Chionas (University of Liverpool); Piotr Krysta (Augusta University); Olga Gorelkina, Rida Laraki (Université Mohammed VI Polytechnique) </li>
+          </ul>
+        </div>
+        
+        <div id="call-for-tutorials" class="tab-content" style="display: none;">
+          <h2>Call for Tutorials</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <p>We invite you to submit proposals for tutorials at WINE 2025. Tutorials are planned to be held in person on <strong>December 8</strong> as part of the conference program.</p>
+          <p>Tutorials provide a valuable opportunity to educate the community, especially younger scholars and researchers, about emerging research areas and topics that deserve greater attention. They offer a structured, formal setting to introduce colleagues to an area of interest. This year, while we welcome alternative formats (which should be described in your proposal), we recommend two possible options: (1) a two-hour session comprising two one-hour blocks of introductory material; or (2) a two-hour session with one hour of introductory material followed by a second hour featuring shorter talks that highlight recent research developments related to the tutorial content. In both cases, the two blocks would be separated by a short break (e.g., coffee break).</p>
+          <p>Tutorial proposals should be 2–3 pages long and contain:</p>
+          <ul>
+            <li> Title of the tutorial and brief (1–2 paragraph) abstract </li>
+            <li> Keywords and sub-areas relevant to the WINE community </li>
+            <li> Names, affiliations, contact information, and short biographies of the organizers </li>
+            <li> Suggested format and duration of the tutorial </li>
+            <li> Outline of the content </li>
+            <li> Rationale for the tutorial (e.g., timeliness and goals)
+            </li><li> Target audience and required prior knowledge
+            </li><li> Other venues where a similar tutorial has been presented (if any)
+            </li><li> Any special accommodations required for the tutorial
+          </li></ul>
+          <p>Tutorial proposals should be emailed to <a href="mailto:wine2025tutorials@gmail.com">wine2025tutorials@gmail.com</a>. We look forward to reading your proposals!</p>
+          <h3>Important Dates</h3>
+          <ul>
+            <li> Deadline for submitting proposals: August 22, 2025 </li>
+            <li> Decision announcement: September 19, 2025 </li>
+            <li> Tutorials day: December 8, 2025 </li>
+          </ul>
+          <h3>Tutorial Co-Chairs</h3>
+          <ul>
+            <li><a href="https://danschoepflin.github.io/" target="_blank">Daniel Schoepflin</a>, Rutgers University</li>
+            <li><a href="https://clathomasprime.github.io/" target="_blank">Clayton Thomas</a>, Yale University</li>
+          </ul>
+          Contact: <a href="mailto:wine2025tutorials@gmail.com">wine2025tutorials@gmail.com</a>
+        </div>
+        
+        
+        <div id="accepted-tutorials" class="tab-content" style="display: none;">
+          <h2>Accepted Tutorials</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <ul class="spaced-list">
+            <li> <strong><a href="https://sites.google.com/pitt.edu/wine-2025-tutorial-yuxin" target="_blank">Differential Privacy for Strategic Information Sharing and Learning: Foundations, Mechanisms, and Applications</a></strong> <br><span class="fade">Organizers:</span> M. Amin Rahimian (University of Pittsburgh); Juba Ziani (Georgia Institute of Technology); Marios Papachristou (Arizona State University); Yuxin Liu (University of Pittsburgh) </li>
+            <li> <strong><a href="https://xintongemilywang.github.io/assets/WINE_25_tutorial.pdf" target="_blank">Truth by Design: Proper Scoring Rules from Contracts to Markets</a></strong> <br><span class="fade">Organizers:</span> Fang-Yi Yu (George Mason University); Xintong Wang (Rutgers University) </li>
+            <li> <strong><a href="https://sites.google.com/view/infor-design-calibration/home" target="_blank">Information Design Perspective on Calibration</a></strong> <br><span class="fade">Organizers:</span> Wei Tang (Chinese University of Hong Kong); Yiding Feng (Hong Kong University of Science and Technology) </li>
+            <li> <strong><a href="https://sites.google.com/view/arielsch/wine-2025-tutorial?authuser=0" target="_blank">Tournament Design</a></strong> <br><span class="fade">Organizer:</span> Ariel Schvartzman (Google Research) </li>
+          </ul>
+        </div>
+        
+        
+        <div id="awards" class="tab-content" style="display: none;">
+          <h2>Awards</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <h3>Best Paper Award</h3>
+          <ul>
+            <li> <strong>The Limits of Interval-Regulated Price Discrimination</strong> <br> Kamesh Munagala, Yiheng Shen (Duke University); Renzhe Xu (Shanghai University of Finance and Economics) </li>
+          </ul>
+          <h3>Best Student Paper Award</h3>
+          <ul>
+            <li> <strong>Degree-bounded Online Bipartite Matching: OCS vs. Ranking</strong> <br> Yilong Feng, Haolong Li, Xiaowei Wu, Shengwei Zhou (University of Macau) </li>
+          </ul>
+          <h3>Outstanding Paper Awards</h3>
+          <ul>
+            <li> <strong>Improved Budget-Feasible Mechanisms for Submodular Valuations: Beating 4 Deterministically in Linear Time</strong> <br> Kai Han, Pinyan Lu (Shanghai University of Finance and Economics) </li>
+            <li> <strong>Constant Inapproximability of Pacing Equilibria in Second-Price Auctions</strong> <br> Xi Chen, Yuhao Li (Columbia University) </li>
+            <li> <strong>Bounds on the revenue gap of linear posted pricing for selling a divisible item</strong> <br> Ioannis Caragiannis, Zhile Jiang (Aarhus University); Apostolis Kerentzis (Hellenic Air Force) </li>
+          </ul>
+        </div>
+        
+        
+        
+        <div id="graduating-bits" class="tab-content" style="display: none;">
+          <h2>Graduating Bits</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <p>We are excited to host a <strong>Graduating Bits</strong> session at WINE 2025, dedicated to graduating students and postdocs, prioritizing those who are entering the job market this academic year. Held as a separate session, each participant will have a few minutes to introduce themselves and present their research in a lightning-talk format. Our goal is to provide a snapshot of the exciting work being done by the next generation of our community, highlighting their contributions and fostering connections before they transition to their next career stage.</p>
+          <p>If you are interested in giving a presentation, please send an email to <a href="mailto:wine2025general@gmail.com">wine2025general@gmail.com</a> with the subject line “Graduating Bits - [Your Name]”. Please attach your CV and mention whether you are entering the job market this academic year.</p>
+          <h3>Speakers (at 16:30–17:10 on December 10)</h3>
+          <ul>
+            <li><a href="https://goelsumit.com/" target="_blank">Sumit Goel</a>, NYU Abu Dhabi</li>
+            <li><a href="https://www.mashsuzuki.com/" target="_blank">Mashbat Suzuki</a>, UNSW Sydney</li>
+            <li><a href="https://danschoepflin.github.io/" target="_blank">Daniel Schoepflin</a>, DIMACS, Rutgers University</li>
+            <li><a href="https://xu-jy.github.io/" target="_blank">Jianyu Xu</a>, CMU</li>
+            <li><a href="https://yuxinliu1997.github.io/" target="_blank">Yuxin Liu</a>, University of Pittsburgh</li>
+            <li><a href="https://yichiz97.github.io/" target="_blank">Yichi Zhang</a>, DIMACS, Rutgers University</li>
+          </ul>
+        </div>
+        
+        
+        <div id="registration" class="tab-content" style="display: none;">
+          <h2>Registration</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <p><strong>The registration portal has been closed.</strong></p>
+          <p>An in-person presentation by at least one author is required for every accepted paper, regardless of its submission type (full-length publication or one-page extended abstract).</p>
+          <p>All conference attendees must pay a registration fee. Furthermore, every accepted paper must be covered by a paid author registration. This registration is mandatory even in exceptional circumstances, such as visa denial, where no authors can attend. For authors who do register, a single registration fee covers your attendance and all of your accepted papers. A student registration is sufficient to fulfill the paper requirement.</p>
+          <p>The early registration deadline is <strong>November 7, 2025</strong>. Registration fees are shown in the table below.</p>
+          <table class="centered">
+            <tbody><tr>
+              <td><span class="fade">Registration Fees</span></td>
+              <th>Early (Before November 7)</th>
+              <th>Late (After November 7)</th>
+            </tr>
+            <tr>
+              <th>Regular</th>
+              <td>$500</td>
+              <td>$700</td>
+            </tr>
+            <tr>
+              <th>Student</th>
+              <td>$350</td>
+              <td>$450</td>
+            </tr>
+          </tbody></table>
+          <p>Registration includes:</p>
+          <ul>
+            <li>Full access to all main conference sessions and the tutorial day</li>
+            <li>Daily lunch, light breakfast, and coffee breaks on all four days</li>
+            <li>The conference dinner, scheduled for the evening of December 9</li>
+          </ul>
+        </div>
+        
+        
+        <div id="visa-letters" class="tab-content" style="display: none;">
+          <h2>Invitation Letters for Visa Applications</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <p>For international attendees who require a visa to travel to the conference, we can provide an official letter of invitation. Please note that this letter is intended to help participants obtain a visa and does not imply any financial support.</p>
+          <p>To request an invitation letter, please send an email to <a href="mailto:wine2025general@gmail.com">wine2025general@gmail.com</a> with the subject line “Invitation Letter Request - [Your Full Name]”. Please include the following information in your email:</p>
+          <ul>
+            <li> Your full name (as it appears on your passport) </li>
+            <li> Your professional or academic affiliation (university/company) </li>
+            <li> Your address (as provided in your visa application) </li>
+            <li> The title of your accepted paper(s) if you are an author </li>
+          </ul>
+        </div>
+        
+        
+        <div id="local-info" class="tab-content" style="display: none;">
+          <h2>Local Information</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <h3>Main Venue</h3>
+          <p>The main conference venue is the <strong>Rutgers University Inn and Conference Center</strong>. The address is <strong>178 Ryders Lane, New Brunswick, NJ 08901, USA</strong>.</p>
+          <div class="no-dark">
+            <div class="map-container">
+              <iframe src="./WINE 2025 Source File_files/embed.html" allowfullscreen="" loading="lazy" style="max-width: 100%; width: 800px; height: 400px; border: 0;" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+          
+          
+          <h3>Room Assignment</h3>
+          <ul>
+            <li> <strong>Conference Room A</strong>: Sessions xA, and Tutorials 1 &amp; 3 </li>
+            <li> <strong>Dining Hall</strong>: All plenary sessions, Sessions xB, and Tutorials 2 &amp; 4 </li>
+          </ul>
+          
+          
+          <h3>Parking Information</h3>
+          <p>Visitors may park in Lots 82, 76, and 74A. To do so, you must register your vehicle using <a href="https://parkingbase.com/c/rutgers/d/3676664?eventId=90be290f-646e-4d29-ac67-f5977ccf9f81" target="_blank">this link</a>. Select “Visitor,” enter your email and vehicle information, and you will receive a confirmation via email or text.</p>
+          <p>Note: If you are affiliated with Rutgers, please purchase or use your existing Rutgers parking permit and park accordingly.</p>
+          
+          
+          <h3>Lodging Options</h3>
+          <p>There are three lodging options that are within walking distance of the conference venue, and many more that are a short drive from it. The three hotels closest to the conference are:</p>
+          <ul>
+            <li> The <a href="https://inn.rutgers.edu/" target="_blank">Rutgers University Inn</a> is a nice lower-priced option that is collocated with the conference venue. The Inn is relatively small, so if this is your preferred option, you should book as soon as possible. It offers great accessibility to the conference site, but it has no on-site restaurant and relatively few dining options in the immediate vicinity. That said, there are many dining options in downtown New Brunswick about a mile (1.6 kilometers) away. There is free parking on site at the Rutgers Inn. </li>
+            <li> The <a href="https://www.theheldrich.com/" target="_blank">Heldrich Hotel</a> is a more upscale lodging option in the heart of New Brunswick, with a variety of restaurants within easy walking distance. It is a frequent choice of participants at DIMACS events. The hotel is about 1.1 miles (1.8 kilometers) from the conference venue. It has parking nearby, at an additional cost. </li>
+            <li> The <a href="https://www.hyatt.com/hyatt-regency/en-US/ewrrn-hyatt-regency-new-brunswick" target="_blank">Hyatt Regency Hotel</a> is another upscale lodging option in downtown New Brunswick, with a variety of restaurants within easy walking distance. The hotel is about 1.5 miles (2.4 kilometers) from the conference venue and has on-site parking at an additional cost. </li>
+          </ul>
+          
+          <h3>Transportation</h3>
+          <p>Nearby major airports include</p>
+          <ul>
+            <li> <strong>Newark Liberty International Airport (EWR)</strong>, which is the closest </li>
+            <li> John F. Kennedy International Airport (JFK) </li>
+            <li> LaGuardia Airport (LGA) </li>
+            <li> Philadelphia International Airport (PHL) </li>
+            <li> Trenton–Mercer Airport (TTN) </li>
+          </ul>
+          The NJ Transit connects the EWR airport to the New Brunswick station, which is about 1.5 miles (2.4 kilometers) from the main conference venue.
+        </div>
+        
+        
+        <div id="sponsorship" class="tab-content" style="display: none;">
+          <h2>Sponsorship Opportunities</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <p>WINE 2025 is accepting sponsors! Sponsoring WINE 2025 offers a unique opportunity to connect your organization with the brightest minds in the field. Your support will not only enhance the conference experience for all attendees but will also position your brand at the forefront of innovation, thought leadership, and talent recruitment. If you are interested in becoming a sponsor, please see the sponsorship opportunities below.</p>
+          <h3><span class="no-dark">🥈</span> Silver Sponsors ($1,500) <span class="no-dark">🥈</span></h3>
+          <ul>
+            <li> Your sponsorship will be acknowledged at the conference venue, in the conference program, on the conference website, and in the conference proceedings. </li>
+            <li> You will have the opportunity to include your promotional materials among the items given to registered participants. </li>
+          </ul>
+          <h3><span class="no-dark">🥇</span> Gold Sponsors ($3,000) <span class="no-dark">🥇</span></h3>
+          In addition to everything above:
+          <ul>
+            <li> You will have the opportunity to give a 15-minute talk about your organization during the conference. </li>
+          </ul>
+          <h3><span class="no-dark">💎</span> Diamond Sponsors ($5,000) <span class="no-dark">💎</span></h3>
+          In addition to everything above:
+          <ul>
+            <li> An event will be named for your organization. For example, it could be our conference dinner that would be advertised as the “conference dinner, sponsored by YOUR ORGANIZATION.” </li>
+            <li> We will provide you with a complimentary registration. </li>
+          </ul>
+        </div>
+        
+        
+        <div id="previous-wine" class="tab-content" style="display: none;">
+          <h2>Previous WINEs</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <ul>
+            <li><a href="https://wine2025.cs.rutgers.edu/" target="_blank">WINE 2025, New Brunswick, USA</a></li>
+            <li><a href="https://wine2024.org/" target="_blank">WINE 2024, Edinburgh, UK</a></li>
+            <li><a href="https://wine2023.shanghaitech.edu.cn/" target="_blank">WINE 2023, Shanghai, China</a></li>
+            <li><a href="https://www.cs.rpi.edu/wine2022/" target="_blank">WINE 2022, Troy, USA</a></li>
+            <li><a href="https://hpi.de/wine2021/" target="_blank">WINE 2021, Potsdam, Germany</a></li>
+            <li><a href="https://econcs.pku.edu.cn/wine2020/" target="_blank">WINE 2020, Beijing, China</a></li>
+            <li><a href="https://wine2019.cs.columbia.edu/index.html" target="_blank">WINE 2019, New York, USA</a></li>
+            <li><a href="https://www.cs.ox.ac.uk/conferences/wine2018/" target="_blank">WINE 2018, Oxford, UK</a></li>
+            <li><a href="http://lcm.csa.iisc.ernet.in/wine2017/index.html" target="_blank">WINE 2017, Bangalore, India</a></li>
+            <li><a href="http://cs.mcgill.ca/~wine2016/" target="_blank">WINE 2016, Montreal, Canada</a></li>
+            <li><a href="http://event.cwi.nl/wine2015/" target="_blank">WINE 2015, Amsterdam, Netherlands</a></li>
+            <li><a href="http://wine2014.amss.ac.cn/" target="_blank">WINE 2014, Beijing, China</a></li>
+            <li><a href="http://wine13.seas.harvard.edu/" target="_blank">WINE 2013, Harvard, USA</a></li>
+            <li><a href="http://wine12.csc.liv.ac.uk/" target="_blank">WINE 2012, Liverpool, UK</a></li>
+            <li><a href="http://web.spms.ntu.edu.sg/~wine11/" target="_blank">WINE 2011, Singapore</a></li>
+            <li><a href="http://www.stanford.edu/group/wine/" target="_blank">WINE 2010, Stanford, USA</a></li>
+            <li><a href="http://www.dis.uniroma1.it/wine09/" target="_blank">WINE 2009, Rome, Italy</a></li>
+            <li>WINE 2008, Shanghai, China</li>
+            <li><a href="http://math.ucsd.edu/~wawnwine/wine2007/" target="_blank">WINE 2007, San Diego, USA</a></li>
+            <li><a href="http://wine2006.cti.gr/" target="_blank">WINE 2006, Patras, Greece</a></li>
+            <li>WINE 2005, Hong Kong, China</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Helper function: Just handles the UI switching of tabs
+    function switchTabUI(tabName) {
+      // Hide all tab contents
+      let tabs = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+      }
+
+      // Remove active class from all buttons
+      let buttons = document.getElementsByClassName("tab-buttons")[0].getElementsByTagName("button");
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+      }
+
+      // Show the selected tab
+      const activeTab = document.getElementById(tabName);
+      if (activeTab) {
+        activeTab.style.display = "block";
+        
+        // Activate the button
+        const tabButton = document.querySelector('.tab-buttons button[data-tab="' + tabName + '"]');
+        if (tabButton) {
+          tabButton.classList.add("active");
+        }
+      }
+    }
+
+    // Your original Click Handler (Simplified to use the helper)
+    function openTab(evt, tabName) {
+      switchTabUI(tabName);
+
+      // Update URL
+      if (history.pushState) {
+        history.pushState(null, null, '#' + tabName);
+      } else {
+        window.location.hash = '#' + tabName;
+      }
+      
+      // Only scroll to top when explicitly clicking a main tab button
+      window.scrollTo(0, 0); 
+    }
+
+    // Hash Handler
+    function loadTabFromHash() {
+      const hash = window.location.hash.substring(1);
+      
+      if (!hash) {
+        switchTabUI('about'); // Default
+        return;
+      }
+
+      const targetElement = document.getElementById(hash);
+
+      // Case 1: The Hash IS a Tab (e.g., #about, #projects)
+      if (targetElement && targetElement.classList.contains("tab-content")) {
+        switchTabUI(hash);
+        window.scrollTo(0, 0); // Reset scroll for main tab switches
+      } 
+      // Case 2: The Hash is an ANCHOR inside a tab (e.g., #subsection)
+      else if (targetElement) {
+        // Find which tab contains this element
+        const parentTab = targetElement.closest(".tab-content");
+        
+        if (parentTab) {
+          // Switch to that tab first
+          switchTabUI(parentTab.id);
+          
+          // Wait a split second for the display:block to render, then scroll
+          setTimeout(() => {
+             targetElement.scrollIntoView({ behavior: "smooth" });
+          }, 10);
+        }
+      } 
+      // Case 3: Hash is invalid or doesn't exist -> Default to About
+      else {
+        switchTabUI('about');
+      }
+    }
+
+    // Listeners
+    window.addEventListener('DOMContentLoaded', loadTabFromHash);
+    window.addEventListener('hashchange', loadTabFromHash);
+
+    // Sidebar / Dark Mode Logic (Unchanged)
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("show");
+    }
+    
+    const root = document.documentElement;
+    const saved = localStorage.getItem("darkMode");
+    
+    if (saved === "enabled") {
+      root.classList.add("dark");
+    }
+    
+    function toggleDarkMode() {
+      const isDark = root.classList.toggle("dark");
+      localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+    }
+  </script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
