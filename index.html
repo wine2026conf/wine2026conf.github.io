@@ -290,7 +290,7 @@
         <button href="#about" class="tab-link active" onclick="openTab(event, &#39;about&#39;)" data-tab="about">Overview</button>
         <button href="#pc" class="tab-link" onclick="openTab(event, &#39;pc&#39;)" data-tab="pc">Committees</button>
         <button href="#keynote-speakers" class="tab-link" onclick="openTab(event, 'keynote-speakers')" data-tab="keynote-speakers">Keynote Speakers</button>
-        <!--<button href="#schedule" class="tab-link" onclick="openTab(event, &#39;schedule&#39;)" data-tab="schedule">Schedule</button>-->
+        <button href="#schedule" class="tab-link" onclick="openTab(event, &#39;schedule&#39;)" data-tab="schedule">Schedule</button>
         <button href="#call-for-papers" class="tab-link" onclick="openTab(event, &#39;call-for-papers&#39;)" data-tab="call-for-papers">Call for Papers</button>
         <button href="#accepted-papers" class="tab-link" onclick="openTab(event, &#39;accepted-papers&#39;)" data-tab="accepted-papers">Accepted Papers</button>
         <button href="#call-for-tutorials" class="tab-link" onclick="openTab(event, &#39;call-for-tutorials&#39;)" data-tab="call-for-tutorials">Call for Tutorials</button>
@@ -648,316 +648,1100 @@
         <div id="schedule" class="tab-content" style="display: none;">
           <h2>Schedule</h2>
           <hr style="border: none; height: 2px; background-color: black;">
-          
-          <h3>Time for Onsite Registration and Checking in</h3>
-          <ul>
-            <li> December 8, 8:30–15:30 </li>
-            <li> December 9, 8:30–15:30 </li>
-            <li> December 10, 8:30–12:30 </li>
-          </ul>
-          
-          <h3>Room Assignment</h3>
-          <ul>
-            <li> <strong>Conference Room A</strong>: Sessions xA, and Tutorials 1 &amp; 3 </li>
-            <li> <strong>Dining Hall</strong>: All plenary sessions, Sessions xB, and Tutorials 2 &amp; 4 </li>
-          </ul>
-          <h3>Schedule Overview</h3>
-          <p>Most sessions have four talks each. Each talk (in Sessions 1–8) is scheduled to run for 20 minutes plus another 2.5 minutes for questions and answers.</p>
-          <table class="centered">
-            <tbody><tr>
-              <td><span class="fade">Date and Time</span></td>
-              <th>December 8</th>
-              <th>December 9</th>
-              <th>December 10</th>
-              <th>December 11</th>
-            </tr>
-            <tr>
-              <th>Starting at 8:30</th>
-              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">🥐</span> Light Breakfast <span class="no-dark">🥐</span></td>
-            </tr>
-            <tr>
-              <th>8:50–9:00</th>
-              <td style="background-color: #D0D0D0;"></td>
-              <td>Opening Remarks (Dining Hall)</td>
-              <td colspan="2" style="background-color: #D0D0D0;"></td>
-            </tr>
-            <tr>
-              <th>9:00–10:30</th>
-              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-1">1</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-2">2</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-1a">1A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-1b">1B</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-4a">4A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-4b">4B</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-6a">6A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-6b">6B</a></td>
-            </tr>
-            <tr>
-              <th>10:30–11:00</th>
-              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">☕</span> Coffee Break <span class="no-dark">☕</span></td>
-            </tr>
-            <tr>
-              <th>11:00–12:30</th>
-              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-1">1</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-2">2</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-2a">2A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-2b">2B</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-5a">5A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-5b">5B</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-7a">7A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-7b">7B</a></td>
-            </tr>
-            <tr>
-              <th>12:30–14:00</th>
-              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">🍴</span> Lunch <span class="no-dark">🍴</span></td>
-            </tr>
-            <tr>
-              <th>14:00–15:00</th>
-              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-3">3</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-4">4</a></td>
-              <td>Invited Talk: <i>Recent Developments in Fixed Point Computation</i>, by Xi Chen (Columbia)</td>
-              <td>Invited Talk: <i>Revenue Maximization with Minimal Information</i>, by Sigal Oren (Ben-Gurion)</td>
-              <td>Invited Talk: <i>Privacy and Discrimination</i>, by Philipp Strack (Yale)</td>
-            </tr>
-            <tr>
-              <th>15:00–15:30</th>
-              <td colspan="4" style="background-color: #D0D0D0;"><span class="no-dark">☕</span> Coffee Break <span class="no-dark">☕</span></td>
-            </tr>
-            <tr>
-              <th>15:30–17:30</th>
-              <td>Tutorials <a href="https://wine2025.cs.rutgers.edu/#tutorial-3">3</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#tutorial-4">4</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-3a">3A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-3b">3B</a></td>
-              <td><a href="https://wine2025.cs.rutgers.edu/#session-best">Best Paper Awards</a>, <a href="https://wine2025.cs.rutgers.edu/#graduating-bits-talks">Graduating Bits</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#sponsor-spotlight">Sponsor Spotlight</a></td>
-              <td>Sessions <a href="https://wine2025.cs.rutgers.edu/#session-8a">8A</a> &amp; <a href="https://wine2025.cs.rutgers.edu/#session-8b">8B</a></td>
-            </tr>
-            <tr>
-              <th>18:00–19:30</th>
-              <td rowspan="2" style="background-color: #D0D0D0;"></td>
-              <td rowspan="2">Conference Dinner, Sponsored by Google</td>
-              <td>Business Meeting</td>
-              <td rowspan="2" style="background-color: #D0D0D0;"></td>
-            </tr>
-            <tr>
-              <th>19:30–21:00</th>
-              <td style="background-color: #D0D0D0;"></td>
-            </tr>
-          </tbody></table>
-          
-          
-          
-          <h3 id="tutorial-1">Tutorial 1 (9:00–10:30 and 11:00–12:30, December 8): <a href="https://sites.google.com/view/arielsch/wine-2025-tutorial?authuser=0" target="_blank">Tournament Design</a></h3>
-          <p><span class="fade">Organizer:</span> Ariel Schvartzman (Google Research)</p>
-          <p><span class="fade">Introduction:</span> How should the organizer of a round-robin tournament choose one of n teams as the winner in a fair manner? This is a question that has practical implications for everything from major sports competitions, like the World Cup and the Olympic Games, to theoretical implications for mechanism design and computational social choice. In this tutorial, we aim to present a growing line of work that addresses this question and highlight some elusive open questions and conjectures.</p>
-          
-          
-          <h3 id="tutorial-2">Tutorial 2 (9:00–10:30 and 11:00–12:30, December 8): <a href="https://xintongemilywang.github.io/assets/WINE_25_tutorial.pdf" target="_blank">Truth by Design: Proper Scoring Rules from Contracts to Markets</a></h3>
-          <p><span class="fade">Organizers:</span> Fang-Yi Yu (George Mason University); Xintong Wang (Rutgers University)</p>
-          <p><span class="fade">Introduction:</span> As forecasts steer real decisions—from allocating vaccines to pricing risk, reliable evaluation and incentives are essential. This tutorial surveys proper scoring rules, the backbone of probabilistic forecast evaluation and designing truthful reporting mechanisms. We introduce proper scoring rules as contracts that reward accurate forecasts and develop their geometric (convex-analytic) intuition. We then generalize to property elicitation, which characterizes which statistics of an outcome (e.g., means, quantiles) are elicitable, and to surrogate (proxy) scoring, which evaluates forecasts using stochastically related observations.</p>
-          <p>Building on this foundation, we survey applications of proper scoring rules. First, information elicitation aims to design payments to elicit truthful reports or even motivate costly information acquisition. We will survey a family of peer prediction mechanisms using proper scoring rules. Second, prediction markets, which serve as automatic market makers for prediction, use proper scoring rules to design trades that aggregate predictions in real time. We will focus on designing efficient algorithms for markets when the prediction space is large. We close with related topics—wagering mechanisms, forecast competitions and aggregation, and evaluating (multi-)calibration.</p>
-          
-          
-          
-          <h3 id="tutorial-3">Tutorial 3 (14:00–15:00 and 15:30–17:30, December 8): <a href="https://sites.google.com/pitt.edu/wine-2025-tutorial-yuxin" target="_blank">Differential Privacy for Strategic Information Sharing and Learning: Foundations, Mechanisms, and Applications</a></h3>
-          <p><span class="fade">Organizers:</span> M. Amin Rahimian (University of Pittsburgh); Juba Ziani (Georgia Institute of Technology); Marios Papachristou (Arizona State University); Yuxin Liu (University of Pittsburgh)</p>
-          <p><span class="fade">Introduction:</span> The increasing prevalence of data-driven decision making requires robust mechanisms to protect sensitive information while allowing its utility for collective benefit. Differential Privacy (DP) offers a rigorous framework for achieving strong privacy guarantees. This tutorial will explore how differential privacy can be leveraged to facilitate secure and privacy-preserving information sharing in various contexts. We will dive into the fundamental concepts of DP and discuss its application in scenarios where data are acquired, shared, aggregated, or processed to derive collective insights, ensuring individual contributions remain private.</p>
-          <p>The tutorial will cover recent advances in applying DP to practical challenges in information exchange, including methods for private estimation, learning, and inference, as well as incentive compatible and privacy-preserving mechanisms for optimal data sharing and acquisition. Attendees will gain an understanding of the trade-offs involved in designing DP mechanisms for real-world systems and learn about the techniques that enable effective information flow while mitigating privacy risks. Our discussion will highlight the importance of careful design to balance privacy with the goals of data utility, sharing, and collaborative knowledge generation, as well as open problems and research questions of interest to the WINE community in this space.</p>
-          
-          
-          <h3 id="tutorial-4">Tutorial 4 (14:00–15:00 and 15:30–17:30, December 8): <a href="https://sites.google.com/view/infor-design-calibration/home" target="_blank">Information Design Perspective on Calibration</a></h3>
-          <p><span class="fade">Organizers:</span> Wei Tang (Chinese University of Hong Kong); Yiding Feng (Hong Kong University of Science and Technology)</p>
-          <p><span class="fade">Introduction:</span> This tutorial explores the role of information design in studying and improving calibration for decision making. Calibration is crucial in scenarios where accurate predictions or decisions based on uncertain or incomplete information are necessary, such as in online markets, machine learning, or healthcare. In the first part, we will introduce the foundational concepts of calibration, the challenges in decision-making under uncertainty, and how information design techniques can be leveraged to study and enhance calibration. In the second part, we will delve into advanced topics, including applications of calibration in modern settings. The tutorial aims to equip participants with a deep understanding of how to analyze and improve calibration in decision-making processes using principles from information design.</p>
-          
-          
-          <h3 id="session-1a">Session 1A (9:00–10:30, December 9): AI and Game Theory</h3>
-          <ul>
-            <li> <strong>Multi-Armed Bandits With Machine Learning-Generated Surrogate Rewards</strong> <br> Wenlong Ji (Stanford University); Yihan Pan (Northwestern University); Ruihao Zhu (Cornell University); Lihua Lei (Stanford University) </li>
-            <li> <strong>Will AI Trade? A Computational Inversion of the No-Trade Theorem</strong> <br> Hanyu Li, Xiaotie Deng (Peking University) </li>
-            <li> <strong>Accelerated Preference Elicitation with LLM Proxies</strong> <br> David Huang (Harvard University); Francisco Marmolejo-Cossio (Boston College, Harvard University, IOG); Edwin Lock (University of Oxford); David Parkes (Harvard University) </li>
-            <li> <strong>Misalignment, Learning, and Ranking: Harnessing Users Limited Attention</strong> <br> Arpit Agarwal (IIT Bombay); Rad Niazadeh (University of Chicago); Prathamesh Patil (JP Morgan Chase) </li>
-          </ul>
-          
-          
-          <h3 id="session-1b">Session 1B (9:00–10:30, December 9): Pricing</h3>
-          <ul>
-            <li> <strong>Bounds on the revenue gap of linear posted pricing for selling a divisible item</strong> <br> Ioannis Caragiannis, Zhile Jiang (Aarhus University); Apostolis Kerentzis (Hellenic Air Force) </li>
-            <li> <strong>Optimal Robust Pricing with Minimal Information</strong> <br> Yan Ge (Shanghai University of Finance and Economics); Simai He (Shanghai Jiao Tong University); Zhen Wang (Shanghai University of Finance and Economics); Zizhuo Wang (The Chinese University of Hong Kong, Shenzhen) </li>
-            <li> <strong>Repeated Sales with Heterogeneous Buyer Sophistication</strong> <br> Rishi Patel, Emmanouil Pountourakis (Drexel University); Samuel Taggart (Oberlin College) </li>
-            <li> <strong>Dynamic Pricing with Adversarially-Censored Demands</strong> <br> Jianyu Xu (Carnegie Mellon University); Yining Wang (UT Dallas); Xi Chen (New York University); Yu-Xiang Wang (University of California San Diego) </li>
-          </ul>
-          
-          
-          <h3 id="session-2a">Session 2A (11:00–12:30, December 9): Fairness and Social Choice</h3>
-          <ul>
-            <li> <strong>Compatibility of Max and Sum Objectives for Committee Selection and k-Facility Location</strong> <br> Elliot Anshelevich, Yue Han (Rensselaer Polytechnic Institute) </li>
-            <li> <strong>Justified Representation: From Hare to Droop</strong> <br> Matthew M. Casey, Edith Elkind (Northwestern University) </li>
-            <li> <strong>Bin Packing and Covering: Pushing the Frontier on the Maximin Share Fairness</strong> <br> Bo Li, Ankang Sun (The Hong Kong Polytechnic University); Zunyu Wang (Huazhong University of Science and Technology); Yu Zhou (The Pennsylvania State University) </li>
-            <li> <strong>Improved Approximate EFX Guarantees for Multigraphs</strong> <br> Alireza Kaviani, Alireza Keshavarz (Sharif University of Technology); Masoud Seddighin (Tehran Institute for Advanced Studies); Amir Mohammad Shahrezaei (Sharif University of Technology) </li>
-          </ul>
-          
-          
-          <h3 id="session-2b">Session 2B (11:00–12:30, December 9): Behavioral and Decision Theory</h3>
-          <ul>
-            <li> <strong>Strategic Behavior in Crowdfunding: Insights from a Large-Scale Online Experiment</strong> <br> Din Amir, Bar Hoter, Moran Koren (Ben-Gurion University) </li>
-            <li> <strong>Behavioral Study of Dashboard Mechanisms</strong> <br> Paula Kayongo (Northwestern Univeristy); Jessica Hullman, Jason Hartline (Northwestern University) </li>
-            <li> <strong>Commitment Gap via Correlation Gap</strong> <br> Dimitrios Christou (University of Texas at Austin); Shuchi Chawla (UT Austin) </li>
-            <li> <strong>Online Selection with Uncertain Disruption</strong> <br> Yihua Xu, Suleyman Kerimov, Sebastian Perez-Salazar (Rice University) </li>
-          </ul>
-          
-          
-          <h3 id="session-3a">Session 3A (15:30–17:25, December 9): Mechanism Design</h3>
-          <ul>
-            <li> <strong>Bilateral Exclusion in Discrete Exchange Economies</strong> <br> Zhibin Tan, Ertan Zhuang (Beijing Jiaotong University) </li>
-            <li> <strong>Optimal Automated Market Makers: Differentiable Economics and Strong Duality</strong> <br> Michael Curry (University of Illinois Chicago); Zhou Fan, David Parkes (Harvard University) </li>
-            <li> <strong>Achieving Coordination in Non-Cooperative Joint Replenishment Games</strong> <br> Junjie Luo (Beijing Jiaotong University); Changjun Wang (University of Chinese Academy of Sciences) </li>
-            <li> <strong>Accelerated Price Adjustment for Fisher Markets with Exact Recovery of Competitive Equilibrium</strong> <br> He Chen, Chonghe Jiang, Anthony Man-Cho So (The Chinese University of Hong Kong) </li>
-            <li> <strong>Neighborhood Stability in Assignments on Graphs</strong> <br> Haris Aziz (UNSW Sydney); Grzegorz Lisowski (AGH University); Mashbat Suzuki, Jeremy Vollen (UNSW Sydney) </li>
-          </ul>
-          
-          
-          <h3 id="session-3b">Session 3B (15:30–17:00, December 9): Matching</h3>
-          <ul>
-            <li> <strong>Two-Sided Fairness in Many-to-One Matching</strong> <br> Ayumi Igarashi (University of Tokyo); Naoyuki Kamiyama (Kyushu University); Yasushi Kawase (University of Tokyo); Warut Suksompong (National University of Singapore); Hanna Sumita, Yu Yokoi (Institute of Science Tokyo) </li>
-            <li> <strong>Fair Metric Distortion for Matching with Preferences</strong> <br> Jabari Hastings, Prasanna Ramakrishnan (Stanford University) </li>
-            <li> <strong>The Popular Dimension of Matchings</strong> <br> Frank Connor, Louis-Roy Langevin, Ndiame Ndiaye, Agnès Totschnig, Rohit Vasishta, Adrian Vetta (McGill University) </li>
-            <li> <strong>Characterizing Super Stability in the Roommate Problem Under Weak Preferences</strong> <br> Bin Yu (Guangri Research and Development Institute) </li>
-          </ul>
-          
-          
-          <h3 id="session-4a">Session 4A (9:00–10:30, December 10): Online Algorithms</h3>
-          <ul>
-            <li> <strong>New Concentration Bounds and Their Applications in Online Resource Allocation</strong> <br> Jinshan Zhang (Zhejiang University); Biaoshuai Tao (Shanghai Jiaotong University); Nan Zhao, Meng Xi, Tao Jin, Jianwei Yin (Zhejiang University) </li>
-            <li> <strong>Robustness of Online Inventory Balancing to Inventory Shocks</strong> <br> Yiding Feng (Hong Kong University of Science and Technology); Rad Niazadeh (University of Chicago); Amin Saberi (Stanford University) </li>
-            <li> <strong>Constant Approximation for Network Revenue Management with Markovian-Correlated Customer Arrivals</strong> <br> Jiashuo Jiang (The Hong Kong University of Science and Technology) </li>
-            <li> <strong>Potential-Based Greedy Matching for Dynamic Delivery Pooling</strong> <br> Hongyao Ma, Will Ma, Matias Romero (Columbia University) </li>
-          </ul>
-          
-          
-          <h3 id="session-4b">Session 4B (9:00–10:30, December 10): Mechanism Design</h3>
-          <ul>
-            <li> <strong>Improved Budget-Feasible Mechanisms for Submodular Valuations: Beating 4 Deterministically in Linear Time</strong> <br> Kai Han, Pinyan Lu (Shanghai University of Finance and Economics) </li>
-            <li> <strong>Decentralized Signaling Mechanisms</strong> <br> Niloufar Mirzavand Boroujeni (Institute for Data Science in Oncology, The University of Texas MD Anderson Cancer Center); Krishnamurthy Iyer, William L. Cooper (University of Minnesota) </li>
-            <li> <strong>Ex-Ante Truthful Distribution-Reporting Mechanisms</strong> <br> Xiaotie Deng, Yanru Guan, Ningyuan Li (Peking University); Zihe Wang (Renmin University of China); Jie Zhang (University of Bath) </li>
-            <li> <strong>Inspect or Guess? Mechanism Design with Unobservable Inspection</strong> <br> Ali Daei Naby (Rotman School of Management, University of Toronto); Saeed Alaei (Google Research); Azarakhsh Malekian (Rotman School of Management, University of Toronto) </li>
-          </ul>
-          
-          
-          <h3 id="session-5a">Session 5A (11:00–12:30, December 10): Online Algorithms</h3>
-          <ul>
-            <li> <strong>Online Job Assignment</strong> <br> Farbod Ekbatani (University of Chicago Booth School of Business); Yiding Feng (Hong Kong University of Science and Technology); Ian Kash (UIC); Rad Niazadeh (University of Chicago) </li>
-            <li> <strong>Online Makespan Minimization: Beat LPT by Dynamic Locking</strong> <br> Zhaozi Wang (New York University); Zhiwei Ying, Yuhao Zhang (Shanghai Jiao Tong University) </li>
-            <li> <strong>Multi-Unit Combinatorial Prophet Inequalities</strong> <br> Shuchi Chawla (UT Austin); Trung Dang (The University of Texas at Austin); Zhiyi Huang (University of Texas at Austin); Yifan Wang (Georgia Institute of Technology) </li>
-            <li> <strong>Prophet Inequalities with Stochastic Choices</strong> <br> Shaoyu Wang, Pin Gao, Guillermo Gallego (The Chinese University of Hong Kong, Shenzhen); Su Zhao (Meituan) </li>
-          </ul>
-          
-          
-          <h3 id="session-5b">Session 5B (11:00–12:30, December 10): Games and Complexity</h3>
-          <ul>
-            <li> <strong>Constant Inapproximability of Pacing Equilibria in Second-Price Auctions</strong> <br> Xi Chen, Yuhao Li (Columbia University) </li>
-            <li> <strong>On the Complexity of Stationary Nash Equilibria in Discounted Perfect Information Stochastic Games</strong> <br> Kristoffer Arnsfelt Hansen, Xinhao Nie (Aarhus University) </li>
-            <li> <strong>Price of Anarchy of Algorithmic Monoculture</strong> <br> Robert Kleinberg, Erald Sinanaj, Éva Tardos (Cornell University) </li>
-            <li> <strong>Algorithmic and Structural Complexities of Menus in Unit-Demand Auctions</strong> <br> Clayton Thomas (Yale University); Daniel Schoepflin (Rutgers University); S. Matthew Weinberg (Princeton University) </li>
-          </ul>
-          
-          
-          <h3 id="session-best">Best Paper Awards Session (15:30–16:30, December 10)</h3>
-          <ul>
-            <li> <strong>The Limits of Interval-Regulated Price Discrimination</strong> <br> Kamesh Munagala, Yiheng Shen (Duke University); Renzhe Xu (Shanghai University of Finance and Economics) </li>
-            <li> <strong>Degree-bounded Online Bipartite Matching: OCS vs. Ranking</strong> <br> Yilong Feng, Haolong Li, Xiaowei Wu, Shengwei Zhou (University of Macau) </li>
-          </ul>
-          
-          
-          <h3 id="graduating-bits-talks">Graduating Bits (16:30–17:10, December 10)</h3>
-          <ul>
-            <li><a href="https://goelsumit.com/" target="_blank">Sumit Goel</a>, NYU Abu Dhabi</li>
-            <li><a href="https://www.mashsuzuki.com/" target="_blank">Mashbat Suzuki</a>, UNSW Sydney</li>
-            <li><a href="https://danschoepflin.github.io/" target="_blank">Daniel Schoepflin</a>, DIMACS, Rutgers University</li>
-            <li><a href="https://xu-jy.github.io/" target="_blank">Jianyu Xu</a>, CMU</li>
-            <li><a href="https://yuxinliu1997.github.io/" target="_blank">Yuxin Liu</a>, University of Pittsburgh</li>
-            <li><a href="https://yichiz97.github.io/" target="_blank">Yichi Zhang</a>, DIMACS, Rutgers University</li>
-          </ul>
-          
-          
-          <h3 id="sponsor-spotlight">Sponsor Spotlight (17:10–17:30, December 10)</h3>
-          <ul>
-            <li> <strong>Recent Trends in Market Algorithms Research in GenAI Era</strong> <br> Vahab Mirrokni (Google) </li>
-          </ul>
-          
-          
-          <h3 id="session-6a">Session 6A (9:00–10:30, December 11): Mechanism Design</h3>
-          <ul>
-            <li> <strong>Optimal Prize Design in Parallel Rank-order Contests</strong> <br> Xiaotie Deng (Peking University); Ningyuan Li (Center on Frontiers of Computing Studies, School of CS, Peking University); Weian Li (School of Software, Shandong University); Qi Qi (Gaoling School of Artificial Intelligence, Renmin University of China, Beijing, China) </li>
-            <li> <strong>Less is More: Optimal Contest Design with a Shortlist</strong> <br> Hanbing Liu (Gaoling School of Artificial Intelligence, Renmin University of China); Ningyuan Li (Center on Frontiers of Computing Studies, School of Computer Science, Peking University); Weian Li (School of Software, Shandong University); Qi Qi (Gaoling School of Artificial Intelligence, Renmin University of China); Changyuan Yu (Baidu Inc.) </li>
-            <li> <strong>TTC Domains</strong> <br> Sumit Goel (New York University Abu Dhabi); Yuki Tamura (Ecole Polytechnique, CREST, IP Paris) </li>
-            <li> <strong>Strategyproof Tournament Rules for Teams with a Constant Degree of Selfishness</strong> <br> David Pennock, Daniel Schoepflin, Kangning Wang (Rutgers University) </li>
-          </ul>
-          
-          
-          <h3 id="session-6b">Session 6B (9:00–10:30, December 11): Fair Division</h3>
-          <ul>
-            <li> <strong>Incentive Analysis of Collusion in Fair Division</strong> <br> Haoqiang Huang (HKUST); Biaoshuai Tao (Shanghai Jiao Tong University); Mingwei Yang (Stanford University); Shengwei Zhou (University of Macau) </li>
-            <li> <strong>A Polynomial-Time Algorithm for Fair and Efficient Allocation with a Fixed Number of Agents</strong> <br> Ryoga Mahara (The University of Tokyo) </li>
-            <li> <strong>Fair and Efficient Allocation of Indivisible Mixed Manna</strong> <br> Siddharth Barman (Indian Institute of Science); Vishwa Prakash HV (Chennai Mathematical Institute); Aditi Sethia (Indian Institute of Science, Bangalore); Mashbat Suzuki (UNSW Sydney) </li>
-            <li> <strong>On Pareto-Optimal and Fair Allocations with Personalized Bi-Valued Utilities</strong> <br> Jiarong Jin, Biaoshuai Tao (Shanghai Jiao Tong University) </li>
-          </ul>
-          
-          
-          <h3 id="session-7a">Session 7A (11:00–12:30, December 11): Games and Equilibria</h3>
-          <ul>
-            <li> <strong>Flow Over Time with Tolls</strong> <br> Shaul Rosner (Tel Aviv University); Marc Schröder (Maastricht University); Laura Vargas Koch (RWTH Aachen University) </li>
-            <li> <strong>Multiplayer General Lotto game</strong> <br> Yan Liu (Renmin University of China); Bonan Ni (Tsinghua University); Weiran Shen, Zihe Wang (Renmin University of China); Jie Zhang (University of Bath) </li>
-            <li> <strong>Integer-splittable Bin Packing Games</strong> <br> Bainian Hao (Chang'An University); Carla Michini (University of Wisconsin--Madison) </li>
-            <li> <strong>Cooperation in Bilateral Generalized Network Creation</strong> <br> Hans Gawendowicz (Hasso Plattner Institute, University of Potsdam); Pascal Lenzner (University of Augsburg); Lukas Weyand (Hasso Plattner Institute, University of Potsdam) </li>
-          </ul>
-          
-          
-          <h3 id="session-7b">Session 7B (11:00–12:30, December 11): Auctions</h3>
-          <ul>
-            <li> <strong>Unending Sequential Auctions</strong> <br> Amir Ban (Hebrew University of Jerusalem) </li>
-            <li> <strong>How to Sell High-Dimensional Data Optimally</strong> <br> Andrew Li, R. Ravi, Karan Singh, Zihong Yi, Weizhong Zhang (Carnegie Mellon University) </li>
-            <li> <strong>Robust Optimality of Bundling Goods Beyond Finite Variance</strong> <br> Tim van Eck, Pieter Kleer, Johan van Leeuwaarden (Tilburg University) </li>
-            <li> <strong>The Role of Prescreening in Auctions with Predictions</strong> <br> Yanwei Sun, Fupeng Sun (Imperial College London); Chiwei Yan (University of California, Berkeley); Jiahua Wu (Imperial College London) </li>
-          </ul>
-          
-          
-          <h3 id="session-8a">Session 8A (15:30–17:00, December 11): Blockchain</h3>
-          <ul>
-            <li> <strong>Money Burning Improves Mediated Communication</strong> <br> Yi Liu (Department of Economics, Yale University); Yang Yu (School of Economics and Management, China University of Petroleum-Beijing) </li>
-            <li> <strong>Time Consensus and Censorship Resistance in Blockchains</strong> <br> Arthur Breitman (Tezos Foundation, Switzerland); Dariusz Kowalski, Piotr Krysta (Augusta University) </li>
-            <li> <strong>One-dimensional vs. Multi-dimensional Pricing in Blockchain Protocols</strong> <br> Giorgos Panagiotakos (IOHK); Aggelos Kiayias (University of Edinburgh &amp; IOG); Elias Koutsoupias (University of Oxford); Kyriaki Zioga (National Technical University of Athens) </li>
-            <li> <strong>Selling Privacy in Blockchain Transactions</strong> <br> Georgios Chionas (University of Liverpool); Piotr Krysta (Augusta University); Olga Gorelkina, Rida Laraki (Université Mohammed VI Polytechnique) </li>
-          </ul>
-          
-          
-          <h3 id="session-8b">Session 8B (15:30–17:00, December 11): Pricing</h3>
-          <ul>
-            <li> <strong>Price and Assortment Optimization under the Multinomial Logit Model with Opaque Products</strong> <br> Omar El Housni (Cornell University); Adam Elmachtoub, Harsh Sheth, Jiaqi Shi (Columbia University) </li>
-            <li> <strong>Assortment Optimization for the Multinomial Logit Model with Repeated Customer Interactions</strong> <br> Ningyuan Chen (University of Toronto, Rotman School of Management); Pin Gao, Chenhao Wang (The Chinese University of Hong Kong, Shenzhen); Yao Wang (Xi'an Jiaotong University); Jianpei Wen (Meituan, Beijing, China) </li>
-            <li> <strong>Pricing and Addiction Control for Digital Services</strong> <br> Jiacheng Chang, Xiao Lei, Feng Tian (University of Hong Kong) </li>
-            <li> <strong>Rethinking Pricing in Energy Markets: Pay-as-Bid vs Pay-as-Clear</strong> <br> Ioannis Caragiannis, Zhile Jiang, Stratis Skoulakis (Aarhus University) </li>
-          </ul>
+          <style>
+            /* Schedule presentation; all rules are scoped to the Schedule tab. */
+            #schedule {
+              box-sizing: border-box;
+              width: calc(100vw - 242px);
+              max-width: 920px;
+            }
+            #schedule .schedule-page {
+              font-family: "Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+              font-size: 17px;
+              line-height: 1.6;
+            }
+            #schedule .schedule-page * { box-sizing: border-box; }
+            #schedule .schedule-page time,
+            #schedule .schedule-table tbody th { font-variant-numeric: tabular-nums; }
+            #schedule .schedule-intro { margin: 1.1rem 0 .8rem; }
+            #schedule .schedule-intro strong { font-size: 1.04rem; }
+            #schedule .schedule-timezone { color: #626262; }
+            #schedule .schedule-nav {
+              display: flex;
+              flex-wrap: wrap;
+              gap: .4rem;
+              margin: 1rem 0 1.7rem;
+              padding-bottom: .8rem;
+              border-bottom: 1px solid #e6e6e6;
+            }
+            #schedule .schedule-nav a {
+              display: inline-block;
+              padding: .2rem .65rem;
+              background: #f7f7f7;
+              border-radius: 3px;
+            }
+            #schedule .schedule-nav a:hover { background: #f3e7ea; }
+            #schedule .schedule-page a:focus-visible,
+            #schedule .schedule-table-scroll:focus-visible {
+              outline: 2px solid rgb(204, 0, 51);
+              outline-offset: 3px;
+            }
+            #schedule .schedule-page h3 { font-size: 1.3rem; }
+            #schedule .schedule-table-scroll {
+              overflow-x: auto;
+              max-width: 100%;
+              margin: .9rem 0 2.25rem;
+              border: 1px solid #dedede;
+            }
+            #schedule .schedule-scroll-hint { display: none; }
+            #schedule .schedule-table {
+              width: 100%;
+              min-width: 680px;
+              table-layout: fixed;
+              border: none;
+              border-collapse: collapse;
+              font-size: .92rem;
+              line-height: 1.45;
+            }
+            #schedule .schedule-table th,
+            #schedule .schedule-table td {
+              border: 1px solid #e0e0e0;
+              padding: .65rem .55rem;
+              vertical-align: middle;
+              text-align: center;
+            }
+            #schedule .schedule-table thead th {
+              background: #fafafa;
+              border-bottom: 2px solid rgb(204, 0, 51);
+              padding: .8rem .6rem;
+            }
+            #schedule .schedule-table .schedule-time-column { width: 19%; text-align: left; padding-left: .9rem; }
+            #schedule .schedule-table tbody th {
+              padding-left: .9rem;
+              text-align: left;
+              font-size: .89rem;
+              font-weight: 650;
+              white-space: nowrap;
+              background: #fff;
+            }
+            #schedule .schedule-weekday {
+              display: block;
+              margin-top: .12rem;
+              color: #777;
+              font-weight: 400;
+            }
+            #schedule .schedule-speaker { display: block; margin-top: .3rem; font-size: .95em; }
+            #schedule .schedule-session-links { display: flex; justify-content: center; align-items: center; gap: .85rem; }
+            #schedule .schedule-session-links a { display: inline-block; }
+            #schedule .schedule-break { background: #f7f7f7; }
+            #schedule .schedule-table .schedule-break th { background: #f7f7f7; }
+            #schedule .schedule-day { margin-top: 2.3rem; }
+            #schedule .schedule-day > h3 {
+              margin: 0 0 .55rem;
+              padding-bottom: .45rem;
+              border-bottom: 2px solid rgb(204, 0, 51);
+            }
+            #schedule .schedule-session,
+            #schedule .schedule-event,
+            #schedule .schedule-day,
+            #schedule #schedule-overview { scroll-margin-top: 1.5rem; }
+            /* A single 8.5rem time rail is used by every detailed agenda entry. */
+            #schedule .schedule-event,
+            #schedule .schedule-session {
+              display: grid;
+              grid-template-columns: 8.5rem minmax(0, 1fr);
+              column-gap: 1.1rem;
+              row-gap: .2rem;
+              align-items: start;
+              padding: 1.05rem .45rem;
+              border-bottom: 1px solid #e0e0e0;
+            }
+            #schedule .schedule-event-time,
+            #schedule .schedule-meta {
+              color: #454545;
+              font-size: .91rem;
+              font-weight: 650;
+              line-height: 1.5;
+              font-variant-numeric: tabular-nums;
+              white-space: nowrap;
+              margin: 0;
+              padding: .04rem 0 0;
+            }
+            #schedule .schedule-session > .schedule-meta { grid-column: 1; grid-row: 1 / span 3; }
+            #schedule .schedule-session > h4 { grid-column: 2; grid-row: 1; }
+            #schedule .schedule-session > ul { grid-column: 2; grid-row: 2; }
+            #schedule .schedule-session > .schedule-session-note { grid-column: 2; grid-row: 2; }
+            #schedule #session-5 > ul {
+              grid-column: 1 / -1;
+              grid-row: 3;
+              padding-left: 0;
+              margin-top: .9rem;
+              list-style: none;
+            }
+            #schedule .schedule-award-list > li {
+              display: grid;
+              grid-template-columns: 8.5rem minmax(0, 1fr);
+              column-gap: 1.1rem;
+              align-items: start;
+              padding: .1rem 0;
+              padding-left: 0;
+            }
+            #schedule .schedule-award-details { min-width: 0; }
+            #schedule .schedule-award-type {
+              display: block;
+              margin-bottom: .18rem;
+              color: #777;
+              font-size: .87rem;
+              font-weight: 600;
+            }
+            #schedule .schedule-event h4,
+            #schedule .schedule-session h4 {
+              font-size: 1.08rem;
+              line-height: 1.4;
+              margin: 0;
+            }
+            #schedule .schedule-session-label,
+            #schedule .schedule-keynote-label { color: rgb(170, 20, 56); }
+            #schedule .schedule-event p { margin: .27rem 0 0; font-size: .96rem; }
+            #schedule .schedule-event.schedule-break { padding-top: .72rem; padding-bottom: .72rem; }
+            #schedule .schedule-event.schedule-break p { margin: 0; }
+            #schedule .schedule-session-note { margin: .15rem 0 0; color: #777; font-size: .88rem; }
+            #schedule .schedule-session ul {
+              padding-left: 1.2rem;
+              margin: .65rem 0 .12rem;
+              gap: .8rem;
+            }
+            #schedule .schedule-session li { padding-left: .1rem; }
+            #schedule #session-5 .schedule-award-list > li { padding-left: 0; }
+            #schedule .schedule-paper-title { display: block; line-height: 1.47; }
+            #schedule .schedule-authors {
+              display: block;
+              margin-top: .12rem;
+              color: #5d5d5d;
+              font-size: .92rem;
+              line-height: 1.52;
+            }
+            #schedule .schedule-award {
+              display: block;
+              margin-bottom: .22rem;
+              color: #666;
+              font-size: .9rem;
+              font-variant-numeric: tabular-nums;
+              white-space: nowrap;
+              font-weight: 650;
+            }
+            #schedule .schedule-award time { color: #444; font-weight: 650; }
+            #schedule .schedule-back { margin: 1.15rem 0 0; font-size: .94rem; }
+            @media (max-width: 960px) {
+              #schedule .schedule-scroll-hint {
+                display: block;
+                margin: .4rem 0 -.3rem;
+                color: #666;
+                font-size: .85rem;
+              }
+            }
+            @media (max-width: 768px) {
+              #schedule { width: calc(100vw - 40px); }
+            }
+            @media (max-width: 600px) {
+              #schedule { padding-right: 20px; padding-left: 20px; }
+              #schedule .schedule-session,
+              #schedule .schedule-event,
+              #schedule .schedule-day { scroll-margin-top: 4.25rem; }
+              #schedule .schedule-nav { gap: .35rem; }
+              #schedule .schedule-nav a { padding: .15rem .45rem; }
+              /* Keep times in view when browsing Thursday and Friday horizontally. */
+              #schedule .schedule-table tr > th:first-child {
+                position: sticky;
+                left: 0;
+                z-index: 1;
+                box-shadow: 1px 0 0 #dedede;
+              }
+              #schedule .schedule-table thead tr > th:first-child { z-index: 2; background: #fafafa; }
+              /* The shared break label also remains visible in the time rail. */
+              #schedule .schedule-table .schedule-break th[data-break-label]::after {
+                display: block;
+                content: attr(data-break-label);
+                margin-top: .1rem;
+                font-size: .78rem;
+                font-weight: 400;
+                color: #666;
+              }
+              #schedule .schedule-event,
+              #schedule .schedule-session { grid-template-columns: minmax(0, 1fr); row-gap: .22rem; }
+              #schedule .schedule-session > .schedule-meta { grid-column: 1; grid-row: 1; }
+              #schedule .schedule-session > h4 { grid-column: 1; grid-row: 2; }
+              #schedule .schedule-session > ul { grid-column: 1; grid-row: 3; }
+              #schedule .schedule-session > .schedule-session-note { grid-column: 1; grid-row: 3; }
+              #schedule #session-5 > ul { grid-column: 1; grid-row: 4; }
+              #schedule .schedule-award-list > li { grid-template-columns: minmax(0, 1fr); row-gap: .18rem; }
+              #schedule .schedule-event > div:last-child { grid-column: 1; grid-row: 2; }
+              #schedule .schedule-event.schedule-break { grid-template-columns: 8.5rem minmax(0, 1fr); }
+              #schedule .schedule-event.schedule-break > div:last-child { grid-column: 2; grid-row: 1; }
+            }
+          </style>
+          <div class="schedule-page">
+            <p class="schedule-intro"><strong>December 2–4, 2026</strong><br><span class="schedule-timezone">All times are Hong Kong time (UTC+8).</span></p>
+            <nav class="schedule-nav" aria-label="Schedule navigation">
+              <a href="#schedule-overview">Overview</a>
+              <a href="#schedule-december-2">December 2</a>
+              <a href="#schedule-december-3">December 3</a>
+              <a href="#schedule-december-4">December 4</a>
+            </nav>
+            <h3 id="schedule-overview">Schedule Overview</h3>
+            <p class="schedule-scroll-hint">Scroll horizontally to view all three days.</p>
+            <div class="schedule-table-scroll" role="region" aria-labelledby="schedule-overview" tabindex="0">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="schedule-time-column">Time</th>
+                    <th scope="col"><a href="#schedule-december-2">December 2</a><span class="schedule-weekday">Wednesday</span></th>
+                    <th scope="col"><a href="#schedule-december-3">December 3</a><span class="schedule-weekday">Thursday</span></th>
+                    <th scope="col"><a href="#schedule-december-4">December 4</a><span class="schedule-weekday">Friday</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">09:00–10:00</th>
+                    <td><a href="#schedule-keynote-1">Keynote 1: A Collectivist, Economic Perspective on AI</a><span class="schedule-speaker">by Michael I. Jordan</span></td>
+                    <td><a href="#schedule-keynote-2">Keynote 2: No Generation Without Representation</a><span class="schedule-speaker">by Ariel Procaccia</span></td>
+                    <td><a href="#schedule-keynote-4">Keynote 4: Understanding AI Behavior and Human Behavior with AI</a><span class="schedule-speaker">by Tracy Xiao Liu</span></td>
+                  </tr>
+                  <tr class="schedule-break">
+                    <th scope="row" data-break-label="Coffee Break">10:00–10:30</th>
+                    <td colspan="3">Coffee Break</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10:30–12:00</th>
+                    <td><span class="schedule-session-links"><a href="#session-1a" title="Information Elicitation">1A</a> <a href="#session-1b" title="Fair Division">1B</a> <a href="#session-1c" title="Pricing">1C</a></span></td>
+                    <td><span class="schedule-session-links"><a href="#session-4a" title="Pricing">4A</a> <a href="#session-4b" title="Equilibria">4B</a> <a href="#session-4c" title="Fair Division">4C</a></span></td>
+                    <td><span class="schedule-session-links"><a href="#session-7a" title="Social Choice">7A</a> <a href="#session-7b" title="Matchings">7B</a> <a href="#session-7c" title="Auctions">7C</a></span></td>
+                  </tr>
+                  <tr class="schedule-break">
+                    <th scope="row" data-break-label="Lunch">12:00–13:30</th>
+                    <td colspan="3">Lunch</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13:30–15:00</th>
+                    <td><span class="schedule-session-links"><a href="#session-2a" title="Information Design and Information Elicitation">2A</a> <a href="#session-2b" title="Markets">2B</a> <a href="#session-2c" title="Mechanism Design">2C</a></span></td>
+                    <td><a href="#session-5">Session 5 Award Papers</a></td>
+                    <td><span class="schedule-session-links"><a href="#session-8a" title="Markets">8A</a> <a href="#session-8b" title="Fair Division">8B</a> <a href="#session-8c" title="Mechanism Design">8C</a></span></td>
+                  </tr>
+                  <tr class="schedule-break">
+                    <th scope="row" data-break-label="Coffee Break">15:00–15:30</th>
+                    <td colspan="3">Coffee Break</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15:30–16:30</th>
+                    <td>Industry Talk &amp; Graduating Bits</td>
+                    <td><a href="#schedule-keynote-3">Keynote 3: TBA</a><span class="schedule-speaker">by Michal Feldman</span></td>
+                    <td>Industry Talk &amp; Graduating Bits</td>
+                  </tr>
+                  <tr class="schedule-break">
+                    <th scope="row" data-break-label="Short Break">16:30–16:40</th>
+                    <td colspan="3">Short Break</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16:40–18:10</th>
+                    <td><span class="schedule-session-links"><a href="#session-3a" title="Equilibria">3A</a> <a href="#session-3b" title="Auctions">3B</a> <a href="#session-3c" title="Information Design and Information Elicitation">3C</a></span></td>
+                    <td><span class="schedule-session-links"><a href="#session-6a" title="Blockchains and Financial Protocols">6A</a> <a href="#session-6b" title="Social Choice">6B</a> <a href="#session-6c" title="Pricing">6C</a></span></td>
+                    <td><span class="schedule-session-links"><a href="#session-9a" title="Solution Concepts">9A</a> <a href="#session-9b" title="Matchings">9B</a> <a href="#session-9c" title="Mechanism Design">9C</a></span></td>
+                  </tr>
+                  <tr class="schedule-break">
+                    <th scope="row">18:30–20:30</th>
+                    <td>Social Activity 1</td>
+                    <td>Banquet and Business Meeting</td>
+                    <td>Social Activity 2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <section class="schedule-day" id="schedule-december-2" aria-labelledby="schedule-december-2-heading">
+              <h3 id="schedule-december-2-heading">Wednesday, December 2, 2026</h3>
+              <div class="schedule-event" id="schedule-keynote-1">
+                <div class="schedule-event-time"><time datetime="2026-12-02T09:00:00+08:00">09:00</time>–<time datetime="2026-12-02T10:00:00+08:00">10:00</time></div>
+                <div>
+                  <h4><span class="schedule-keynote-label">Keynote 1:</span> A Collectivist, Economic Perspective on AI</h4>
+                  <p>by <a href="#keynote-jordan">Michael I. Jordan</a></p>
+                </div>
+              </div>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-02T10:00:00+08:00">10:00</time>–<time datetime="2026-12-02T10:30:00+08:00">10:30</time></div>
+                <div>
+                  <p>Coffee Break</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-1a" aria-labelledby="session-1a-heading">
+                <h4 id="session-1a-heading"><span class="schedule-session-label">Session 1A:</span> Information Elicitation</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T10:30:00+08:00">10:30</time>–<time datetime="2026-12-02T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Strategic Disclosure of Action Space in Principal-Agent Contracts</strong>
+                    <span class="schedule-authors">Xiaotie Deng and Ningyuan Li</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">When Agents Propose Simple Contracts</strong>
+                    <span class="schedule-authors">Paul Dütting, Guru Guruganesh, Jon Schneider, and Joshua R. Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Incentives and Outcomes in Bug Bounties</strong>
+                    <span class="schedule-authors">Serena Wang, Martino Banchio, Krzysztof Kotowicz, Katrina Ligett, R. Preston McAfee, and Eduardo “Vela” Nava</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Principal-Agent Problems with Subcontracting</strong>
+                    <span class="schedule-authors">Guru Guruganesh, Jon Schneider, and Joshua R. Wang</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-1b" aria-labelledby="session-1b-heading">
+                <h4 id="session-1b-heading"><span class="schedule-session-label">Session 1B:</span> Fair Division</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T10:30:00+08:00">10:30</time>–<time datetime="2026-12-02T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Fractional Assignment with Distance-Based Preferences</strong>
+                    <span class="schedule-authors">Yasushi Kawase, Warut Suksompong, Hanna Sumita, and Yu Yokoi</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">On best of both worlds allocations with subadditive valuations</strong>
+                    <span class="schedule-authors">Uriel Feige</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Best-of-Both-Worlds Guarantees with Fairer Endings</strong>
+                    <span class="schedule-authors">Telikepalli Kavitha, Surya Panchapakesan, Rohit Vaish, Vignesh Viswanathan, and Jatin Yadav</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Tight Efficiency Bounds for the Probabilistic Serial and Related Mechanisms</strong>
+                    <span class="schedule-authors">Jugal Garg, Yixin Tao, and László A. Végh</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-1c" aria-labelledby="session-1c-heading">
+                <h4 id="session-1c-heading"><span class="schedule-session-label">Session 1C:</span> Pricing</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T10:30:00+08:00">10:30</time>–<time datetime="2026-12-02T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Quantile Meets Mean: Robust Pricing under Bounded Residual Surplus</strong>
+                    <span class="schedule-authors">Dan She, Zhihao Gavin Tang, and Shixin Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Sample Complexity of the Second-Best Bilateral Trade</strong>
+                    <span class="schedule-authors">Qiaoyun Shi, Shengxin Liu, and Zongqi Wan</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Optimal Prophet Inequalities for Gain from Trade</strong>
+                    <span class="schedule-authors">Xujin Chen, Xiaodong Hu, Changjun Wang, and Qingjie Ye</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Personalised versus Posted Pricing from Samples</strong>
+                    <span class="schedule-authors">Pieter Kleer, Johan van Leeuwaarden, and Daan Noordenbos</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-02T12:00:00+08:00">12:00</time>–<time datetime="2026-12-02T13:30:00+08:00">13:30</time></div>
+                <div>
+                  <p>Lunch</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-2a" aria-labelledby="session-2a-heading">
+                <h4 id="session-2a-heading"><span class="schedule-session-label">Session 2A:</span> Information Design and Information Elicitation</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T13:30:00+08:00">13:30</time>–<time datetime="2026-12-02T15:00:00+08:00">15:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Deviation-Based Learning: Training Recommender Systems Using Informed User Choice</strong>
+                    <span class="schedule-authors">Junpei Komiyama and Shunya Noda</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Bayesian Conversations</strong>
+                    <span class="schedule-authors">Renato Paes Leme, Jon Schneider, Heyang Shang, and Shuran Zheng</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Information Elicitation by Ordinal Agreement</strong>
+                    <span class="schedule-authors">Yiling Chen, Shi Feng, Grant Schoenebeck, and Fang-Yi Yu</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Prices as Signals: Joint Design of Information and Pricing</strong>
+                    <span class="schedule-authors">Zhicheng Du, Yanwei Sun, Zihe Wang, and Jiahua Wu</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-2b" aria-labelledby="session-2b-heading">
+                <h4 id="session-2b-heading"><span class="schedule-session-label">Session 2B:</span> Markets</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T13:30:00+08:00">13:30</time>–<time datetime="2026-12-02T15:00:00+08:00">15:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Decentralized Dynamics in Trading Networks</strong>
+                    <span class="schedule-authors">Simon Finster, Paul W. Goldberg, Edwin Lock, and Matilde Tullii</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Signaling in Data Markets via Free Samples</strong>
+                    <span class="schedule-authors">Nivasini Ananthakrishnan, Alireza Fallah, and Michael I. Jordan</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Profit Reallocation Mechanisms in Tree-based Data Trading</strong>
+                    <span class="schedule-authors">Yunxuan Ma, Wu Xin, Jichen Li, Yusen Zheng, and Xiaotie Deng</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Social Learning of Ranking: Getting the Top Right despite Local Herding</strong>
+                    <span class="schedule-authors">Shahrzad Haddadan and Jie Gao</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-2c" aria-labelledby="session-2c-heading">
+                <h4 id="session-2c-heading"><span class="schedule-session-label">Session 2C:</span> Mechanism Design</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T13:30:00+08:00">13:30</time>–<time datetime="2026-12-02T15:00:00+08:00">15:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Gaps and Augmentations in Bayesian Scheduling</strong>
+                    <span class="schedule-authors">Ahuva Mu’alem</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">The Pareto Secretary Problem</strong>
+                    <span class="schedule-authors">Andrés Cristi, Yilin Kong, and Jiechen Zhang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Competitive Non-Clairvoyant KV-Cache Scheduling for LLM Inference</strong>
+                    <span class="schedule-authors">Yiding Feng, Zonghan Yang, and Yuhao Zhang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Time-Windowed Optimal Stopping</strong>
+                    <span class="schedule-authors">Nikolai Gravin, Ping Li, and Zhihao Gavin Tang</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-02T15:00:00+08:00">15:00</time>–<time datetime="2026-12-02T15:30:00+08:00">15:30</time></div>
+                <div>
+                  <p>Coffee Break</p>
+                </div>
+              </div>
+              <div class="schedule-event">
+                <div class="schedule-event-time"><time datetime="2026-12-02T15:30:00+08:00">15:30</time>–<time datetime="2026-12-02T16:30:00+08:00">16:30</time></div>
+                <div>
+                  <p>Industry Talk &amp; Graduating Bits</p>
+                </div>
+              </div>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-02T16:30:00+08:00">16:30</time>–<time datetime="2026-12-02T16:40:00+08:00">16:40</time></div>
+                <div>
+                  <p>Short Break</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-3a" aria-labelledby="session-3a-heading">
+                <h4 id="session-3a-heading"><span class="schedule-session-label">Session 3A:</span> Equilibria</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T16:40:00+08:00">16:40</time>–<time datetime="2026-12-02T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Equilibrium Analysis of Fair Data-Exchange</strong>
+                    <span class="schedule-authors">Rashida Hakim, Christos H. Papadimitriou, and Mihalis Yannakakis</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Price of Stability in Failure-Aware Kidney Exchange</strong>
+                    <span class="schedule-authors">Itai Feigenbaum, Felix Wilking, and Francesco Zeolla</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Nash Equilibria in Auctions with Pacing Strategies: Complexity and Inefficiency</strong>
+                    <span class="schedule-authors">Aris Filos-Ratsikas, Charalampos Kokkalis, and Mohamad Latifian</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Pacing Equilibria in Abstract Mechanisms</strong>
+                    <span class="schedule-authors">Salam Afiouni and Christian Kroer</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-3b" aria-labelledby="session-3b-heading">
+                <h4 id="session-3b-heading"><span class="schedule-session-label">Session 3B:</span> Auctions</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T16:40:00+08:00">16:40</time>–<time datetime="2026-12-02T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Repeated Descent: A Framework for Online Budget-Feasible Auctions</strong>
+                    <span class="schedule-authors">Andreas Charalampopoulos, Dimitris Fotakis, and Thanos Tolias</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Equitable Auction Design with Provable Regret Guarantees</strong>
+                    <span class="schedule-authors">Ruiqin Wang, Çağıl Koçyiğit, and Napat Rujeerapaiboon</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Auctions with Contract Design</strong>
+                    <span class="schedule-authors">Xiaolin Bu, Jiarong Jin, Junzhu Ke, Pinyan Lu, Biaoshuai Tao, Xiang Yan, Chunxue Yang, Haikuo Yang, and Zhihua Zhu</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">A Unified Framework for Single-item Diffusion Auctions</strong>
+                    <span class="schedule-authors">Miao Li, Yao Zhang, and Dengji Zhao</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-3c" aria-labelledby="session-3c-heading">
+                <h4 id="session-3c-heading"><span class="schedule-session-label">Session 3C:</span> Information Design and Information Elicitation</h4>
+                <div class="schedule-meta"><time datetime="2026-12-02T16:40:00+08:00">16:40</time>–<time datetime="2026-12-02T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Learning from a Mixture of Information Sources</strong>
+                    <span class="schedule-authors">Nicole Immorlica, Brendan Lucier, Yaroslav Mukhin, Clayton Thomas, and Ruqing Xu</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Horizontal or Vertical? Managerial Attention and Organizational Structure</strong>
+                    <span class="schedule-authors">Ashley Perry</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Multi-agent Adaptive Mechanism Design</strong>
+                    <span class="schedule-authors">Qiushi Han, David Simchi-Levi, Renfei Tan, and Zishuo Zhao</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Does AI Help or Harm? Endogenous Information Acquisition with AI Advice</strong>
+                    <span class="schedule-authors">Kexin Chen, Tao Lin, and Jianwei Huang</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event">
+                <div class="schedule-event-time"><time datetime="2026-12-02T18:30:00+08:00">18:30</time>–<time datetime="2026-12-02T20:30:00+08:00">20:30</time></div>
+                <div>
+                  <p>Social Activity 1</p>
+                </div>
+              </div>
+              <p class="schedule-back"><a href="#schedule-overview">Back to schedule overview</a></p>
+            </section>
+            <section class="schedule-day" id="schedule-december-3" aria-labelledby="schedule-december-3-heading">
+              <h3 id="schedule-december-3-heading">Thursday, December 3, 2026</h3>
+              <div class="schedule-event" id="schedule-keynote-2">
+                <div class="schedule-event-time"><time datetime="2026-12-03T09:00:00+08:00">09:00</time>–<time datetime="2026-12-03T10:00:00+08:00">10:00</time></div>
+                <div>
+                  <h4><span class="schedule-keynote-label">Keynote 2:</span> No Generation Without Representation</h4>
+                  <p>by <a href="#keynote-procaccia">Ariel Procaccia</a></p>
+                </div>
+              </div>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-03T10:00:00+08:00">10:00</time>–<time datetime="2026-12-03T10:30:00+08:00">10:30</time></div>
+                <div>
+                  <p>Coffee Break</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-4a" aria-labelledby="session-4a-heading">
+                <h4 id="session-4a-heading"><span class="schedule-session-label">Session 4A:</span> Pricing</h4>
+                <div class="schedule-meta"><time datetime="2026-12-03T10:30:00+08:00">10:30</time>–<time datetime="2026-12-03T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Beyond a Single Optimal Design: A Dynamical Systems Characterization of Online Allocation with Convex Costs</strong>
+                    <span class="schedule-authors">Haoxin Sang, Bo Sun, and Xiaoqi Tan</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Learning Anonymous Pricing for Online Resource Allocation</strong>
+                    <span class="schedule-authors">Yifeng Teng and Yifan Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Online Stochastic Allocation with Increasing Returns</strong>
+                    <span class="schedule-authors">Shuo Sun and Yunduan Lin</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Online Posted Pricing with Unknown Demand</strong>
+                    <span class="schedule-authors">Nick Gravin, Hao Li, and Zhiqi Wang</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-4b" aria-labelledby="session-4b-heading">
+                <h4 id="session-4b-heading"><span class="schedule-session-label">Session 4B:</span> Equilibria</h4>
+                <div class="schedule-meta"><time datetime="2026-12-03T10:30:00+08:00">10:30</time>–<time datetime="2026-12-03T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Network Topology That Excludes Braess’s Paradox and Maintains Monotonicity in Flows Over Time</strong>
+                    <span class="schedule-authors">Xujin Chen, Xiyuan Deng, and Changjun Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Informal and Privatized Transit: Incentives, Efficiency and Coordination</strong>
+                    <span class="schedule-authors">Devansh Jalota and Matthew Tsao</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Ordinal Hegselmann-Krause Systems</strong>
+                    <span class="schedule-authors">Martin Hoefer, Tim Koglin, Jakob Lindner, and Jannis Schramek</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Nonmonetary Allocation Under Congestion</strong>
+                    <span class="schedule-authors">Alexander S. Estes and Ankur Mani</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-4c" aria-labelledby="session-4c-heading">
+                <h4 id="session-4c-heading"><span class="schedule-session-label">Session 4C:</span> Fair Division</h4>
+                <div class="schedule-meta"><time datetime="2026-12-03T10:30:00+08:00">10:30</time>–<time datetime="2026-12-03T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Fair and Efficient Allocations: Decision Problems in the Gap of Polynomial Hierarchy</strong>
+                    <span class="schedule-authors">Xiaolin Bu and Biaoshuai Tao</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Delegated Fair Division</strong>
+                    <span class="schedule-authors">Argyrios Deligkas, Michail Fasoulakis, Stavros D. Ioannidis, Alviona Mancho, and Evangelos Markakis</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Improved Parallel Algorithms for EF1 Allocations</strong>
+                    <span class="schedule-authors">Kishen N Gowda, D Ellis Hershkowitz, Richard Z Huang, and Gregory Kehne</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">When One Good Is Not Enough: EF1 and Pareto Optimality Are Not Compatible for Submodular Valuations</strong>
+                    <span class="schedule-authors">Simon Mackenzie and Mashbat Suzuki</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-03T12:00:00+08:00">12:00</time>–<time datetime="2026-12-03T13:30:00+08:00">13:30</time></div>
+                <div>
+                  <p>Lunch</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-5" aria-labelledby="session-5-heading">
+                <h4 id="session-5-heading"><span class="schedule-session-label">Session 5:</span> Award Papers</h4>
+                <div class="schedule-meta"><time datetime="2026-12-03T13:30:00+08:00">13:30</time>–<time datetime="2026-12-03T15:00:00+08:00">15:00</time></div>
+                <p class="schedule-session-note">30 minutes per paper</p>
+                <ul class="spaced-list schedule-award-list">
+                  <li>
+                    <span class="schedule-award"><time datetime="2026-12-03T13:30:00+08:00">13:30</time>–<time datetime="2026-12-03T14:00:00+08:00">14:00</time></span>
+                    <div class="schedule-award-details">
+                      <span class="schedule-award-type">Best Paper Award</span>
+                      <strong class="schedule-paper-title">An Entropy Potential for Type-Composition Games</strong>
+                    <span class="schedule-authors">Morteza Alimi, Merlin de la Haye, Pascal Lenzner, Šimon Schierreich, Alexander Skopalik, and Marcus Wunderlich</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="schedule-award"><time datetime="2026-12-03T14:00:00+08:00">14:00</time>–<time datetime="2026-12-03T14:30:00+08:00">14:30</time></span>
+                    <div class="schedule-award-details">
+                      <span class="schedule-award-type">Best Student Paper Award</span>
+                      <strong class="schedule-paper-title">Algorithmic Information Design for Searchers with Uncertain Alternatives</strong>
+                    <span class="schedule-authors">Zhicheng Du, Hu Fu, Ying Qin, and Zihe Wang</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="schedule-award"><time datetime="2026-12-03T14:30:00+08:00">14:30</time>–<time datetime="2026-12-03T15:00:00+08:00">15:00</time></span>
+                    <div class="schedule-award-details">
+                      <span class="schedule-award-type">Best Student Paper Award</span>
+                      <strong class="schedule-paper-title">What You Earn from What You Learn: Characterization and Complexity of the Value of Information</strong>
+                    <span class="schedule-authors">Ratip Emin Berker, Ioannis Anagnostides, Emanuel Tewolde, Brian Hu Zhang, Tuomas Sandholm, and Vincent Conitzer</span>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-03T15:00:00+08:00">15:00</time>–<time datetime="2026-12-03T15:30:00+08:00">15:30</time></div>
+                <div>
+                  <p>Coffee Break</p>
+                </div>
+              </div>
+              <div class="schedule-event" id="schedule-keynote-3">
+                <div class="schedule-event-time"><time datetime="2026-12-03T15:30:00+08:00">15:30</time>–<time datetime="2026-12-03T16:30:00+08:00">16:30</time></div>
+                <div>
+                  <h4><span class="schedule-keynote-label">Keynote 3:</span> TBA</h4>
+                  <p>by <a href="#keynote-feldman">Michal Feldman</a></p>
+                </div>
+              </div>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-03T16:30:00+08:00">16:30</time>–<time datetime="2026-12-03T16:40:00+08:00">16:40</time></div>
+                <div>
+                  <p>Short Break</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-6a" aria-labelledby="session-6a-heading">
+                <h4 id="session-6a-heading"><span class="schedule-session-label">Session 6A:</span> Blockchains and Financial Protocols</h4>
+                <div class="schedule-meta"><time datetime="2026-12-03T16:40:00+08:00">16:40</time>–<time datetime="2026-12-03T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Slack and Budget Breaking in Threshold Team Production</strong>
+                    <span class="schedule-authors">Benjamin Marsh and Alejandro Ranchal-Pedrosa</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">The Economics of Proof-of-Useful-Work</strong>
+                    <span class="schedule-authors">Rafael Pass</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Pricing Blockchain Gossip through Bandwidth Fee Mechanisms</strong>
+                    <span class="schedule-authors">Eleftheria Fassman, Mahimna Kelkar, Benjamin Marsh, and Ke Wu</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Beyond Incentive Compatibility: Rational Harm-Proof Transaction Fee Mechanisms</strong>
+                    <span class="schedule-authors">Forest Zhang, Ke Wu, and Elain Park</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-6b" aria-labelledby="session-6b-heading">
+                <h4 id="session-6b-heading"><span class="schedule-session-label">Session 6B:</span> Social Choice</h4>
+                <div class="schedule-meta"><time datetime="2026-12-03T16:40:00+08:00">16:40</time>–<time datetime="2026-12-03T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Fair and Efficient Investment in Public Transportation</strong>
+                    <span class="schedule-authors">Martin Bullinger, Edith Elkind, and Kassian Köck</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Individual Rationality in Size-Constrained Hedonic Games: Anonymous and Diversity Preferences</strong>
+                    <span class="schedule-authors">Foivos Fioravantes, Harmender Gahlawat, Nikolaos Melissinos, and Šimon Schierreich</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Utilitarian Distortion Under Probabilistic Voting</strong>
+                    <span class="schedule-authors">Hamidreza Alipour and Mohak Goyal</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Anchored Sequential Deliberation</strong>
+                    <span class="schedule-authors">Sijing Tu and Ashish Goel</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-6c" aria-labelledby="session-6c-heading">
+                <h4 id="session-6c-heading"><span class="schedule-session-label">Session 6C:</span> Pricing</h4>
+                <div class="schedule-meta"><time datetime="2026-12-03T16:40:00+08:00">16:40</time>–<time datetime="2026-12-03T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Learning to Price in Feature-Based Pool Markets under Censored Feedback</strong>
+                    <span class="schedule-authors">Titing Cui</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Simple Delay-Oblivious Policies Are Robust: Overbooking with Delayed Purchases</strong>
+                    <span class="schedule-authors">Yiding Feng, Puping Jiang, and Wei Tang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Simple Policies for Joint Pricing and Inventory Management</strong>
+                    <span class="schedule-authors">Adam N. Elmachtoub, Harsh Sheth, and Yeqing Zhou</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Selling Surplus Foods Through Surprise Bags: Online Inventory Routing Across Dual Channels</strong>
+                    <span class="schedule-authors">Yiding Feng, Chui Shan Lee, Guodong Lyu, and Huan Zheng</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event">
+                <div class="schedule-event-time"><time datetime="2026-12-03T18:30:00+08:00">18:30</time>–<time datetime="2026-12-03T20:30:00+08:00">20:30</time></div>
+                <div>
+                  <p>Banquet and Business Meeting</p>
+                </div>
+              </div>
+              <p class="schedule-back"><a href="#schedule-overview">Back to schedule overview</a></p>
+            </section>
+            <section class="schedule-day" id="schedule-december-4" aria-labelledby="schedule-december-4-heading">
+              <h3 id="schedule-december-4-heading">Friday, December 4, 2026</h3>
+              <div class="schedule-event" id="schedule-keynote-4">
+                <div class="schedule-event-time"><time datetime="2026-12-04T09:00:00+08:00">09:00</time>–<time datetime="2026-12-04T10:00:00+08:00">10:00</time></div>
+                <div>
+                  <h4><span class="schedule-keynote-label">Keynote 4:</span> Understanding AI Behavior and Human Behavior with AI</h4>
+                  <p>by <a href="#keynote-liu">Tracy Xiao Liu</a></p>
+                </div>
+              </div>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-04T10:00:00+08:00">10:00</time>–<time datetime="2026-12-04T10:30:00+08:00">10:30</time></div>
+                <div>
+                  <p>Coffee Break</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-7a" aria-labelledby="session-7a-heading">
+                <h4 id="session-7a-heading"><span class="schedule-session-label">Session 7A:</span> Social Choice</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T10:30:00+08:00">10:30</time>–<time datetime="2026-12-04T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">The Complexity of Justified Representation with Additive Utilities</strong>
+                    <span class="schedule-authors">Carmel Baharav, Jakob de Raaij, and Agnès Totschnig</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Candidate Resignation Monotonicity in Approval-Based Committee Elections</strong>
+                    <span class="schedule-authors">Yeeseok Oh and Dominik Peters</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Computational Complexity of Strong and Average Justified Representation</strong>
+                    <span class="schedule-authors">Yizhou Ai and Biaoshuai Tao</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Explanation Systems for Approval-Based Multiwinner Voting</strong>
+                    <span class="schedule-authors">Niclas Boehmer, Luca Kreisel, and Jannik Peters</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-7b" aria-labelledby="session-7b-heading">
+                <h4 id="session-7b-heading"><span class="schedule-session-label">Session 7B:</span> Matchings</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T10:30:00+08:00">10:30</time>–<time datetime="2026-12-04T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">A Short List Goes A Long Way: Pareto-Optimal Assignment under Stochastic Arrival and MNL Utilities</strong>
+                    <span class="schedule-authors">Weicheng Wang, Ankang Sun, and Zizhuo Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Justifiable Priority Violations</strong>
+                    <span class="schedule-authors">Josué Ortega and R. Pablo Arribillaga</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Dynamic Pooling and Regional Participation in Deceased-Donor Organ Allocation</strong>
+                    <span class="schedule-authors">Genta Okada</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Optimal Metric Distortion for Learning-Augmented Matching on the Line</strong>
+                    <span class="schedule-authors">Jabari Hastings and Marena Richter</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-7c" aria-labelledby="session-7c-heading">
+                <h4 id="session-7c-heading"><span class="schedule-session-label">Session 7C:</span> Auctions</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T10:30:00+08:00">10:30</time>–<time datetime="2026-12-04T12:00:00+08:00">12:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Safe Strategies in Multi-Unit Auctions: Equilibria, Liquid Welfare, and Revenue</strong>
+                    <span class="schedule-authors">Negin Golrezaei and Sourav Sahoo</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Generalized Prophet Inequalities for Online Auctions</strong>
+                    <span class="schedule-authors">Twan Kroll and Rebecca Reiffenhäuser</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Mechanism Design via Market-Clearing Prices for Value Maximizers under Budget and RoS Constraints</strong>
+                    <span class="schedule-authors">Xiaodong Liu, Weiran Shen, and Zihe Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Two-sided Market Design Meets Autobidding</strong>
+                    <span class="schedule-authors">Yang Cai, Christopher Liaw, Aranyak Mehta, Xizhi Tan, and Mingfei Zhao</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-04T12:00:00+08:00">12:00</time>–<time datetime="2026-12-04T13:30:00+08:00">13:30</time></div>
+                <div>
+                  <p>Lunch</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-8a" aria-labelledby="session-8a-heading">
+                <h4 id="session-8a-heading"><span class="schedule-session-label">Session 8A:</span> Markets</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T13:30:00+08:00">13:30</time>–<time datetime="2026-12-04T15:00:00+08:00">15:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Who Is Shown to Whom? Sorting, Screening, and Exposure Design on a Two-Sided Matching Platform</strong>
+                    <span class="schedule-authors">Kei Ikegami</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Content Generation: Human Creators, AI Learning, and Platform Design</strong>
+                    <span class="schedule-authors">Seyedeh Parisa Moosavi, Azarakhsh Malekian, and Ali Makhdoumi</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Driven to Collusion: Competitive Pricing under Independent Demand Model and Price Imitation</strong>
+                    <span class="schedule-authors">Zongsen Yang, Pin Gao, and Zizhuo Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">A Markovian Approach for Cross-Category Complementarity in Choice Modeling</strong>
+                    <span class="schedule-authors">Omar El Housni, Shuo Sun, and Rajan Udwani</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-8b" aria-labelledby="session-8b-heading">
+                <h4 id="session-8b-heading"><span class="schedule-session-label">Session 8B:</span> Fair Division</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T13:30:00+08:00">13:30</time>–<time datetime="2026-12-04T15:00:00+08:00">15:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Optimal Subsidy for Envy-Free Allocations with Monotone Valuations in Multigraphs</strong>
+                    <span class="schedule-authors">Bo Li, Ankang Sun, Mashbat Suzuki, and Shiji Xing</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Settling PROPm and PROPavg in Graphical Resource Allocations</strong>
+                    <span class="schedule-authors">Bo Li, Ankang Sun, and Ruijie Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">EF(X) Orientations: A Parameterized Complexity Perspective</strong>
+                    <span class="schedule-authors">Sotiris Kanellopoulos, Edouard Nemery, Christos Pergaminelis, Minas Marios Sotiriou, and Manolis Vasilakis</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Strategyproof Multi-Resource Allocation in Cloud Computing via Adaptive-Speed Fairness</strong>
+                    <span class="schedule-authors">Yunpeng Lou and Junjie Luo</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-8c" aria-labelledby="session-8c-heading">
+                <h4 id="session-8c-heading"><span class="schedule-session-label">Session 8C:</span> Mechanism Design</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T13:30:00+08:00">13:30</time>–<time datetime="2026-12-04T15:00:00+08:00">15:00</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Robust Learning with Private Information</strong>
+                    <span class="schedule-authors">Kyohei Okumura</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Strategyproof Mechanisms for Euclidean Facility Location Problems under Lp-norm Social Cost</strong>
+                    <span class="schedule-authors">Hau Chan, Jianan Lin, and Chenhao Wang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Identity Falsification and Quotas</strong>
+                    <span class="schedule-authors">Sergei Mikhalishchev</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-04T15:00:00+08:00">15:00</time>–<time datetime="2026-12-04T15:30:00+08:00">15:30</time></div>
+                <div>
+                  <p>Coffee Break</p>
+                </div>
+              </div>
+              <div class="schedule-event">
+                <div class="schedule-event-time"><time datetime="2026-12-04T15:30:00+08:00">15:30</time>–<time datetime="2026-12-04T16:30:00+08:00">16:30</time></div>
+                <div>
+                  <p>Industry Talk &amp; Graduating Bits</p>
+                </div>
+              </div>
+              <div class="schedule-event schedule-break">
+                <div class="schedule-event-time"><time datetime="2026-12-04T16:30:00+08:00">16:30</time>–<time datetime="2026-12-04T16:40:00+08:00">16:40</time></div>
+                <div>
+                  <p>Short Break</p>
+                </div>
+              </div>
+              <section class="schedule-session" id="session-9a" aria-labelledby="session-9a-heading">
+                <h4 id="session-9a-heading"><span class="schedule-session-label">Session 9A:</span> Solution Concepts</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T16:40:00+08:00">16:40</time>–<time datetime="2026-12-04T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">On the Hardness of Algorithmic Bayesian Persuasion with Succinctly Described Inputs</strong>
+                    <span class="schedule-authors">Chirag Pabbaraju</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Matroid Packing Games: The Core and the Nucleolus</strong>
+                    <span class="schedule-authors">Pengfei Liu, Han Xiao, Xin Chen, and Qizhi Fang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Flow Games with Public Arcs: the Least Core and the Nucleolus</strong>
+                    <span class="schedule-authors">Tianhang Lu, Han Xiao, and Qizhi Fang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Packing Linear Programs and Fractional Knapsack using Comparison Oracles</strong>
+                    <span class="schedule-authors">Ritabrata Barat, Siddharth Barman, Nirjhar Das, and Sukruta Midigeshi</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-9b" aria-labelledby="session-9b-heading">
+                <h4 id="session-9b-heading"><span class="schedule-session-label">Session 9B:</span> Matchings</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T16:40:00+08:00">16:40</time>–<time datetime="2026-12-04T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Preemptive Bipartite Matching with Secondary Chances</strong>
+                    <span class="schedule-authors">Yifan Lin, Yuhao Zhang, and Weihao Zhu</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Arrival-Time Incentive Compatibility in Random Order Online Bipartite Matching</strong>
+                    <span class="schedule-authors">Arghya Chakraborty and Varun Gupta</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Feature-Based Dynamic Matching in the Dark</strong>
+                    <span class="schedule-authors">Akshit Kumar</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Degree-Parameterized Analysis of Sampling-Based Online Matching</strong>
+                    <span class="schedule-authors">Pan Xu</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="schedule-session" id="session-9c" aria-labelledby="session-9c-heading">
+                <h4 id="session-9c-heading"><span class="schedule-session-label">Session 9C:</span> Mechanism Design</h4>
+                <div class="schedule-meta"><time datetime="2026-12-04T16:40:00+08:00">16:40</time>–<time datetime="2026-12-04T18:10:00+08:00">18:10</time></div>
+                <ul class="spaced-list">
+                  <li>
+                    <strong class="schedule-paper-title">Sample-Based Prophet Inequalities for Random Walks</strong>
+                    <span class="schedule-authors">Pieter Kleer, Johan van Leeuwaarden, and Daan Noordenbos</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Competition Versus Complexity in Multiple-Selection Prophet Inequalities</strong>
+                    <span class="schedule-authors">Eugenio Cruz-Ossa, Sebastian Perez-Salazar, and Victor Verdugo</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">On the Cost of Non-Adaptivity in Matroid Prophet Inequalities</strong>
+                    <span class="schedule-authors">Tianle Jiang</span>
+                  </li>
+                  <li>
+                    <strong class="schedule-paper-title">Optimal Prophet Inequality for Unions of Easy Systems</strong>
+                    <span class="schedule-authors">Hanrui Zhang and Yiran Zhang</span>
+                  </li>
+                </ul>
+              </section>
+              <div class="schedule-event">
+                <div class="schedule-event-time"><time datetime="2026-12-04T18:30:00+08:00">18:30</time>–<time datetime="2026-12-04T20:30:00+08:00">20:30</time></div>
+                <div>
+                  <p>Social Activity 2</p>
+                </div>
+              </div>
+              <p class="schedule-back"><a href="#schedule-overview">Back to schedule overview</a></p>
+            </section>
+          </div>
         </div>
 
         <div id="keynote-speakers" class="tab-content" style="display: none;">
           <h2>Keynote Speakers</h2>
           <hr style="border: none; height: 2px; background-color: black;">
-          <p>The WINE 2026 program will feature keynote talks by the following speakers.</p>
           <style>
-          .keynote-bio {
-            display: flex;       /* Forces items side-by-side */
-            align-items: center; /* Vertically centers the text with the image (optional) */
-            gap: 20px;          /* Adds clean spacing between the image and text */
-          }
-
-          .keynote-picture {
-            width: 200px;        /* Sets a fixed size for your image */
-            height: auto;
-          }
-        </style>
-          <details name="keynote">
-            <summary style="cursor: pointer; border: none;">
-              <strong>Michal Feldman (Tel Aviv University): TBA</strong>
-            </summary>
-            <div style="border: none; border-top: none;">
+            /* Keynote styles are scoped to this tab. */
+            #keynote-speakers {
+              box-sizing: border-box;
+              width: calc(100vw - 242px);
+              max-width: 920px;
+            }
+            #keynote-speakers .keynote-page {
+              font-family: "Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+              font-size: 17px;
+              line-height: 1.6;
+            }
+            #keynote-speakers .keynote-entry {
+              border-bottom: 1px solid #dcdcdc;
+              padding: 1.25rem 0;
+              scroll-margin-top: 1.5rem;
+            }
+            #keynote-speakers .keynote-entry:first-of-type { border-top: 3px solid rgb(204, 0, 51); }
+            #keynote-speakers .keynote-entry summary { cursor: pointer; padding-right: .5rem; }
+            #keynote-speakers .keynote-entry summary::marker { color: rgb(204, 0, 51); }
+            #keynote-speakers .keynote-heading { display: inline; }
+            #keynote-speakers .keynote-name { font-size: 1.1rem; }
+            #keynote-speakers .keynote-affiliation { font-weight: 400; color: #666; }
+            #keynote-speakers .keynote-title {
+              display: block;
+              margin: .35rem 0 0 1.2rem;
+              color: rgb(153, 102, 92);
+            }
+            #keynote-speakers .keynote-slot { margin: .5rem 0 0 1.2rem; font-size: .9rem; color: #666; }
+            #keynote-speakers .keynote-details { padding: .25rem 0 0 1.2rem; }
+            #keynote-speakers .keynote-details p { margin: 1rem 0; }
+            #keynote-speakers .keynote-bio {
+              display: flex;
+              align-items: flex-start;
+              gap: 1.5rem;
+              margin-top: 1.5rem;
+              padding-top: 1.25rem;
+              border-top: 1px solid #dcdcdc;
+            }
+            #keynote-speakers .keynote-picture {
+              display: block;
+              width: 200px;
+              height: auto;
+              max-width: 100%;
+              flex: 0 0 auto;
+            }
+            #keynote-speakers .text-content { flex: 1; min-width: 0; }
+            #keynote-speakers .text-content p:first-child { margin-top: 0; }
+            #keynote-speakers a:focus-visible,
+            #keynote-speakers summary:focus-visible {
+              outline: 2px solid rgb(204, 0, 51);
+              outline-offset: 3px;
+            }
+            @media (max-width: 768px) {
+              #keynote-speakers { width: calc(100vw - 40px); }
+            }
+            @media (max-width: 600px) {
+              #keynote-speakers { padding-right: 20px; padding-left: 20px; }
+              #keynote-speakers .keynote-bio { flex-direction: column; gap: 1rem; }
+              #keynote-speakers .keynote-details { padding-left: 0; }
+              #keynote-speakers .keynote-affiliation { display: block; margin-left: 1.2rem; }
+            }
+          </style>
+          <div class="keynote-page">
+            <p>The WINE 2026 program will feature keynote talks by the following speakers.</p>
+            <p>All times are Hong Kong time (UTC+8).</p>
+            <details name="keynote" class="keynote-entry" id="keynote-feldman">
+              <summary>
+                <span class="keynote-heading"><strong class="keynote-name">Michal Feldman</strong> <span class="keynote-affiliation">(Tel Aviv University)</span></span>
+                <span class="keynote-title">TBA</span>
+              </summary>
+              <p class="keynote-slot"><a href="#schedule-keynote-3">Keynote 3 · Thursday, December 3 · 15:30–16:30</a></p>
+            <div class="keynote-details">
               <p>TBA</p>
             </div>
-          </details>
-          <br>
-          <details name="keynote">
-            <summary style="cursor: pointer; border: none;">
-              <strong>Michael I. Jordan (Inria Paris and UC Berkeley): A Collectivist, Economic Perspective on AI</strong>
-            </summary>
-            <div style="border: none; border-top: none;">
+            </details>
+            <details name="keynote" class="keynote-entry" id="keynote-jordan">
+              <summary>
+                <span class="keynote-heading"><strong class="keynote-name">Michael I. Jordan</strong> <span class="keynote-affiliation">(Inria Paris and UC Berkeley)</span></span>
+                <span class="keynote-title">A Collectivist, Economic Perspective on AI</span>
+              </summary>
+              <p class="keynote-slot"><a href="#schedule-keynote-1">Keynote 1 · Wednesday, December 2 · 09:00–10:00</a></p>
+            <div class="keynote-details">
               <p><strong>Abstract:</strong>
                 Information technology is in the midst of a revolution in which
                 omnipresent data collection and machine learning are impacting the
@@ -981,9 +1765,8 @@
                 sciences.  I'll discuss some concrete examples of problems and
                 solutions at this tripartite interface.
               </p>
-              <hr style="border: none; height: 2px; background-color: black;">
               <div class="keynote-bio">
-                <img src="files/jordan.jpg" width=200 class="keynote-picture">
+                <img src="files/jordan.jpg" width="200" class="keynote-picture no-dark" alt="Michael I. Jordan">
                 <div class="text-content">
                   <p><strong>Bio:</strong>
                     Michael I. Jordan is a researcher at Inria Paris and Professor
@@ -1004,13 +1787,14 @@
                 </div>
               </div>
             </div>
-          </details>
-          <br>
-          <details name="keynote">
-            <summary style="cursor: pointer; border: none;">
-              <strong>Tracy Xiao Liu (Tsinghua University): Understanding AI Behavior and Human Behavior with AI</strong>
-            </summary>
-            <div style="border: none; border-top: none;">
+            </details>
+            <details name="keynote" class="keynote-entry" id="keynote-liu">
+              <summary>
+                <span class="keynote-heading"><strong class="keynote-name">Tracy Xiao Liu</strong> <span class="keynote-affiliation">(Tsinghua University)</span></span>
+                <span class="keynote-title">Understanding AI Behavior and Human Behavior with AI</span>
+              </summary>
+              <p class="keynote-slot"><a href="#schedule-keynote-4">Keynote 4 · Friday, December 4 · 09:00–10:00</a></p>
+            <div class="keynote-details">
               <p><strong>Abstract:</strong> Generative AI is rapidly evolving into both a tool that supports human decision-making and cognitive tasks and an increasingly autonomous agent in social and economic settings. These expanding roles raise two important questions: how can we understand and interpret AI behavior, and how the use of generative AI may affect individuals' cognitive engagement with tasks and, in turn, their cognitive development. This talk examines these questions through two studies: one combines behavioral economics with AI interpretability to understand AI behavior, while the other uses large-scale student–AI interaction data to examine the cognitive engagement divide in higher education.</p>
 
               <p>The first study focuses on altruism, which is fundamental to human societies and fosters cooperation and social cohesion. While recent evidence suggests that large language models (LLMs) can display human-like prosocial behavior, it remains unclear what gives rise to such behavior within the model. By combining the Dictator Game with sparse autoencoders, an AI interpretability method for identifying interpretable features in a model's internal representations, we identify a set of features associated with altruistic choices. Intervening on these features systematically changes the model's allocations, and the effects generalize to several other social decision-making settings. These findings link economically meaningful behavior in LLMs to internal features that can be identified and causally manipulated.</p>
@@ -1018,27 +1802,26 @@
               <p>The second study turns from AI behavior to human behavior with AI. As Generative AI increasingly performs cognitive tasks on people's behalf, a central question is whether users remain actively engaged in thinking or delegate their thinking to AI. We study this question using more than 4.1 million student–AI interactions from 1.28 million students in nearly 30,000 classes across more than 500 higher-education institutions in China. Drawing on the ICAP framework, we characterize how students cognitively engage with an AI tutor and identify substantial heterogeneity in their patterns of use. Students at less selective institutions are less likely to adopt and use the tutor and are more likely to engage in answer-seeking or passive learning. Across institutions, engagement also shifts toward answer-seeking over time. More active cognitive engagement is associated with better subsequent academic performance. Together, these findings reveal a cognitive engagement divide that extends beyond access to and frequency of AI use to how students actually engage with the technology.</p>
 
               <p>Together, the two studies highlight how behavioral economics, in combination with methods and insights from other disciplines, can contribute to understanding both the behavior of increasingly capable AI systems and the ways in which these systems reshape human cognitive engagement and performance.</p>
-              <hr style="border: none; height: 2px; background-color: black;">
               <div class="keynote-bio">
-                <img src="files/liu.jpg" width=200 class="keynote-picture">
+                <img src="files/liu.jpg" width="200" class="keynote-picture no-dark" alt="Tracy Xiao Liu">
                 <div class="text-content">
                   <p><strong>Bio:</strong> Tracy Xiao Liu is a Professor in the Department of Economics at the School of Economics and Management, Tsinghua University. Her research interests include experimental economics, behavioral economics, and the intersection of economics and computer science (Econ-CS). Her work has been published in leading journals, including PNAS, Management Science, Production and Operations Management, and Games and Economic Behavior, as well as in top-tier conferences in computer science and artificial intelligence, including KDD, IJCAI, and WWW. She currently serves as an Associate Editor for Management Science and the Journal of Economic Behavior & Organization.</p>
                 </div>
               </div>
             </div>
-          </details>
-          <br>
-          <details name="keynote">
-            <summary style="cursor: pointer; border: none;">
-              <strong>Ariel Procaccia (Harvard University): No Generation Without Representation</strong>
-            </summary>
-            <div style="border: none; border-top: none;">
+            </details>
+            <details name="keynote" class="keynote-entry" id="keynote-procaccia">
+              <summary>
+                <span class="keynote-heading"><strong class="keynote-name">Ariel Procaccia</strong> <span class="keynote-affiliation">(Harvard University)</span></span>
+                <span class="keynote-title">No Generation Without Representation</span>
+              </summary>
+              <p class="keynote-slot"><a href="#schedule-keynote-2">Keynote 2 · Thursday, December 3 · 09:00–10:00</a></p>
+            <div class="keynote-details">
               <p><strong>Abstract:</strong>
                 AI systems and democratic processes are confronting similar challenges around representation. I examine two related questions that cut across both domains. First, how can AI enable democratic processes that handle vast spaces of opinions or statements while ensuring proportional representation of a population's views? Second, when AI systems themselves provide normative guidance, whose viewpoints do they reflect, and can we make this precise? Drawing on social choice theory, I present formal frameworks and algorithms for both problems, showing that meaningful representation guarantees are feasible and practical.
               </p>
-              <hr style="border: none; height: 2px; background-color: black;">
               <div class="keynote-bio">
-                <img src="files/procaccia.jpg" width=200 class="keynote-picture">
+                <img src="files/procaccia.jpg" width="200" class="keynote-picture no-dark" alt="Ariel Procaccia">
                 <div class="text-content">
                   <p><strong>Bio:</strong>
                     Ariel Procaccia is the Alfred and Rebecca Lin Professor of Computer Science at Harvard University. He works on a broad and dynamic set of problems related to AI, algorithms, economics, and society. He has helped create systems and platforms that are widely used to solve everyday fair division problems, resettle refugees, distribute food, and select citizens’ assemblies. To make his research accessible to the public, he has written numerous opinion and exposition pieces for publications such as The New York Times, The Washington Post, Bloomberg, Wired, and Scientific American. He is an <a href="https://en.wikipedia.org/wiki/ACM_Fellow">ACM Fellow</a> (2025), a <a href="https://en.wikipedia.org/wiki/AAAI_Fellow">AAAI Fellow</a> (2024), and a recipient of the <a href="https://www.sigecom.org/award-midcareer.html">ACM SIGecom Mid-Career Award</a> (2024), <a href="https://scwsociety.org/Prize.html">Social Choice and Welfare Prize</a> (2020), <a href="https://en.wikipedia.org/wiki/Guggenheim_Fellowship">Guggenheim Fellowship</a> (2018), <a href="https://en.wikipedia.org/wiki/IJCAI_Computers_and_Thought_Award">IJCAI Computers and Thought Award</a> (2015), and <a href="https://en.wikipedia.org/wiki/Sloan_Research_Fellowship">Sloan Research Fellowship</a> (2015). In 2026, he was named <a href="https://current.fas.harvard.edu/stories/five-harvard-faculty-named-harvard-college-professors">Harvard College Professor</a> in recognition of excellence in undergraduate teaching. 
@@ -1046,8 +1829,9 @@
                 </div>
               </div>
             </div>
-          </details>
+            </details>
           </div>
+        </div>
         
         <div id="call-for-papers" class="tab-content" style="display: none;">
           <h2>Call for Papers</h2>
