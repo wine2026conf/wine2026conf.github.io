@@ -300,6 +300,7 @@
         <button href="#registration" class="tab-link" onclick="openTab(event, &#39;registration&#39;)" data-tab="registration">Registration</button>
         <button href="#visa-information" class="tab-link" onclick="openTab(event, &#39;visa-information&#39;)" data-tab="visa-information">Visa Information</button>
         <button href="#local-info" class="tab-link" onclick="openTab(event, &#39;local-info&#39;)" data-tab="local-info">Local Information</button>
+        <button href="#dining" class="tab-link" onclick="openTab(event, &#39;dining&#39;)" data-tab="dining">Dining</button>
         <button href="#sponsorship" class="tab-link" onclick="openTab(event, 'sponsorship')" data-tab="sponsorship">Sponsorship Opportunities</button>
         <button href="#previous-wine" class="tab-link" onclick="openTab(event, &#39;previous-wine&#39;)" data-tab="previous-wine">Previous WINEs</button>
       </div>
@@ -2303,8 +2304,8 @@
           <h2>Local Information</h2>
           <hr style="border: none; height: 2px; background-color: black;">
           <style>
-            /* Styles from the attached WINE 2026 local-information page; scoped to this tab. */
-            #local-info .local-info-page {
+            /* Local Information and Dining share their typography and group headings. */
+            :is(#local-info, #dining) .local-info-page {
               --crimson: rgb(204, 0, 51);
               --crimson-soft: rgba(255, 204, 204, 0.8);
               --link: rgb(153, 102, 92);
@@ -2319,21 +2320,21 @@
               color: var(--ink);
               box-sizing: border-box;
             }
-            #local-info .local-info-page * { box-sizing: border-box; }
-            #local-info .local-info-page ::selection { background: rgb(204, 153, 173); color: black; }
+            :is(#local-info, #dining) .local-info-page * { box-sizing: border-box; }
+            :is(#local-info, #dining) .local-info-page ::selection { background: rgb(204, 153, 173); color: black; }
             #local-info .local-info-page h3 { font-size: 1.5rem; margin: 2.5rem 0 .5rem; }
-            #local-info .local-info-page h4 { font-size: 1.15rem; margin: 0; }
+            :is(#local-info, #dining) .local-info-page h4 { font-size: 1.15rem; margin: 0; }
             #local-info .local-info-page hr.section {
               border: none; height: 2px; background: black; margin: 0 0 1rem;
             }
-            #local-info .local-info-page .lede { max-width: 46rem; }
-            #local-info .local-info-page a {
+            :is(#local-info, #dining) .local-info-page .lede { max-width: 46rem; }
+            :is(#local-info, #dining) .local-info-page a {
               color: var(--link);
               text-decoration: none;
               position: relative;
               transition: color 1s ease;
             }
-            #local-info .local-info-page a::after {
+            :is(#local-info, #dining) .local-info-page a::after {
               content: "";
               position: absolute;
               left: 0; bottom: -2px;
@@ -2343,9 +2344,9 @@
               transform-origin: bottom right;
               transition: transform .75s ease-out;
             }
-            #local-info .local-info-page a:hover { color: var(--link-hover); }
-            #local-info .local-info-page a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-            #local-info .local-info-page a:focus-visible {
+            :is(#local-info, #dining) .local-info-page a:hover { color: var(--link-hover); }
+            :is(#local-info, #dining) .local-info-page a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+            :is(#local-info, #dining) .local-info-page a:focus-visible {
               outline: 2px solid var(--crimson); outline-offset: 2px;
             }
             #local-info .local-info-page ul,
@@ -2377,15 +2378,15 @@
             #local-info .local-info-page table.legend td:first-child {
               font-weight: 700; color: var(--crimson); white-space: nowrap;
             }
-            #local-info .local-info-page .group { margin-top: 2.25rem; }
-            #local-info .local-info-page .group-head {
+            :is(#local-info, #dining) .local-info-page .group { margin-top: 2.25rem; }
+            :is(#local-info, #dining) .local-info-page .group-head {
               display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap;
               border-bottom: 3px solid var(--crimson);
               padding-bottom: .35rem;
             }
-            #local-info .local-info-page .group-head h3 { margin: 0; font-size: 1.3rem; }
+            :is(#local-info, #dining) .local-info-page .group-head h3 { margin: 0; font-size: 1.3rem; }
             #local-info .local-info-page .group-head.off-line { border-bottom-style: dashed; }
-            #local-info .local-info-page .group-head .trip {
+            :is(#local-info, #dining) .local-info-page .group-head .trip {
               color: var(--grey); font-size: .95rem;
             }
             #local-info .local-info-page .hotel {
@@ -2395,6 +2396,9 @@
               padding: 1rem 0;
               border-bottom: 1px solid var(--rule);
             }
+            #dining .local-info-page .dining-item {
+              display: grid; gap: .2rem; padding: 1rem 0; border-bottom: 1px solid var(--rule);
+            }
             #local-info .local-info-page .hotel h4 { grid-column: 1; }
             #local-info .local-info-page .hotel .price {
               grid-column: 2; grid-row: 1; text-align: right; font-weight: 700; color: var(--crimson);
@@ -2402,10 +2406,12 @@
             #local-info .local-info-page .hotel .price span {
               display: block; font-weight: 400; font-size: .85rem; color: var(--grey);
             }
-            #local-info .local-info-page .hotel .addr {
+            #local-info .local-info-page .hotel .addr,
+            #dining .local-info-page .dining-item .addr {
               grid-column: 1 / -1; margin: 0; color: var(--grey);
             }
-            #local-info .local-info-page .hotel .note {
+            #local-info .local-info-page .hotel .note,
+            #dining .local-info-page .dining-item .note {
               grid-column: 1 / -1; margin: .1rem 0 0;
             }
             #local-info .local-info-page .hotel .addr a {
@@ -2461,13 +2467,13 @@
               }
             }
             @media (prefers-reduced-motion: reduce) {
-              #local-info .local-info-page a,
-              #local-info .local-info-page a::after { transition: none; }
+              :is(#local-info, #dining) .local-info-page a,
+              :is(#local-info, #dining) .local-info-page a::after { transition: none; }
             }
           </style>
           <div class="local-info-page">
               <main>
-                <p>The conference takes place at the University of Hong Kong (specific building / rooms to be announced).  See below for information about accommodation and local transportation.</p>
+                <p>The conference takes place at the University of Hong Kong (specific building / rooms to be announced).  See below for information about accommodation and local transportation. See <a href="#dining">Dining</a> for places to eat on and near campus.</p>
 
                 <details>
                 <summary style="cursor: pointer; border: none; color: red;">
@@ -2687,6 +2693,92 @@
                 </div>
               </main>
 
+          </div>
+        </div>
+
+        <div id="dining" class="tab-content" style="display: none;">
+          <h2>Dining near HKU</h2>
+          <hr style="border: none; height: 2px; background-color: black;">
+          <div class="local-info-page">
+            <main>
+              <p class="lede">For a meal between sessions, choose from the campus restaurants and cafés below. Use the <a href="https://www.maps.hku.hk/" target="_blank" rel="noopener">HKU campus map</a> to find buildings and the <a href="https://catering.hku.hk/en/eateries/" target="_blank" rel="noopener">HKU dining directory</a> for opening hours.</p>
+
+              <section class="group" aria-labelledby="dining-main-campus">
+                <div class="group-head">
+                  <h3 id="dining-main-campus">Main Campus</h3>
+                  <span class="trip">On-campus restaurants and cafés</span>
+                </div>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/FSCACR/" target="_blank" rel="noopener">JuYing Tai <span lang="zh-Hant">聚英臺</span></a></h4>
+                  <p class="addr">2/F, Fong Shu Chuen Amenities Centre, Swire Building</p>
+                  <p class="note">Chinese rice and noodle dishes.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/halalcorner/" target="_blank" rel="noopener">27 Kebab House</a></h4>
+                  <p class="addr">1/F, Fong Shu Chuen Amenities Centre</p>
+                  <p class="note">Halal kebabs, biryani and pizza.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/COBG01/" target="_blank" rel="noopener">OORI HANSIK</a></h4>
+                  <p class="addr">Shop G.01, G/F, Composite Building</p>
+                  <p class="note">Korean meals and fried chicken.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/mlc/" target="_blank" rel="noopener">Urban Coffee Roaster</a></h4>
+                  <p class="addr">G/F, Library Building (Old Wing)</p>
+                  <p class="note">Coffee, pastries and salads.</p>
+                </article>
+              </section>
+
+              <section class="group" aria-labelledby="dining-centennial-campus">
+                <div class="group-head">
+                  <h3 id="dining-centennial-campus">Centennial Campus</h3>
+                  <span class="trip">On-campus restaurants and cafés</span>
+                </div>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/CCOutletB/" target="_blank" rel="noopener">TamJai SamGor</a></h4>
+                  <p class="addr">G/F, The Jockey Club Tower</p>
+                  <p class="note">Rice noodle soups and snacks.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/CCOutletA/" target="_blank" rel="noopener">alfafa bistro</a></h4>
+                  <p class="addr">LG/F, The Jockey Club Tower</p>
+                  <p class="note">Pasta, sandwiches and salads.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/CCOutletC/" target="_blank" rel="noopener">Asian Gourmet</a></h4>
+                  <p class="addr">G/F, Run Run Shaw Tower</p>
+                  <p class="note">Southeast Asian rice and noodle dishes.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://catering.hku.hk/en/eateries/CCOutletD/" target="_blank" rel="noopener">BIJAS Vegetarian</a></h4>
+                  <p class="addr">G/F, Run Run Shaw Tower</p>
+                  <p class="note">Chinese vegetarian buffet with vegan options.</p>
+                </article>
+              </section>
+
+              <section class="group" aria-labelledby="dining-off-campus">
+                <div class="group-head">
+                  <h3 id="dining-off-campus">Off-campus dining areas</h3>
+                </div>
+                <p>Each location below is a starting point for exploring a cluster of eateries. Open the map, head to the area and choose a restaurant nearby.</p>
+                <article class="dining-item">
+                  <h4><a href="https://www.google.com/maps/search/?api=1&amp;query=HKU+Station+Exit+B2%2C+Hill+Road%2C+Hong+Kong" target="_blank" rel="noopener">Queen’s Road West near Hill Road</a></h4>
+                  <p class="addr">Neighbourhood · Shek Tong Tsui <span lang="zh-Hant">石塘咀</span> · HKU Station Exit B2</p>
+                  <p class="note">Look for cafés and noodle shops along the street, or head to Shek Tong Tsui Market’s cooked food centre.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Water+Street%2C+Sai+Ying+Pun%2C+Hong+Kong" target="_blank" rel="noopener">Water Street to Western Street</a></h4>
+                  <p class="addr">Neighbourhood · Sai Ying Pun <span lang="zh-Hant">西營盤</span> · HKU Station Exit B1</p>
+                  <p class="note">Start at Water Street and look along Queen’s Road West and Des Voeux Road West for cafés and lunch spots.</p>
+                </article>
+                <article class="dining-item">
+                  <h4><a href="https://www.google.com/maps/search/?api=1&amp;query=Belcher%27s+Street%2C+Kennedy+Town%2C+Hong+Kong" target="_blank" rel="noopener">Belcher’s Street and nearby side streets</a></h4>
+                  <p class="addr">Neighbourhood · Kennedy Town <span lang="zh-Hant">堅尼地城</span> · One MTR stop west of HKU</p>
+                  <p class="note">Explore the side streets off Belcher’s Street for dim sum, claypot rice and cafés.</p>
+                </article>
+              </section>
+            </main>
           </div>
         </div>
         
