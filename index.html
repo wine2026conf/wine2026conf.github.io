@@ -827,6 +827,8 @@
             #schedule .schedule-event.schedule-break { padding-top: .72rem; padding-bottom: .72rem; }
             #schedule .schedule-event.schedule-break p { margin: 0; }
             #schedule .schedule-session-note { margin: .15rem 0 0; color: #777; font-size: .88rem; }
+            #schedule .schedule-session .schedule-room-chair,
+            #schedule .schedule-event .schedule-room-chair { margin: .15rem 0 0; font-size: .96rem; }
             #schedule .schedule-session ul {
               padding-left: 1.2rem;
               margin: .65rem 0 .12rem;
@@ -902,7 +904,8 @@
             }
           </style>
           <div class="schedule-page">
-            <p class="schedule-intro"><strong>December 1–4, 2026</strong><br><span class="schedule-timezone">All times are Hong Kong time (UTC+8).</span></p>
+            <p class="schedule-intro"><strong>Session locations:</strong> Session A: CPD-1.24 · Session B: CPD-1.21 · Session C: CPD-2.16.
+            Keynotes, Award Talks, Industry Talks, and Graduating Bits take place in CPD-1.24 by default. When CPD-1.24 reaches capacity, Zoom streaming is available in CPD-1.21.</p>
             <nav class="schedule-nav" aria-label="Schedule navigation">
               <a href="#schedule-overview">Overview</a>
               <a href="#accepted-tutorials">December 1</a>
@@ -973,9 +976,9 @@
                   </tr>
                   <tr class="schedule-break">
                     <th scope="row">18:30–20:30</th>
-                    <td>Social Activity 1</td>
+                    <td>Social Activity 1: Bus Tour (Dinner Included)</td>
                     <td>Banquet and Business Meeting</td>
-                    <td>Social Activity 2</td>
+                    <td>Social Activity 2: Evening Hike to Victoria Peak</td>
                   </tr>
                 </tbody>
               </table>
@@ -987,7 +990,7 @@
                 <div>
                   <h4><span class="schedule-keynote-label">Keynote 1:</span> A Collectivist, Economic Perspective on AI</h4>
                   <p>by <a href="#keynote-jordan">Michael I. Jordan</a></p>
-                  <p>Session chair: Jing Chen</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Jing Chen</p>
                 </div>
               </div>
               <div class="schedule-event schedule-break">
@@ -998,7 +1001,7 @@
               </div>
               <section class="schedule-session" id="session-1a" aria-labelledby="session-1a-heading">
                 <h4 id="session-1a-heading"><span class="schedule-session-label">Session 1A:</span> Information Elicitation</h4>
-                <p>Session chair: Jiashuo Jiang</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Jiashuo Jiang</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T10:30:00+08:00">10:30</time>–<time datetime="2026-12-02T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1021,7 +1024,7 @@
               </section>
               <section class="schedule-session" id="session-1b" aria-labelledby="session-1b-heading">
                 <h4 id="session-1b-heading"><span class="schedule-session-label">Session 1B:</span> Fair Division</h4>
-                <p>Session chair: Xiaowei Wu</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Xiaowei Wu</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T10:30:00+08:00">10:30</time>–<time datetime="2026-12-02T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1044,7 +1047,7 @@
               </section>
               <section class="schedule-session" id="session-1c" aria-labelledby="session-1c-heading">
                 <h4 id="session-1c-heading"><span class="schedule-session-label">Session 1C:</span> Pricing</h4>
-                <p>Session chair: Zhihao Tang</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Zhihao Tang</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T10:30:00+08:00">10:30</time>–<time datetime="2026-12-02T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1073,7 +1076,7 @@
               </div>
               <section class="schedule-session" id="session-2a" aria-labelledby="session-2a-heading">
                 <h4 id="session-2a-heading"><span class="schedule-session-label">Session 2A:</span> Information Design and Information Elicitation</h4>
-                <p>Session chair: Yiding Feng</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Wei Tang</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T13:30:00+08:00">13:30</time>–<time datetime="2026-12-02T15:00:00+08:00">15:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1096,7 +1099,7 @@
               </section>
               <section class="schedule-session" id="session-2b" aria-labelledby="session-2b-heading">
                 <h4 id="session-2b-heading"><span class="schedule-session-label">Session 2B:</span> Markets</h4>
-                <p>Session chair: Siddharth Barman</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Siddharth Barman</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T13:30:00+08:00">13:30</time>–<time datetime="2026-12-02T15:00:00+08:00">15:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1119,7 +1122,7 @@
               </section>
               <section class="schedule-session" id="session-2c" aria-labelledby="session-2c-heading">
                 <h4 id="session-2c-heading"><span class="schedule-session-label">Session 2C:</span> Mechanism Design</h4>
-                <p>Session chair: Xujin Chen</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Xujin Chen</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T13:30:00+08:00">13:30</time>–<time datetime="2026-12-02T15:00:00+08:00">15:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1151,14 +1154,14 @@
                 <div>
                   <strong class="schedule-paper-title">Industry Talk: Practicing OR in Industry: From Cases to Research Projects</strong>
                     <span class="schedule-authors">Zizhuo Wang (Cardinal Operations; CUHK, Shenzhen)</span>
-                  <p>Session chair: Xiaotie Deng</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Xiaotie Deng</p>
                 </div>
               </div>
               <div class="schedule-event">
                 <div class="schedule-event-time"><time datetime="2026-12-02T16:00:00+08:00">16:00</time>–<time datetime="2026-12-02T16:30:00+08:00">16:30</time></div>
                 <div>
                   <strong class="schedule-paper-title">Graduating Bits</strong>
-                  <p>Session chair: Bo Li</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Bo Li</p>
                 </div>
               </div>
               <div class="schedule-event schedule-break">
@@ -1169,7 +1172,7 @@
               </div>
               <section class="schedule-session" id="session-3a" aria-labelledby="session-3a-heading">
                 <h4 id="session-3a-heading"><span class="schedule-session-label">Session 3A:</span> Equilibria</h4>
-                <p>Session chair: Argyris Deligkas</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Argyris Deligkas</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T16:40:00+08:00">16:40</time>–<time datetime="2026-12-02T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1192,7 +1195,7 @@
               </section>
               <section class="schedule-session" id="session-3b" aria-labelledby="session-3b-heading">
                 <h4 id="session-3b-heading"><span class="schedule-session-label">Session 3B:</span> Auctions</h4>
-                <p>Session chair: Evangelos Markakis</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Evangelos Markakis</p>
                 <div class="schedule-meta"><time datetime="2026-12-02T16:40:00+08:00">16:40</time>–<time datetime="2026-12-02T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1214,7 +1217,7 @@
                 </ul>
               </section>
               <section class="schedule-session" id="session-3c" aria-labelledby="session-3c-heading">
-                <p>Session chair: Yiding Feng</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Yiding Feng</p>
                 <h4 id="session-3c-heading"><span class="schedule-session-label">Session 3C:</span> Information Design and Information Elicitation</h4>
                 <div class="schedule-meta"><time datetime="2026-12-02T16:40:00+08:00">16:40</time>–<time datetime="2026-12-02T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
@@ -1239,7 +1242,10 @@
               <div class="schedule-event">
                 <div class="schedule-event-time"><time datetime="2026-12-02T18:30:00+08:00">18:30</time>–<time datetime="2026-12-02T20:30:00+08:00">20:30</time></div>
                 <div>
-                  <p>Social Activity 1</p>
+                  <p>Social Activity 1: <a href="https://www.crystalbus.com.hk/en/">Bus Tour (Dinner Included)</a></p>
+                  <p>Sign-up link (limited to 30 participants, first come, first served): <a href="https://forms.gle/AdAq1bKsSyZF4m7R8">here</a>.
+                  <br>
+                  Contact: Zixuan Zhu (<a href="mailto:zhuzixua@connect.hku.hk">zhuzixua@connect.hku.hk</a>)</p>
                 </div>
               </div>
               <p class="schedule-back"><a href="#schedule-overview">Back to schedule overview</a></p>
@@ -1251,7 +1257,7 @@
                 <div>
                   <h4><span class="schedule-keynote-label">Keynote 2:</span> No Generation Without Representation</h4>
                   <p>by <a href="#keynote-procaccia">Ariel Procaccia</a></p>
-                  <p>Session chair: Ioannis Caragiannis</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Ioannis Caragiannis</p>
                 </div>
               </div>
               <div class="schedule-event schedule-break">
@@ -1262,7 +1268,7 @@
               </div>
               <section class="schedule-session" id="session-4a" aria-labelledby="session-4a-heading">
                 <h4 id="session-4a-heading"><span class="schedule-session-label">Session 4A:</span> Pricing</h4>
-                <p>Session chair: Zhihao Tang</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Zhihao Tang</p>
                 <div class="schedule-meta"><time datetime="2026-12-03T10:30:00+08:00">10:30</time>–<time datetime="2026-12-03T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1285,7 +1291,7 @@
               </section>
               <section class="schedule-session" id="session-4b" aria-labelledby="session-4b-heading">
                 <h4 id="session-4b-heading"><span class="schedule-session-label">Session 4B:</span> Equilibria</h4>
-                <p>Session chair: Ioannis Anagnostides</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Ioannis Anagnostides</p>
                 <div class="schedule-meta"><time datetime="2026-12-03T10:30:00+08:00">10:30</time>–<time datetime="2026-12-03T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1308,7 +1314,7 @@
               </section>
               <section class="schedule-session" id="session-4c" aria-labelledby="session-4c-heading">
                 <h4 id="session-4c-heading"><span class="schedule-session-label">Session 4C:</span> Fair Division</h4>
-                <p>Session chair: Uriel Feige</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Uriel Feige</p>
                 <div class="schedule-meta"><time datetime="2026-12-03T10:30:00+08:00">10:30</time>–<time datetime="2026-12-03T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1338,7 +1344,7 @@
               <section class="schedule-session" id="session-5" aria-labelledby="session-5-heading">
                 <h4 id="session-5-heading"><span class="schedule-session-label">Session 5:</span> Award Papers</h4>
                 <div class="schedule-meta"><time datetime="2026-12-03T13:30:00+08:00">13:30</time>–<time datetime="2026-12-03T15:00:00+08:00">15:00</time></div>
-                <p class="schedule-session-note">Session chairs: Jing Chen and Ioannis Caragiannis</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chairs: Jing Chen and Ioannis Caragiannis</p>
                 <ul class="spaced-list schedule-award-list">
                   <li>
                     <span class="schedule-award"><time datetime="2026-12-03T13:30:00+08:00">13:30</time>–<time datetime="2026-12-03T14:00:00+08:00">14:00</time></span>
@@ -1377,7 +1383,7 @@
                 <div>
                   <h4><span class="schedule-keynote-label">Keynote 3:</span> TBA</h4>
                   <p>by <a href="#keynote-feldman">Michal Feldman</a></p>
-                  <p>Session chair: Ioannis Caragiannis</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Ioannis Caragiannis</p>
                 </div>
               </div>
               <div class="schedule-event schedule-break">
@@ -1388,7 +1394,7 @@
               </div>
               <section class="schedule-session" id="session-6a" aria-labelledby="session-6a-heading">
                 <h4 id="session-6a-heading"><span class="schedule-session-label">Session 6A:</span> Blockchains and Financial Protocols</h4>
-                <p>Session chair: Jichen Li</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Jichen Li</p>
                 <div class="schedule-meta"><time datetime="2026-12-03T16:40:00+08:00">16:40</time>–<time datetime="2026-12-03T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1411,7 +1417,7 @@
               </section>
               <section class="schedule-session" id="session-6b" aria-labelledby="session-6b-heading">
                 <h4 id="session-6b-heading"><span class="schedule-session-label">Session 6B:</span> Social Choice</h4>
-                <p>Session chair: Niclas Boehmer</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Niclas Boehmer</p>
                 <div class="schedule-meta"><time datetime="2026-12-03T16:40:00+08:00">16:40</time>–<time datetime="2026-12-03T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1434,7 +1440,7 @@
               </section>
               <section class="schedule-session" id="session-6c" aria-labelledby="session-6c-heading">
                 <h4 id="session-6c-heading"><span class="schedule-session-label">Session 6C:</span> Pricing</h4>
-                <p>Session chair: Zhihao Tang</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Zhihao Tang</p>
                 <div class="schedule-meta"><time datetime="2026-12-03T16:40:00+08:00">16:40</time>–<time datetime="2026-12-03T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1470,7 +1476,7 @@
                 <div>
                   <h4><span class="schedule-keynote-label">Keynote 4:</span> Understanding AI Behavior and Human Behavior with AI</h4>
                   <p>by <a href="#keynote-liu">Tracy Xiao Liu</a></p>
-                  <p>Session chair: Jing Chen</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Jing Chen</p>
                 </div>
               </div>
               <div class="schedule-event schedule-break">
@@ -1481,7 +1487,7 @@
               </div>
               <section class="schedule-session" id="session-7a" aria-labelledby="session-7a-heading">
                 <h4 id="session-7a-heading"><span class="schedule-session-label">Session 7A:</span> Social Choice</h4>
-                <p>Session chair: Ratip Emin Berker</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Ratip Emin Berker</p>
                 <div class="schedule-meta"><time datetime="2026-12-04T10:30:00+08:00">10:30</time>–<time datetime="2026-12-04T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1503,7 +1509,7 @@
                 </ul>
               </section>
               <section class="schedule-session" id="session-7b" aria-labelledby="session-7b-heading">
-                <p>Session chair: Ioannis Caragiannis</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Ioannis Caragiannis</p>
                 <h4 id="session-7b-heading"><span class="schedule-session-label">Session 7B:</span> Matchings</h4>
                 <div class="schedule-meta"><time datetime="2026-12-04T10:30:00+08:00">10:30</time>–<time datetime="2026-12-04T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
@@ -1526,7 +1532,7 @@
                 </ul>
               </section>
               <section class="schedule-session" id="session-7c" aria-labelledby="session-7c-heading">
-                <p>Session chair: Tao Lin</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Tao Lin</p>
                 <h4 id="session-7c-heading"><span class="schedule-session-label">Session 7C:</span> Auctions</h4>
                 <div class="schedule-meta"><time datetime="2026-12-04T10:30:00+08:00">10:30</time>–<time datetime="2026-12-04T12:00:00+08:00">12:00</time></div>
                 <ul class="spaced-list">
@@ -1556,7 +1562,7 @@
               </div>
               <section class="schedule-session" id="session-8a" aria-labelledby="session-8a-heading">
                 <h4 id="session-8a-heading"><span class="schedule-session-label">Session 8A:</span> Markets</h4>
-                <p>Session chair: Tao Lin</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Tao Lin</p>
                 <div class="schedule-meta"><time datetime="2026-12-04T13:30:00+08:00">13:30</time>–<time datetime="2026-12-04T15:00:00+08:00">15:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1579,7 +1585,7 @@
               </section>
               <section class="schedule-session" id="session-8b" aria-labelledby="session-8b-heading">
                 <h4 id="session-8b-heading"><span class="schedule-session-label">Session 8B:</span> Fair Division</h4>
-                <p>Session chair: Šimon Schierreich</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Šimon Schierreich</p>
                 <div class="schedule-meta"><time datetime="2026-12-04T13:30:00+08:00">13:30</time>–<time datetime="2026-12-04T15:00:00+08:00">15:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1602,7 +1608,7 @@
               </section>
               <section class="schedule-session" id="session-8c" aria-labelledby="session-8c-heading">
                 <h4 id="session-8c-heading"><span class="schedule-session-label">Session 8C:</span> Mechanism Design</h4>
-                <p>Session chair: Bo Li</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Bo Li</p>
                 <div class="schedule-meta"><time datetime="2026-12-04T13:30:00+08:00">13:30</time>–<time datetime="2026-12-04T15:00:00+08:00">15:00</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1630,14 +1636,14 @@
                 <div>
                   <strong class="schedule-paper-title">Industry Talk: TBA</strong>
                     <span class="schedule-authors">Yifeng Teng (Google)</span>
-                  <p>Session chair: Xiaotie Deng</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Xiaotie Deng</p>
                 </div>
               </div>
               <div class="schedule-event">
                 <div class="schedule-event-time"><time datetime="2026-12-02T16:00:00+08:00">16:00</time>–<time datetime="2026-12-02T16:30:00+08:00">16:30</time></div>
                 <div>
                   <strong class="schedule-paper-title">Graduating Bits</strong>
-                  <p>Session chair: Bo Li</p>
+                  <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Bo Li</p>
                 </div>
               </div>
               <div class="schedule-event schedule-break">
@@ -1648,7 +1654,7 @@
               </div>
               <section class="schedule-session" id="session-9a" aria-labelledby="session-9a-heading">
                 <h4 id="session-9a-heading"><span class="schedule-session-label">Session 9A:</span> Solution Concepts</h4>
-                <p>Session chair: Bo Li</p>
+                <p class="schedule-room-chair">Room: CPD-1.24 · Session chair: Bo Li</p>
                 <div class="schedule-meta"><time datetime="2026-12-04T16:40:00+08:00">16:40</time>–<time datetime="2026-12-04T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1671,7 +1677,7 @@
               </section>
               <section class="schedule-session" id="session-9b" aria-labelledby="session-9b-heading">
                 <h4 id="session-9b-heading"><span class="schedule-session-label">Session 9B:</span> Matchings</h4>
-                <p>Session chair: Yiding Feng</p>
+                <p class="schedule-room-chair">Room: CPD-1.21 · Session chair: Yiding Feng</p>
                 <div class="schedule-meta"><time datetime="2026-12-04T16:40:00+08:00">16:40</time>–<time datetime="2026-12-04T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1694,7 +1700,7 @@
               </section>
               <section class="schedule-session" id="session-9c" aria-labelledby="session-9c-heading">
                 <h4 id="session-9c-heading"><span class="schedule-session-label">Session 9C:</span> Mechanism Design</h4>
-                <p>Session chair: Hanrui Zhang</p>
+                <p class="schedule-room-chair">Room: CPD-2.16 · Session chair: Hanrui Zhang</p>
                 <div class="schedule-meta"><time datetime="2026-12-04T16:40:00+08:00">16:40</time>–<time datetime="2026-12-04T18:10:00+08:00">18:10</time></div>
                 <ul class="spaced-list">
                   <li>
@@ -1714,7 +1720,10 @@
               <div class="schedule-event">
                 <div class="schedule-event-time"><time datetime="2026-12-04T18:30:00+08:00">18:30</time>–<time datetime="2026-12-04T20:30:00+08:00">20:30</time></div>
                 <div>
-                  <p>Social Activity 2</p>
+                  <p>Social Activity 2: <a href="https://www.hongkonghike.com/morning-trail-high-west-victoria-peak-hike-city-views-ocean-views/">Evening Hike to Victoria Peak</a></p>
+                  <p>Sign-up link: <a href="https://forms.gle/mCeZsso6jBf3gUx9A">here</a>.
+                  <br>
+                  Contact: Andrew Zhou (<a href="mailto:andrewchew@connect.hku.hk">zhuzixua@connect.hku.hk</a>)</p>
                 </div>
               </div>
               <p class="schedule-back"><a href="#schedule-overview">Back to schedule overview</a></p>
